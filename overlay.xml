@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>daugustin</name>
+    <description>gentoo-overlay from daugustin (hossie)</description>
+    <homepage>https://github.com/daugustin/gentoo-overlay</homepage>
+    <owner>
+      <email>hossie@hossie.de</email>
+    </owner>
+    <source type="git">https://github.com/daugustin/gentoo-overlay.git</source>
+    <feed>https://github.com/daugustin/gentoo-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
