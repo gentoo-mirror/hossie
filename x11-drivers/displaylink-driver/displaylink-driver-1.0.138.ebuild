@@ -50,7 +50,7 @@ src_install() {
 
     cat > "${udevrules}" <<-EOF
         ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="179", ATTR{bNumInterfaces}=="*5", GROUP="plugdev", MODE="0660"
-    EOF
+	EOF
     udev_dorules "${udevrules}"
 
     if use systemd; then
