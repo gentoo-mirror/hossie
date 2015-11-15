@@ -1,0 +1,36 @@
+#!/bin/bash
+# Copyright (c) 2015 DisplayLink (UK) Ltd.
+
+COREDIR=/usr/lib/displaylink
+suspend_dlm()
+{
+  #flush any bytes in pipe
+  while read -n 1 -t 1 SUSPEND_RESULT < $COREDIR/PmMessagesPort_out; do : ; done;
+
+  #suspend DisplayLinkManager
+  echo "S" > $COREDIR/PmMessagesPort_in
+
+  #wait until suspend of DisplayLinkManager finish
+  read -n 1 -t 10 SUSPEND_RESULT < $COREDIR/PmMessagesPort_out
+}
+
+resume_dlm()
+{
+  #resume DisplayLinkManager
+  echo "R" > $COREDIR/PmMessagesPort_in
+}
+
+case "$1" in
+  thaw)
+    resume_dlm
+    ;;
+  hibernate)
+    suspend_dlm
+    ;;
+  suspend)
+    suspend_dlm
+    ;;
+  resume)
+    resume_dlm
+    ;;
+esac
