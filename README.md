@@ -1,19 +1,13 @@
-daugustin (hossie) overlay
-==========================
+hossie overlay
+==============
 
 Add it to layman
 ----------------
 
-**Temporary:**
-
-    layman -o https://raw.githubusercontent.com/daugustin/gentoo-overlay/master/overlay.xml -a daugustin
-    
-**Permanently:**
-
 Edit the file /etc/layman/layman.cfg and add the line
 
-    https://raw.githubusercontent.com/daugustin/gentoo-overlay/master/overlay.xml
+    https://git.hossie.de/projects/GEN/repos/gentoo-overlay/browse/overlay.xml?raw
 
 to the "overlays" section. Then, run
 
-    layman -a daugustin
+    layman -a hossie
