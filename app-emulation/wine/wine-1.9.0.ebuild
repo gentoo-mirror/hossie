@@ -318,7 +318,6 @@ multilib_src_configure() {
 		$(use_with oss)
 		$(use_with pcap)
 		$(use_with png)
-		$(use_with pulseaudio)
 		$(use_with threads pthread)
 		$(use_with scanner sane)
 		$(use_enable test tests)
