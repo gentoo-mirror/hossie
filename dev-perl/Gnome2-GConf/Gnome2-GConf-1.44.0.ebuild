@@ -21,7 +21,7 @@ RDEPEND="gnome-base/gconf:2
 
 DEPEND="${RDEPEND}
     >=dev-perl/extutils-pkgconfig-1.03
-    >=dev-perl/extutils-depends-0.202
+    >=dev-perl/ExtUtils-Depends-0.202
     virtual/pkgconfig"
 
 SRC_TEST=do
