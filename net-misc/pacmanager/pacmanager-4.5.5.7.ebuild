@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="freerdp mosh rdesktop webdav vnc"
+IUSE="freerdp mosh +rdesktop webdav vnc"
 
 RDEPEND="freerdp? ( net-misc/freerdp )
     mosh? ( net-misc/mosh )
