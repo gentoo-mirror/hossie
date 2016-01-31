@@ -36,6 +36,8 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 	dev-perl/Expect
 	dev-perl/IO-Stty"
 
+S="${WORKDIR}/pac"
+
 src_prepare() {
     rm -rf pac/lib/ex/vte*
     find pac/utils pac/lib pac/pac -type f | while read f
