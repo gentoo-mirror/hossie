@@ -39,8 +39,8 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 S="${WORKDIR}/pac"
 
 src_prepare() {
-    rm -rf pac/lib/ex/vte*
-    find pac/utils pac/lib pac/pac -type f | while read f
+    rm -rf lib/ex/vte*
+    find utils lib pac -type f | while read f
     do
         sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/lib@\1/usr/$(get_libdir)/pacmanager@g" "$f"
         sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/res@\1/usr/share/pacmanager@g" "$f"
@@ -48,23 +48,23 @@ src_prepare() {
 }
 
 src_install() {
-    dobin pac/pac
-    dodoc pac/README
+    dobin pac
+    dodoc README
 
-    doman pac/res/pac.1
+    doman res/pac.1
     insinto /usr/share/applications
-    doins pac/res/pac.desktop
-    rm pac/res/{pac.1,pac.desktop}
+    doins res/pac.desktop
+    rm res/{pac.1,pac.desktop}
 
     insinto /usr/share/pixmaps
-    newins pac/res/pac64x64.png pac.png
+    newins res/pac64x64.png pac.png
 
     insinto /usr/$(get_libdir)/${PN}
-    doins -r pac/lib/*
+    doins -r lib/*
     insinto /usr/share/${PN}
-    doins -r pac/res/*
-    doins -r pac/utils
-    doins pac/qrcode_pacmanager.png
+    doins -r res/*
+    doins -r utils
+    doins qrcode_pacmanager.png
 }
 
 pkg_postinst()
