@@ -30,7 +30,7 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 	dev-perl/Gtk2-Ex-Simple-List
 	dev-perl/Gtk2-Unique
 	dev-perl/gnome2-perl
-	dev-perl/gnome2-gconf
+	dev-perl/Gnome2-GConf
 	dev-perl/gtk2-gladexml
 	dev-perl/Gnome2-Vte
 	dev-perl/Expect
