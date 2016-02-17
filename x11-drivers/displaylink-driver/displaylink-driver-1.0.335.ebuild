@@ -8,7 +8,7 @@ inherit eutils systemd udev
 
 DESCRIPTION="DisplayLink USB Graphics Software"
 HOMEPAGE="http://www.displaylink.com/downloads/ubuntu.php"
-SRC_URI="http://downloads.displaylink.com/publicsoftware/DisplayLink-Ubuntu-${PV}.zip"
+SRC_URI="DisplayLink_Ubuntu_${PV}.zip"
 
 LICENSE="DisplayLink"
 SLOT="0"
@@ -16,12 +16,18 @@ KEYWORDS="~x86 ~amd64"
 IUSE="systemd"
 
 QA_PREBUILT="/usr/lib/displaylink/DisplayLinkManager"
+RESTRICT="fetch"
 
 DEPEND="app-admin/chrpath"
 RDEPEND="x11-drivers/evdi
 		virtual/libusb:1
 		|| ( x11-drivers/xf86-video-modesetting >=x11-base/xorg-server-1.17.0 )
 		!systemd? ( sys-power/pm-utils )"
+
+pkg_nofetch() {
+    einfo "Please download DisplayLink_Ubuntu_${PV}.zip from"
+    einfo "http://www.displaylink.com/downloads/ubuntu"
+}
 
 src_unpack() {
 	default
