@@ -1,0 +1,9 @@
+app-emulation/vmware-modules 304.1: VMware kernel modules
+app-emulation/wine 1.9.3: Free implementation of Windows(tm) on Unix
+dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
+dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
+games-simulation/corsix-th 0.50: Open source clone of Theme Hospital
+net-misc/pacmanager 4.5.5.7: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
+sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
+x11-drivers/displaylink-driver 1.0.335: DisplayLink USB Graphics Software
+x11-drivers/evdi 2015.08.04 2016.02.19: Extensible Virtual Display Interface
