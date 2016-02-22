@@ -1,13 +1,11 @@
 hossie overlay
 ==============
 
-Add it to layman
-----------------
+Add the overlay
+---------------
 
-Edit the file /etc/layman/layman.cfg and add the line
+My overlay is in the main overlays.gentoo.org list.
 
-    https://git.hossie.de/projects/GEN/repos/gentoo-overlay/browse/overlay.xml?raw
-
-to the "overlays" section. Then, run
+So you can just run:
 
     layman -a hossie
