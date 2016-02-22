@@ -26,6 +26,7 @@ CONFIG_CHECK="FB_VIRTUAL"
 pkg_setup() {
     linux-mod_pkg_setup
 }
+
 src_compile() {
 	linux-mod_src_compile
 	cd "${S}/library"
