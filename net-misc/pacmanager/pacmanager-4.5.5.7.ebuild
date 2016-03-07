@@ -21,7 +21,7 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 	webdav? ( net-misc/cadaver )
 	vnc? ( || ( net-misc/tigervnc net-misc/tightvnc ) )
 	dev-libs/ossp-uuid[perl]
-	dev-perl/crypt-cbc
+	dev-perl/Crypt-CBC
 	dev-perl/gtk2-perl
     dev-perl/Socket6
     dev-perl/Net-ARP
