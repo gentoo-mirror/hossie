@@ -4,12 +4,24 @@ hossie overlay
 Add the overlay
 ---------------
 
+If you don't have it installed yet, install [layman](https://wiki.gentoo.org/wiki/Layman).
+
 My overlay is in the main overlays.gentoo.org list.
 
 So you can just run:
 
     layman -a hossie
 
-Details of the available ebuilds:
 
-https://wiki.hossie.de/display/PROJ/Gentoo+Overlay
+What is in the overlay?
+-----------------------
+
+[Details of the available ebuilds](https://wiki.hossie.de/display/PROJ/Gentoo+Overlay)
+
+
+Bug Tracker
+-----------
+
+If you encounter any problems, want to report bugs or have any questions,
+please open a [Jira-Ticket](https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000).
+No account required.
