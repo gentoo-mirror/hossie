@@ -28,7 +28,7 @@ QA_TEXTRELS="${PN}-IC-${MY_PV}/bin/libbreakgen.so
 QA_PRESTRIPPED="${PN}-IC-${MY_PV}/lib/libpty/linux/x86/libpty.so
 	${PN}-IC-${MY_PV}/lib/libpty/linux/x86_64/libpty.so"
 
-CONFIG_CHECK="~CONFIG_INOTIFY_USER"
+CONFIG_CHECK="~INOTIFY_USER"
 
 S="${WORKDIR}/${MY_PN}-IC-${MY_PV}"
 
@@ -63,7 +63,14 @@ src_install() {
 
 	insinto "${dir}"
 	doins -r *
-	fperms 755 "${dir}/bin/${MY_PN}.sh" "${dir}"/bin/fsnotifier* "${dir}/bin/inspect.sh"
+	fperms 755 "${dir}/bin/${MY_PN}.sh" "${dir}/bin/inspect.sh"
+
+	if use amd64; then
+	    fperms 755 "${dir}/bin/fsnotifier64"
+    fi
+    if use x86; then
+        fperms 755 "${dir}/bin/fsnotifier"
+    fi
 
 	newicon "bin/idea.png" "${PN}.png"
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
