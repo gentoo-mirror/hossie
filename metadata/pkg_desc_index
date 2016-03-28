@@ -6,4 +6,4 @@ net-misc/pacmanager 4.5.5.7: PAC is a Perl/GTK replacement for SecureCRT/Putty/e
 sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
 sys-kernel/gentoo-sources 4.1.19: Full sources including the Gentoo patchset for the 4.1 kernel tree
 x11-drivers/displaylink-driver 1.0.335: DisplayLink USB Graphics Software
-x11-drivers/evdi 2015.08.04 2016.02.19: Extensible Virtual Display Interface
+x11-drivers/evdi 2015.08.04 2016.02.19 2016.03.16: Extensible Virtual Display Interface
