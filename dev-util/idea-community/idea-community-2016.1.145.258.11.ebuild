@@ -42,8 +42,8 @@ pkg_nofetch() {
     einfo "their tarball. Please open a ticket and I will update the"
     einfo "ebuild:"
     einfo "https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000"
-
 }
+
 src_prepare() {
 	if ! use amd64; then
 		rm -rf lib/libpty/linux/x86_64
@@ -76,7 +76,12 @@ src_install() {
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
 
     #https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
+    mkdir -p "${D}/etc/sysctl.d/"
 	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-idea-inotify-watches.conf"
 
 	make_desktop_entry ${PN} "IntelliJ IDEA (Community Edition)" "${PN}.png" "Development;IDE"
+}
+
+pkg_postinst() {
+    /sbin/sysctl fs.inotify.max_user_watches=524288 >/dev/null
 }
