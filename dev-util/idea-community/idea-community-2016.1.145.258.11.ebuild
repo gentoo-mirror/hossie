@@ -79,7 +79,7 @@ src_install() {
     mkdir -p "${D}/etc/sysctl.d/"
 	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-idea-inotify-watches.conf"
 
-	make_desktop_entry ${PN} "IntelliJ IDEA (Community Edition)" "${PN}.png" "Development;IDE"
+	make_desktop_entry ${PN} "IntelliJ IDEA (Community Edition)" "${PN}" "Development;IDE"
 }
 
 pkg_postinst() {
