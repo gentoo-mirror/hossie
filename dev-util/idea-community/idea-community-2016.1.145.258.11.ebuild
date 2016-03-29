@@ -24,7 +24,7 @@ RDEPEND=">=virtual/jdk-1.8"
 
 RESTRICT="fetch strip"
 QA_TEXTRELS="${PN}-IC-${MY_PV}/bin/libbreakgen.so
-    ${PN}-IC-${MY_PV}/bin/libbreakgen64.so"
+	${PN}-IC-${MY_PV}/bin/libbreakgen64.so"
 QA_PRESTRIPPED="${PN}-IC-${MY_PV}/lib/libpty/linux/x86/libpty.so
 	${PN}-IC-${MY_PV}/lib/libpty/linux/x86_64/libpty.so"
 
@@ -33,15 +33,15 @@ CONFIG_CHECK="~INOTIFY_USER"
 S="${WORKDIR}/${MY_PN}-IC-${MY_PV}"
 
 pkg_nofetch() {
-    einfo "It seems JetBrains is deleting archives quickly and thus"
-    einfo "are not accessible at all times via direct URL."
-    einfo "Please download the community version from their main"
-    einfo "website: https://www.jetbrains.com/idea/#chooseYourEdition"
-    einfo "and name it ${MY_PN}IC-${MY_PV}.tar.gz"
-    einfo "If the checksums dont match it means they probably updated"
-    einfo "their tarball. Please open a ticket and I will update the"
-    einfo "ebuild:"
-    einfo "https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000"
+	einfo "It seems JetBrains is deleting archives quickly and thus"
+	einfo "are not accessible at all times via direct URL."
+	einfo "Please download the community version from their main"
+	einfo "website: https://www.jetbrains.com/idea/#chooseYourEdition"
+	einfo "and name it ${MY_PN}IC-${MY_PV}.tar.gz"
+	einfo "If the checksums dont match it means they probably updated"
+	einfo "their tarball. Please open a ticket and I will update the"
+	einfo "ebuild:"
+	einfo "https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000"
 }
 
 src_prepare() {
@@ -66,22 +66,22 @@ src_install() {
 	fperms 755 "${dir}/bin/${MY_PN}.sh" "${dir}/bin/inspect.sh"
 
 	if use amd64; then
-	    fperms 755 "${dir}/bin/fsnotifier64"
-    fi
-    if use x86; then
-        fperms 755 "${dir}/bin/fsnotifier"
-    fi
+		fperms 755 "${dir}/bin/fsnotifier64"
+	fi
+	if use x86; then
+		fperms 755 "${dir}/bin/fsnotifier"
+	fi
 
 	newicon "bin/idea.png" "${PN}.png"
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
 
-    #https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
-    mkdir -p "${D}/etc/sysctl.d/"
+	#https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
+	mkdir -p "${D}/etc/sysctl.d/"
 	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-idea-inotify-watches.conf"
 
 	make_desktop_entry ${PN} "IntelliJ IDEA (Community Edition)" "${PN}" "Development;IDE"
 }
 
 pkg_postinst() {
-    /sbin/sysctl fs.inotify.max_user_watches=524288 >/dev/null
+	/sbin/sysctl fs.inotify.max_user_watches=524288 >/dev/null
 }
