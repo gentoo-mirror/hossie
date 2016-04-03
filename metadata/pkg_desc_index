@@ -1,4 +1,4 @@
-app-emulation/wine 1.9.5 1.9.6: Free implementation of Windows(tm) on Unix
+app-emulation/wine 1.9.5 1.9.6 1.9.7: Free implementation of Windows(tm) on Unix
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
 dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
 dev-util/idea-community 2016.1.145.258.11: Capable and Ergonomic Java IDE (Community Edition)
