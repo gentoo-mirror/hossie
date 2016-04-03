@@ -6,8 +6,8 @@ EAPI=5
 
 inherit eutils linux-info versionator
 
-MY_PV="$(get_version_component_range 3-5)"
-MY_PV_MAJ="$(get_version_component_range 1-2)"
+MY_PV="$(get_version_component_range 4-6)"
+MY_PV_MAJ="$(get_version_component_range 1-3)"
 MY_PN="idea"
 
 DESCRIPTION="Capable and Ergonomic Java IDE (Community Edition)"
