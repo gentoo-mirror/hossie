@@ -46,16 +46,15 @@ pkg_nofetch() {
 
 src_prepare() {
 	if ! use amd64; then
-		rm -rf lib/libpty/linux/x86_64
+		rm -rf lib/libpty/linux/x86_64 plugins/tfsIntegration/lib/native/linux/x86_64
 		rm -f bin/fsnotifier64 bin/libbreakgen64.so bin/idea64.vmoptions
 	fi
 	if ! use x86; then
-		rm -rf lib/libpty/linux/x86
+		rm -rf lib/libpty/linux/x86 plugins/tfsIntegration/lib/native/linux/x86
 		rm -f bin/fsnotifier bin/libbreakgen.so bin/idea.vmoptions
 	fi
-	rm -f bin/fsnotifier-arm
-	rm -rf lib/libpty/{win,macosx}
-	rm Install-Linux-tar.txt
+	rm -f bin/fsnotifier-arm Install-Linux-tar.txt
+	rm -rf lib/libpty/{win,macosx} plugins/tfsIntegration/lib/native/linux/{arm,ppc} plugins/tfsIntegration/lib/native/{aix,freebsd,hpux,macosx,solaris,win32}
 }
 
 src_install() {
