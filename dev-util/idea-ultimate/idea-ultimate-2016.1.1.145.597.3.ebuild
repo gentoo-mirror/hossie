@@ -23,14 +23,14 @@ IUSE=""
 RDEPEND=">=virtual/jdk-1.8"
 
 RESTRICT="fetch strip"
-QA_TEXTRELS="${PN}-IC-${MY_PV}/bin/libbreakgen.so
-	${PN}-IC-${MY_PV}/bin/libbreakgen64.so"
-QA_PRESTRIPPED="${PN}-IC-${MY_PV}/lib/libpty/linux/x86/libpty.so
-	${PN}-IC-${MY_PV}/lib/libpty/linux/x86_64/libpty.so"
+QA_TEXTRELS="${PN}-IU-${MY_PV}/bin/libbreakgen.so
+	${PN}-IU-${MY_PV}/bin/libbreakgen64.so"
+QA_PRESTRIPPED="${PN}-IU-${MY_PV}/lib/libpty/linux/x86/libpty.so
+	${PN}-IU-${MY_PV}/lib/libpty/linux/x86_64/libpty.so"
 
 CONFIG_CHECK="~INOTIFY_USER"
 
-S="${WORKDIR}/${MY_PN}-IC-${MY_PV}"
+S="${WORKDIR}/${MY_PN}-IU-${MY_PV}"
 
 pkg_nofetch() {
 	einfo "It seems JetBrains is deleting archives quickly and thus"

@@ -77,7 +77,7 @@ src_install() {
 
 	#https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
 	mkdir -p "${D}/etc/sysctl.d/"
-	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-idea-inotify-watches.conf"
+	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-${PN}-inotify-watches.conf"
 
 	make_desktop_entry ${PN} "IntelliJ IDEA (Community Edition)" "${PN}" "Development;IDE"
 }
