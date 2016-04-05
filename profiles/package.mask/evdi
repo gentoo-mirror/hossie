@@ -1,0 +1,3 @@
+#Builds from february and later are not yet compatible with the binary
+#displaylink driver
+>=x11-drivers/evdi-2016.02.19
