@@ -22,8 +22,8 @@ diff -Nru ../evdi-1.0.335/evdi_encoder.c ./evdi_encoder.c
    drm_encoder_helper_add(encoder, &evdi_helper_funcs);
    encoder->possible_crtcs = 1;
 diff -Nru ../evdi-1.0.335/evdi_modeset.c ./evdi_modeset.c
---- ../evdi-1.0.335/evdi_modeset.c	2015-11-29 13:40:58.000000000 +0100
-+++ ./evdi_modeset.c	2016-04-04 14:26:26.845050291 +0200
+--- a/module/evdi_modeset.c	2015-11-29 13:40:58.000000000 +0100
++++ b/module/evdi_modeset.c	2016-04-04 14:26:26.845050291 +0200
 @@ -144,9 +144,12 @@
  
    drm_mode_create_dirty_info_property(dev);
