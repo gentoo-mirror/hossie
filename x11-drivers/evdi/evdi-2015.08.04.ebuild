@@ -21,6 +21,10 @@ RDEPEND="${DEPEND}"
 
 MODULE_NAMES="evdi(video:${S}/module)"
 
+src_prepare() {
+    epatch "${FILESDIR}/evdi-1.0.68-linux-4.5.0.patch"
+}
+
 src_compile() {
 	linux-mod_src_compile
 	cd "${S}/library"
