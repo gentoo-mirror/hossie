@@ -1,6 +1,6 @@
 diff -Nru ../evdi-1.0.335/evdi_encoder.c ./evdi_encoder.c
---- ../evdi-1.0.335/evdi_encoder.c	2015-11-29 13:40:58.000000000 +0100
-+++ ./evdi_encoder.c	2016-04-04 14:28:42.261056299 +0200
+--- a/module/evdi_encoder.c	2015-11-29 13:40:58.000000000 +0100
++++ b/module/evdi_encoder.c	2016-04-04 14:28:42.261056299 +0200
 @@ -10,6 +10,7 @@
   * more details.
   */
