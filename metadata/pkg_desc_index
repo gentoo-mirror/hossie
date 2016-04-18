@@ -4,6 +4,7 @@ dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation libra
 dev-util/idea-community 16.1.0.145.258.11 16.1.1.145.597.3: Capable and Ergonomic Java IDE (Community Edition)
 dev-util/idea-ultimate 16.1.1.145.597.3: Capable and Ergonomic Java IDE (Ultimate Edition)
 games-simulation/corsix-th 0.50: Open source clone of Theme Hospital
+net-misc/openconnect 7.06-r4: Free client for Cisco AnyConnect SSL VPN software
 net-misc/pacmanager 4.5.5.7: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
 sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
 sys-kernel/gentoo-sources 4.1.19: Full sources including the Gentoo patchset for the 4.1 kernel tree
