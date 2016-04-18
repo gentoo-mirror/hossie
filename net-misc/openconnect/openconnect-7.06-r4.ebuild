@@ -64,7 +64,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/openconnect-${PV}-gnutls-rehandshake.patch"
-	econf
 }
 
 src_configure() {
