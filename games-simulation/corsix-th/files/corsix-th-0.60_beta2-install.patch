@@ -1,0 +1,26 @@
+--- CMakeLists.txt.orig 2015-11-21 13:09:01.920054316 +0100
++++ CMakeLists.txt      2015-11-21 13:09:29.479535494 +0100
+@@ -40,6 +40,8 @@
+   SET(CMAKE_OSX_ARCHITECTURES x86_64)
+ ENDIF()
+
++set(BINDIR bin CACHE PATH "where to install binaries")
++
+ # Define our options
+ OPTION(WITH_SDL "Activate SDL Renderer" ON) # our default option
+ OPTION(WITH_AUDIO "Activate Sound" ON) # enabled by default
+--- CorsixTH/CMakeLists.txt.orig        2015-11-21 13:07:28.065137216 +0100
++++ CorsixTH/CMakeLists.txt     2015-11-21 13:08:46.080351490 +0100
+@@ -220,10 +220,10 @@
+     FIXUP_BUNDLE(${CMAKE_INSTALL_PREFIX}/CorsixTH.app \"\" \"\")
+     ")
+ ELSE()
+-  install(TARGETS CorsixTH RUNTIME DESTINATION CorsixTH)
++  install(TARGETS CorsixTH RUNTIME DESTINATION ${BINDIR})
+   install(DIRECTORY Lua Levels DESTINATION CorsixTH PATTERN "*.svn" EXCLUDE)
+   install(DIRECTORY Bitmap DESTINATION CorsixTH
+         FILES_MATCHING REGEX ".*\\.(tab|pal|dat|png)$"
+         PATTERN "*.svn" EXCLUDE)
+-  install(FILES CorsixTH.lua ../LICENSE.txt CorsixTH.ico DESTINATION CorsixTH )
++  install(FILES CorsixTH.lua CorsixTH.ico DESTINATION CorsixTH )
+ ENDIF()
