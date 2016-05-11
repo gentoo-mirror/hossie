@@ -1,48 +1,43 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
-
 inherit eutils linux-info versionator
 
-MY_PV="$(get_version_component_range 4-6)"
-MY_PV_MAJ="$(get_version_component_range 1-3)"
+SLOT="0"
+PV_STRING="$(get_version_component_range 4-6)"
+MY_PV="$(get_version_component_range 1-3)"
 MY_PN="idea"
 
-DESCRIPTION="Capable and Ergonomic Java IDE (Ultimate Edition)"
-HOMEPAGE="https://www.jetbrains.com/idea/"
-SRC_URI="${MY_PN}IU-${MY_PV}.tar.gz"
+# distinguish settings for official stable releases and EAP-version releases
+if [[ "$(get_version_component_range 7)x" = "prex" ]]
+then
+	# upstream EAP
+	KEYWORDS=""
+	SRC_URI="https://download.jetbrains.com/idea/${MY_PN}IU-${PV_STRING}.tar.gz"
+else
+	# upstream stable
+	KEYWORDS="~amd64 ~x86"
+	SRC_URI="https://download.jetbrains.com/idea/${MY_PN}IU-${MY_PV}.tar.gz -> ${MY_PN}IU-${PV_STRING}.tar.gz"
+fi
+
+DESCRIPTION="A complete toolset for web, mobile and enterprise development"
+HOMEPAGE="https://www.jetbrains.com/idea"
 
 LICENSE="IDEA"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 #https://intellij-support.jetbrains.com/hc/en-us/articles/206544879-Selecting-the-JDK-version-the-IDE-will-run-under
-RDEPEND=">=virtual/jdk-1.8"
+DEPEND="!dev-util/${PN}:14
+	!dev-util/${PN}:15"
+RDEPEND="${DEPEND}
+	>=virtual/jdk-1.8:*"
+S="${WORKDIR}/${MY_PN}-IU-${PV_STRING}"
 
-RESTRICT="fetch strip"
-QA_TEXTRELS="${PN}-IU-${MY_PV}/bin/libbreakgen.so
-	${PN}-IU-${MY_PV}/bin/libbreakgen64.so"
-QA_PRESTRIPPED="${PN}-IU-${MY_PV}/lib/libpty/linux/x86/libpty.so
-	${PN}-IU-${MY_PV}/lib/libpty/linux/x86_64/libpty.so"
+QA_PREBUILT="opt/${PN}-${MY_PV}/*"
 
 CONFIG_CHECK="~INOTIFY_USER"
-
-S="${WORKDIR}/${MY_PN}-IU-${MY_PV}"
-
-pkg_nofetch() {
-	einfo "It seems JetBrains is deleting archives quickly and thus"
-	einfo "are not accessible at all times via direct URL."
-	einfo "Please download the ultimate version from their main"
-	einfo "website: https://www.jetbrains.com/idea/#chooseYourEdition"
-	einfo "and name it ${MY_PN}IU-${MY_PV}.tar.gz"
-	einfo "If the checksums dont match it means they probably updated"
-	einfo "their tarball. Please open a ticket and I will update the"
-	einfo "ebuild:"
-	einfo "https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000"
-}
 
 src_prepare() {
 	if ! use amd64; then
@@ -59,7 +54,7 @@ src_prepare() {
 }
 
 src_install() {
-	local dir="/opt/${PN}-${MY_PV_MAJ}"
+	local dir="/opt/${PN}-${MY_PV}"
 
 	insinto "${dir}"
 	doins -r *
