@@ -19,7 +19,7 @@ QA_PREBUILT="/usr/lib/displaylink/DisplayLinkManager"
 RESTRICT="fetch"
 
 DEPEND="app-admin/chrpath"
-RDEPEND="=x11-drivers/evdi-1.1.61*
+RDEPEND="=x11-drivers/evdi-1.1*
 		virtual/libusb:1
 		|| ( x11-drivers/xf86-video-modesetting >=x11-base/xorg-server-1.17.0 )
 		!systemd? ( sys-power/pm-utils )"
