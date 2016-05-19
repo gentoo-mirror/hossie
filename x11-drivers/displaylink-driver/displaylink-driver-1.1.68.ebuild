@@ -7,8 +7,8 @@ EAPI=5
 inherit eutils systemd udev
 
 DESCRIPTION="DisplayLink USB Graphics Software"
-HOMEPAGE="http://www.displaylink.com/downloads/ubuntu.php"
-SRC_URI="DisplayLink_Ubuntu_${PV}.zip"
+HOMEPAGE="http://www.displaylink.com/downloads/ubuntu"
+SRC_URI="DisplayLink_USB_Graphics_Software_for_Ubuntu_${PV}.zip"
 
 LICENSE="DisplayLink"
 SLOT="0"
@@ -19,19 +19,20 @@ QA_PREBUILT="/usr/lib/displaylink/DisplayLinkManager"
 RESTRICT="fetch"
 
 DEPEND="app-admin/chrpath"
-RDEPEND="x11-drivers/evdi
+RDEPEND="=x11-drivers/evdi-1.1*
 		virtual/libusb:1
 		|| ( x11-drivers/xf86-video-modesetting >=x11-base/xorg-server-1.17.0 )
 		!systemd? ( sys-power/pm-utils )"
 
 pkg_nofetch() {
-    einfo "Please download DisplayLink_Ubuntu_${PV}.zip from"
-    einfo "http://www.displaylink.com/downloads/ubuntu"
+    einfo "Please download \"DisplayLink USB Graphics Software for Ubuntu ${PV}.zip\" from"
+    einfo "${HOMEPAGE} and name it"
+    einfo "DisplayLink_USB_Graphics_Software_for_Ubuntu_${PV}.zip"
 }
 
 src_unpack() {
 	default
-	sh ./"${P}".run --noexec --target "${P}"
+	sh ./"${PN}"-1.1.62.run --noexec --target "${P}"
 }
 
 src_install() {
