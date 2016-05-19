@@ -14,21 +14,22 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 EGIT_REPO_URI="git://github.com/DisplayLink/evdi.git"
-EGIT_COMMIT="a378a15708bd1fe219aa35a6c4c0f80b5eca7d3c"
+EGIT_COMMIT="v${PV}"
 
-DEPEND="x11-libs/libdrm"
-RDEPEND="${DEPEND}"
+DEPEND="x11-libs/libdrm
+    sys-kernel/linux-headers"
+RDEPEND="x11-libs/libdrm"
 
 MODULE_NAMES="evdi(video:${S}/module)"
+CONFIG_CHECK="FB_VIRTUAL"
 
-src_prepare() {
-    epatch "${FILESDIR}/evdi-1.0.68-linux-4.5.0.patch"
+pkg_setup() {
+    linux-mod_pkg_setup
 }
 
 src_compile() {
 	linux-mod_src_compile
 	cd "${S}/library"
-	sed -i 's#<drm/drm\.h#<libdrm/drm.h#g' ../module/evdi_ioctl.h
 	default
 }
 

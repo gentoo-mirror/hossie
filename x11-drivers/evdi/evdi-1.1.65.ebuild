@@ -14,14 +14,16 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 EGIT_REPO_URI="git://github.com/DisplayLink/evdi.git"
-EGIT_COMMIT="bc1e893cff81c6eb88748a0ef39b550795450784"
+EGIT_COMMIT="v${PV}"
 
 DEPEND="x11-libs/libdrm
     sys-kernel/linux-headers"
 RDEPEND="x11-libs/libdrm"
 
 MODULE_NAMES="evdi(video:${S}/module)"
-CONFIG_CHECK="FB_VIRTUAL"
+
+#https://jira.hossie.de/browse/GOV-15
+CONFIG_CHECK="FB_VIRTUAL ~!INTEL_IOMMU"
 
 pkg_setup() {
     linux-mod_pkg_setup
@@ -30,7 +32,6 @@ pkg_setup() {
 src_compile() {
 	linux-mod_src_compile
 	cd "${S}/library"
-	sed -i 's/CFLAGS :=/CFLAGS := -I..\/module/g' Makefile
 	default
 }
 
