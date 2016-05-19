@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=app-admin/chrpath virtual/pkgconfig virtual/pkgconfig
+DESCRIPTION=DisplayLink USB Graphics Software
+EAPI=5
+HOMEPAGE=http://www.displaylink.com/downloads/ubuntu
+IUSE=systemd
+KEYWORDS=~x86 ~amd64
+LICENSE=DisplayLink
+RDEPEND==x11-drivers/evdi-1.1* virtual/libusb:1 || ( x11-drivers/xf86-video-modesetting >=x11-base/xorg-server-1.17.0 ) !systemd? ( sys-power/pm-utils )
+RESTRICT=fetch
+SLOT=0
+SRC_URI=DisplayLink_USB_Graphics_Software_for_Ubuntu_1.1.68.zip
+_eclass_exported_funcs=pkg_postinst:- src_unpack:- src_install:-
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	udev	73058269b3e70e34e084fa3981282338
+_md5_=226a93f6ed96ddf815e64ec6533b1074
