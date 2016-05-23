@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=virtual/jdk-1.8
     dev-util/cmake"
 
-QA_PREBUILT="${P}/*"
+QA_PREBUILT="opt/${P}/*"
 
 CONFIG_CHECK="~INOTIFY_USER"
 
@@ -45,7 +45,7 @@ src_install() {
 
 	insinto "${dir}"
 	doins -r *
-	fperms 755 "${dir}/bin/${PN}.sh" "${dir}/bin/inspect.sh"
+	fperms 755 "${dir}/bin/${PN}.sh" "${dir}/bin/inspect.sh" "${dir}/bin/gdb/bin/gdb"
 
 	if use amd64; then
 		fperms 755 "${dir}/bin/fsnotifier64"
