@@ -45,7 +45,7 @@ src_install() {
 
 	insinto "${dir}"
 	doins -r *
-	fperms 755 "${dir}/bin/${MY_PN}.sh" "${dir}/bin/inspect.sh"
+	fperms 755 "${dir}/bin/${PN}.sh" "${dir}/bin/inspect.sh"
 
 	if use amd64; then
 		fperms 755 "${dir}/bin/fsnotifier64"
