@@ -1,6 +1,7 @@
 app-emulation/wine 1.9.10: Free implementation of Windows(tm) on Unix
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
 dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
+dev-util/clion 2016.1.2b: Capable and Ergonomic Java IDE (Ultimate Edition)
 dev-util/idea-community 16.1.0.145.258.11 16.1.1.145.597.3: Capable and Ergonomic Java IDE (Community Edition)
 dev-util/idea-ultimate 16.1.1.145.597.3: Capable and Ergonomic Java IDE (Ultimate Edition)
 games-simulation/corsix-th 0.50 0.60_beta1 0.60_beta2: Open source clone of Theme Hospital

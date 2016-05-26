@@ -2,6 +2,12 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+games-strategy/openra:debug - Compile and run with full debugging information
+games-strategy/openra:doc - Generate additional documentation
+games-strategy/openra:nuget - Use NuGet utility to fetch thirdparty dependencies instead of regular cURL utility
+games-strategy/openra:tools - Install some development tools such as editor.
+games-strategy/openra:xdg - xdg-utils are used to open web pages
+games-strategy/openra:zenity - zenity is used to display crash dialogs
 net-misc/openconnect:gssapi - Build GSSAPI support.
 net-misc/openconnect:java - Build JNI bindings using jni.h
 net-misc/openconnect:libproxy - Enable proxy support.
