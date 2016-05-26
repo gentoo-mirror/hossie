@@ -19,7 +19,8 @@ IUSE=""
 RDEPEND=">=virtual/jdk-1.8
     dev-util/cmake"
 
-QA_PREBUILT="opt/${P}/*"
+RESTRICT="strip"
+QA_PREBUILT="opt/${PN}-2016.1.2/*"
 
 CONFIG_CHECK="~INOTIFY_USER"
 
@@ -38,6 +39,8 @@ src_prepare() {
 	rm -rf lib/libpty/{win,macosx}
 	rm Install-Linux-tar.txt
 	rm -rf bin/cmake
+	rm -rf plugins/tfsIntegration/lib/native/linux/{arm,ppc}
+	rm -rf plugins/tfsIntegration/lib/native/{aix,freebsd,hpux,macosx,solaris,win32}
 }
 
 src_install() {
