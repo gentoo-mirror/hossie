@@ -16,15 +16,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE="freerdp mosh +rdesktop webdav vnc"
 
 RDEPEND="freerdp? ( net-misc/freerdp )
-    mosh? ( net-misc/mosh )
+	mosh? ( net-misc/mosh )
 	rdesktop? ( net-misc/rdesktop )
 	webdav? ( net-misc/cadaver )
 	vnc? ( || ( net-misc/tigervnc net-misc/tightvnc ) )
 	dev-libs/ossp-uuid[perl]
 	dev-perl/Crypt-CBC
 	dev-perl/gtk2-perl
-    dev-perl/Socket6
-    dev-perl/Net-ARP
+	dev-perl/Socket6
+	dev-perl/Net-ARP
 	dev-perl/Crypt-Rijndael
 	dev-perl/Crypt-Blowfish
 	dev-perl/Gtk2-Ex-Simple-List
