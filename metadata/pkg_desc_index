@@ -4,7 +4,7 @@ dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation libra
 dev-util/clion 2016.1.2b: Capable and Ergonomic Java IDE (Ultimate Edition)
 dev-util/idea-community 16.1.0.145.258.11 16.1.1.145.597.3: Capable and Ergonomic Java IDE (Community Edition)
 dev-util/idea-ultimate 16.1.1.145.597.3: Capable and Ergonomic Java IDE (Ultimate Edition)
-games-simulation/corsix-th 0.50 0.60_beta1 0.60_beta2: Open source clone of Theme Hospital
+games-simulation/corsix-th 0.50 0.60_beta2: Open source clone of Theme Hospital
 games-strategy/openra 20160508: A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k
 net-misc/openconnect 7.06-r4: Free client for Cisco AnyConnect SSL VPN software
 net-misc/pacmanager 4.5.5.7: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
