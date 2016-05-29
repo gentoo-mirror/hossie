@@ -17,7 +17,7 @@ IUSE=""
 
 #gdb 7.8 is not in tree anymore, so we keep the bundled version
 RDEPEND=">=virtual/jdk-1.8
-    dev-util/cmake"
+	dev-util/cmake"
 
 RESTRICT="strip"
 QA_PREBUILT="opt/${PN}-2016.1.2/*"
