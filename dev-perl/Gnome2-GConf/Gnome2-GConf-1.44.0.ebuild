@@ -16,12 +16,12 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="gnome-base/gconf:2
-    >=dev-perl/glib-perl-1.120
-    dev-lang/perl"
+	>=dev-perl/glib-perl-1.120
+	dev-lang/perl"
 
 DEPEND="${RDEPEND}
-    >=dev-perl/extutils-pkgconfig-1.03
-    >=dev-perl/ExtUtils-Depends-0.202
-    virtual/pkgconfig"
+	>=dev-perl/extutils-pkgconfig-1.03
+	>=dev-perl/ExtUtils-Depends-0.202
+	virtual/pkgconfig"
 
 SRC_TEST=do
