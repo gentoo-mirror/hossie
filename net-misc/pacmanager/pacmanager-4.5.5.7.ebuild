@@ -39,35 +39,35 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 S="${WORKDIR}/pac"
 
 src_prepare() {
-    rm -rf lib/ex/vte*
-    find utils lib pac -type f | while read f
-    do
-        sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/lib@\1/usr/$(get_libdir)/pacmanager@g" "$f"
-        sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/res@\1/usr/share/pacmanager@g" "$f"
-    done
+	rm -rf lib/ex/vte*
+	find utils lib pac -type f | while read f
+	do
+		sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/lib@\1/usr/$(get_libdir)/pacmanager@g" "$f"
+		sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/res@\1/usr/share/pacmanager@g" "$f"
+	done
 }
 
 src_install() {
-    dobin pac
-    dodoc README
+	dobin pac
+	dodoc README
 
-    doman res/pac.1
-    insinto /usr/share/applications
-    doins res/pac.desktop
-    rm res/{pac.1,pac.desktop}
+	doman res/pac.1
+	insinto /usr/share/applications
+	doins res/pac.desktop
+	rm res/{pac.1,pac.desktop}
 
-    insinto /usr/share/pixmaps
-    newins res/pac64x64.png pac.png
+	insinto /usr/share/pixmaps
+	newins res/pac64x64.png pac.png
 
-    insinto /usr/$(get_libdir)/${PN}
-    doins -r lib/*
-    insinto /usr/share/${PN}
-    doins -r res/*
-    doins -r utils
-    doins qrcode_pacmanager.png
+	insinto /usr/$(get_libdir)/${PN}
+	doins -r lib/*
+	insinto /usr/share/${PN}
+	doins -r res/*
+	doins -r utils
+	doins qrcode_pacmanager.png
 }
 
 pkg_postinst()
 {
-    einfo "Please install keepassx if you need a password manager."
+	einfo "Please install keepassx if you need a password manager."
 }
