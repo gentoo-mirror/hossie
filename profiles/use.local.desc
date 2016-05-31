@@ -15,3 +15,6 @@ net-misc/openconnect:stoken - Enable stoken support.
 sys-kernel/gentoo-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/gentoo-sources:kdbus - Apply the kdbus patch. This also requires the "experimental" use flag.
+x11-misc/tint2:battery - Enable battery status plugin
+x11-misc/tint2:examples - Install tint2rc examples
+x11-misc/tint2:tint2conf - Build/Install tint2conf as well
