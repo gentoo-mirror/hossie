@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="-libav +sound truetype"
 
-RDEPEND=">=dev-lang/lua-5.1
+RDEPEND=">=dev-lang/lua-5.1:0
 	media-libs/libsdl2
 	dev-lua/luafilesystem
 	dev-lua/lpeg
