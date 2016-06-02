@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="-libav midi +sound truetype"
 
 RDEPEND=">=dev-lang/lua-5.1:0
-	media-libs/libsdl2
+	media-libs/libsdl2[X,opengl]
 	dev-lua/luafilesystem
 	dev-lua/lpeg
 	dev-lua/luasocket
