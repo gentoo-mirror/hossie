@@ -19,18 +19,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="-libav +sound truetype"
 
-RDEPEND="	>=dev-lang/lua-5.1
-			media-libs/libsdl2
-			dev-lua/luafilesystem
-			dev-lua/lpeg
-			dev-lua/luasocket
-			virtual/opengl
-			!libav? ( media-video/ffmpeg )
-			libav? ( media-video/libav )
-			sound? ( media-libs/sdl2-mixer )
-			truetype? ( media-libs/freetype:2 )"
-DEPEND="	${RDEPEND}
-			virtual/pkgconfig"
+RDEPEND=">=dev-lang/lua-5.1:0
+	media-libs/libsdl2
+	dev-lua/luafilesystem
+	dev-lua/lpeg
+	dev-lua/luasocket
+	virtual/opengl
+	!libav? ( media-video/ffmpeg )
+	libav? ( media-video/libav )
+	sound? ( media-libs/sdl2-mixer )
+	truetype? ( media-libs/freetype:2 )"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}/CorsixTH-${PV}
 
