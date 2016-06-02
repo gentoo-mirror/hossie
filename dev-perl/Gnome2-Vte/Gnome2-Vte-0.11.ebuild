@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="dev-lang/perl
 	>=dev-perl/gtk2-perl-1.00
 	>=dev-perl/glib-perl-1.01
-	x11-libs/vte"
+	x11-libs/vte:0"
 
 DEPEND="${RDEPEND}
 	>=dev-perl/extutils-pkgconfig-1.03
