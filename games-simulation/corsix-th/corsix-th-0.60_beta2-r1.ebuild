@@ -41,6 +41,7 @@ src_configure() {
 		$(cmake-utils_use_with sound AUDIO)
 		$(cmake-utils_use_with truetype FREETYPE2)
 		$(cmake-utils_use_with libav LIBAV)
+		-DCMAKE_INSTALL_PREFIX=/usr/share/games
 		-DWITH_MOVIES="ON"
 	)
 	cmake-utils_src_configure
