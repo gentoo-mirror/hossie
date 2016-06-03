@@ -51,10 +51,10 @@ src_compile() {
 }
 
 src_install() {
-	DOCS="CorsixTH/changelog.txt" cmake-utils_src_install
-	newicon -s scalable CorsixTH/Original_Logo.svg "${PN}.svg"
 	dodoc LICENSE.txt
 	rm LICENSE.txt
+	DOCS="CorsixTH/changelog.txt" cmake-utils_src_install
+	newicon -s scalable CorsixTH/Original_Logo.svg "${PN}.svg"
 	make_wrapper "${PN}" /usr/share/games/CorsixTH/CorsixTH
 	make_desktop_entry "${PN}"
 }
