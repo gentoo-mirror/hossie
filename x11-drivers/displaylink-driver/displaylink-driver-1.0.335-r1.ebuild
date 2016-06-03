@@ -25,8 +25,8 @@ RDEPEND="=x11-drivers/evdi-1.0*
 		!systemd? ( sys-power/pm-utils )"
 
 pkg_nofetch() {
-    einfo "Please download DisplayLink_Ubuntu_${PV}.zip from"
-    einfo "http://www.displaylink.com/downloads/ubuntu"
+	einfo "Please download DisplayLink_Ubuntu_${PV}.zip from"
+	einfo "http://www.displaylink.com/downloads/ubuntu"
 }
 
 src_unpack() {
