@@ -5,8 +5,7 @@
 EAPI=5
 
 CMAKE_IN_SOURCE_BUILD=1
-WX_GTK_VER="3.0"
-inherit eutils cmake-utils gnome2-utils versionator wxwidgets multilib
+inherit eutils cmake-utils gnome2-utils versionator multilib
 
 MY_P="CorsixTH-${PV}-Source"
 MY_PV="$(replace_version_separator 2 '-')"
@@ -53,8 +52,10 @@ src_compile() {
 
 src_install() {
 	DOCS="CorsixTH/changelog.txt" cmake-utils_src_install
-	newicon -s scalable CorsixTH/Original_Logo.svg ${PN}.svg
-	make_desktop_entry ${PN}
+	newicon -s scalable CorsixTH/Original_Logo.svg "${PN}.svg"
+	dodoc LICENSE.txt
+	make_wrapper "${PN}" /usr/share/games/CorsixTH/CorsixTH
+	make_desktop_entry "${PN}"
 }
 
 pkg_preinst() {
