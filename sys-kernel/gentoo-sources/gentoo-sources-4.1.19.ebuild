@@ -9,8 +9,8 @@ K_GENPATCHES_VER="24"
 K_DEBLOB_AVAILABLE="0"
 K_KDBUS_AVAILABLE="0"
 UNIPATCH_LIST="${FILESDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r8-4.1.patch
-    ${FILESDIR}/0002-block-introduce-the-BFQ-v7r8-I-O-sched-for-4.1.patch
-    ${FILESDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r8-for-4.1.0.patch"
+	${FILESDIR}/0002-block-introduce-the-BFQ-v7r8-I-O-sched-for-4.1.patch
+	${FILESDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r8-for-4.1.0.patch"
 
 inherit kernel-2
 detect_version

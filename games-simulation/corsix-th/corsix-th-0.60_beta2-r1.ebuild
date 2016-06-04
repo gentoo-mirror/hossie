@@ -5,8 +5,7 @@
 EAPI=5
 
 CMAKE_IN_SOURCE_BUILD=1
-WX_GTK_VER="3.0"
-inherit eutils cmake-utils games gnome2-utils versionator wxwidgets
+inherit eutils cmake-utils gnome2-utils versionator multilib
 
 MY_P="CorsixTH-${PV}-Source"
 MY_PV="$(replace_version_separator 2 '-')"
@@ -18,16 +17,17 @@ SRC_URI="https://github.com/CorsixTH/CorsixTH/archive/v${MY_PV}.tar.gz -> ${P}.t
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="-libav +sound truetype"
+IUSE="-libav midi +sound truetype"
 
 RDEPEND=">=dev-lang/lua-5.1:0
-	media-libs/libsdl2
+	media-libs/libsdl2[X,opengl]
 	dev-lua/luafilesystem
 	dev-lua/lpeg
 	dev-lua/luasocket
 	virtual/opengl
-	!libav? ( media-video/ffmpeg )
-	libav? ( media-video/libav )
+	midi? ( media-sound/timidity++ )
+	!libav? ( media-video/ffmpeg:0= )
+	libav? ( media-video/libav:0= )
 	sound? ( media-libs/sdl2-mixer )
 	truetype? ( media-libs/freetype:2 )"
 DEPEND="${RDEPEND}
@@ -35,22 +35,13 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/CorsixTH-${MY_PV}
 
-pkg_setup() {
-	games_pkg_setup
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-install.patch
-}
-
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with sound AUDIO)
 		$(cmake-utils_use_with truetype FREETYPE2)
 		$(cmake-utils_use_with libav LIBAV)
+		-DCMAKE_INSTALL_PREFIX=/usr/share/games
 		-DWITH_MOVIES="ON"
-		-DCMAKE_INSTALL_PREFIX="${GAMES_DATADIR}"
-		-DBINDIR="$(games_get_libdir)/${PN}"
 	)
 	cmake-utils_src_configure
 }
@@ -60,25 +51,17 @@ src_compile() {
 }
 
 src_install() {
-	cmake-utils_src_install
-
 	DOCS="CorsixTH/changelog.txt" cmake-utils_src_install
-	games_make_wrapper ${PN} "$(games_get_libdir)/${PN}/CorsixTH" \
-		"${GAMES_DATADIR}/CorsixTH"
-	games_make_wrapper ${PN}-mapedit "$(games_get_libdir)/${PN}/MapEdit" \
-		"${GAMES_DATADIR}/CorsixTH"
-	newicon -s scalable CorsixTH/Original_Logo.svg ${PN}.svg
-	make_desktop_entry ${PN}
-	prepgamesdirs
+	newicon -s scalable CorsixTH/Original_Logo.svg "${PN}.svg"
+	make_wrapper "${PN}" /usr/share/games/CorsixTH/CorsixTH
+	make_desktop_entry "${PN}"
 }
 
 pkg_preinst() {
-	games_pkg_preinst
 	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	games_pkg_postinst
 	gnome2_icon_cache_update
 }
 
