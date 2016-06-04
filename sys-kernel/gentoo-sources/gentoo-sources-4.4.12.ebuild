@@ -23,9 +23,9 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} \
 	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/4.4.0-v7r11/0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.4.0.patch \
 	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/4.4.0-v7r11/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch"
 
-UNIPATCH_LIST="${FILESDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r11-4.4.0.patch \
-	${FILESDIR}/0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.4.0.patch \
-	${FILESDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch"
+UNIPATCH_LIST="${DISTDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r11-4.4.0.patch \
+	${DISTDIR}/0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.4.0.patch \
+	${DISTDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
