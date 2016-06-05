@@ -26,11 +26,11 @@ MODULE_NAMES="evdi(video:${S}/module)"
 CONFIG_CHECK="FB_VIRTUAL ~!INTEL_IOMMU"
 
 pkg_setup() {
-    linux-mod_pkg_setup
+	linux-mod_pkg_setup
 }
 
 src_prepare() {
-    epatch "${FILESDIR}/evdi-1.0.68-linux-4.5.0.patch"
+	epatch "${FILESDIR}/evdi-1.0.68-linux-4.5.0.patch"
 }
 
 src_compile() {
