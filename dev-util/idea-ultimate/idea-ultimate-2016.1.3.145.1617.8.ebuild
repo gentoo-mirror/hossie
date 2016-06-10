@@ -78,5 +78,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	/sbin/sysctl fs.inotify.max_user_watches=524288 >/dev/null
+	sysctl fs.inotify.max_user_watches=524288 >/dev/null
 }
