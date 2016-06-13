@@ -17,7 +17,7 @@ EGIT_REPO_URI="git://github.com/DisplayLink/evdi.git"
 EGIT_COMMIT="v${PV}"
 
 DEPEND="x11-libs/libdrm
-    sys-kernel/linux-headers"
+	sys-kernel/linux-headers"
 RDEPEND="x11-libs/libdrm"
 
 MODULE_NAMES="evdi(video:${S}/module)"
