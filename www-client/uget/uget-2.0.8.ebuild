@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 #Based on https://bugs.gentoo.org/show_bug.cgi?id=581506
 
@@ -26,7 +26,7 @@ SLOT="0"
 RDEPEND="dev-libs/libpcre
 	>=dev-libs/glib-2.32:2
 	>=x11-libs/gtk+-3.4:3
-	gnutls? ( net-libs/gnutls dev-libs/libgcrypt )
+	gnutls? ( net-libs/gnutls dev-libs/libgcrypt:0 )
 	gstreamer? ( media-libs/gstreamer:0.10 )
 	libnotify? ( x11-libs/libnotify )"
 
