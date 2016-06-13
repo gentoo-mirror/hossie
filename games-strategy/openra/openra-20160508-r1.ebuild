@@ -53,8 +53,8 @@ src_compile() {
 src_install()
 {
 	emake $(usex debug "" "DEBUG=false") \
-		bindir=/usr/bin \
-		libdir="$(get_libdir)/${PN}" \
+		prefix=/usr \
+		libdir="/usr/$(get_libdir)" \
 		DESTDIR="${D}" \
 		$(usex tools "install-all" "install") install-linux-scripts install-man-page
 	emake \
