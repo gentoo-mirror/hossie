@@ -7,6 +7,6 @@
         for modern operating systems (Windows, Mac OSX and Linux), high resolutions and much more.
     </longdescription>
     <use>
-        <flag name="midi">Adds support for background midis via media-sound/timidity++</flag>
+        <flag name="midi">Adds support for background midis via <pkg>media-sound/timidity++</pkg></flag>
     </use>
 </pkgmetadata>
