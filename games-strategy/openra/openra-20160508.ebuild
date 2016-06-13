@@ -2,14 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-#This ebuild is imported from https://github.com/cerebrum/dr/tree/master/games-strategy/openra
-
 EAPI=5
 
-inherit eutils mono-env gnome2-utils vcs-snapshot fdo-mime games
+inherit eutils mono-env gnome2-utils vcs-snapshot fdo-mime
 
 MY_PV=release-${PV}
-#MY_PV=playtest-${PV}
 DESCRIPTION="A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k"
 HOMEPAGE="http://www.openra.net/"
 SRC_URI="https://github.com/OpenRA/OpenRA/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
@@ -17,7 +14,7 @@ SRC_URI="https://github.com/OpenRA/OpenRA/archive/${MY_PV}.tar.gz -> ${P}.tar.gz
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+debug doc -nuget +tools +xdg +zenity"
+IUSE="debug doc +tools +xdg +zenity"
 RESTRICT="mirror"
 
 RDEPEND="dev-dotnet/libgdiplus
@@ -31,7 +28,6 @@ RDEPEND="dev-dotnet/libgdiplus
 	xdg? ( x11-misc/xdg-utils )
 	zenity? ( gnome-extra/zenity )"
 DEPEND="${RDEPEND}
-	nuget? ( dev-dotnet/nuget )
 	doc? ( || ( app-text/discount
 		app-text/peg-markdown
 		dev-python/markdown
@@ -39,7 +35,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	mono-env_pkg_setup
-	games_pkg_setup
 }
 
 src_unpack() {
@@ -47,9 +42,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	local NUGET=$(usex nuget "true" "false");
-	sed "s/if \[ ! \$TRAVIS \]/if ${NUGET} \&\& \[ ! \$TRAVIS \]/" \
-		-i thirdparty/fetch-thirdparty-deps.sh || die
 	emake cli-dependencies
 }
 
@@ -61,10 +53,6 @@ src_compile() {
 src_install()
 {
 	emake $(usex debug "" "DEBUG=false") \
-		datadir="${GAMES_DATADIR}" \
-		bindir="${GAMES_BINDIR}" \
-		libdir="$(games_get_libdir)/${PN}" \
-		gameinstalldir="${GAMES_DATADIR}/${PN}" \
 		DESTDIR="${D}" \
 		$(usex tools "install-all" "install") install-linux-scripts install-man-page
 	emake \
@@ -101,8 +89,6 @@ src_install()
 	else
 		dodoc {README,CONTRIBUTING,DOCUMENTATION,Lua-API}.md
 	fi
-	# file permissions
-	prepgamesdirs
 }
 
 pkg_preinst() {
@@ -110,7 +96,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	games_pkg_postinst
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
