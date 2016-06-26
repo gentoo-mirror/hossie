@@ -1,4 +1,4 @@
-app-emulation/wine 1.9.10 1.9.11 1.9.12: Free implementation of Windows(tm) on Unix
+app-emulation/wine 1.9.10 1.9.11 1.9.12 1.9.13: Free implementation of Windows(tm) on Unix
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
 dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
 dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
