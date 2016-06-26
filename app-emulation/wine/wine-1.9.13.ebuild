@@ -21,7 +21,7 @@ else
 	KEYWORDS="-* ~amd64 ~x86"
 fi
 
-GV="2.44"
+GV="2.47"
 MV="4.6.2"
 [[ ${MAJOR_V} == "1.8" ]] && SUFFIX="-unofficial"
 STAGING_P="wine-staging-${PV}"
