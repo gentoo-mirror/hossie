@@ -4,9 +4,11 @@
 
 EAPI=5
 
+inherit unpacker
+
 DESCRIPTION="Hipchat - persistent group chat using XMPP"
 HOMEPAGE=""
-SRC_URI="https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-4.0.1641-Linux.deb"
+SRC_URI="https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-${PV}-Linux.deb"
 
 LICENSE=""
 SLOT="0"
@@ -33,3 +35,18 @@ DEPEND="media-libs/alsa-lib
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5"
 RDEPEND="${DEPEND}"
+
+S=${WORKDIR}
+
+src_prepare() {
+	rm opt/HipChat4/lib/libQt5*
+}
+
+src_install() {
+	for size in 16x16 24x24 32x32 48x48 128x128 256x256; do
+		doicon -s "${size}" "usr/share/icons/hicolor/${size}/apps/hipchat4-attention.png"
+	done
+	for size in 16x16 24x24 32x32 48x48 128x128 256x256 512x512 1024x1024; do
+		doicon -s "${size}" "usr/share/icons/hicolor/${size}/apps/hipchat4.png"
+	done
+}
