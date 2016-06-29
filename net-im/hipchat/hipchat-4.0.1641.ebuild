@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit unpacker
+inherit eutils unpacker
 
 DESCRIPTION="Hipchat - persistent group chat using XMPP"
 HOMEPAGE=""
