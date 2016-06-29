@@ -29,7 +29,7 @@ DEPEND="dev-libs/expat
 	dev-qt/qtnetwork:5
 	dev-qt/qtopengl:5
 	dev-qt/qtpositioning:5
-	dev-qt/qtwebengine[widgets]:5
+	dev-qt/qtwebengine:5[widgets]
 	dev-qt/qtwebkit:5
 	dev-qt/qtwebsockets:5
 	dev-qt/qtwidgets:5
