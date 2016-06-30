@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+QA_PRESTRIPPED="/opt/HipChat4/bin/hellocpp"
+
 DEPEND="dev-libs/glib:2
 	dev-libs/libbsd
 	dev-libs/libpcre
