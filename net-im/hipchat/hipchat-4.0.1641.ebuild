@@ -49,5 +49,6 @@ src_install() {
 
 	insinto /opt
 	doins -r opt/HipChat4
-	fperms 755 /opt/HipChat4/bin/hellocpp /opt/HipChat4/bin/HipChat4 /opt/HipChat4/bin/QtWebEngineProcess /opt/HipChat4/lib/HipChat.bin
+	fperms 755 /opt/HipChat4/bin/hellocpp /opt/HipChat4/bin/HipChat4 /opt/HipChat4/bin/QtWebEngineProcess
+	fperms 755 /opt/HipChat4/lib/HipChat.bin /opt/HipChat4/lib/QtWebEngineProcess.bin
 }
