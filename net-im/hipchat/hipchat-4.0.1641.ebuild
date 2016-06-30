@@ -40,7 +40,7 @@ S=${WORKDIR}
 
 src_prepare() {
 	rm opt/HipChat4/lib/libQt5*
-	rm -r opt/HipChat4/lib/{Qt,QtQuick}
+	rm -r opt/HipChat4/lib/{Qt,QtQuick,QtWebEngine}
 }
 
 src_install() {
