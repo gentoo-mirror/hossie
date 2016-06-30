@@ -47,8 +47,6 @@ src_prepare() {
 src_install() {
 	for size in 16x16 24x24 32x32 48x48 128x128 256x256; do
 		doicon -s "${size}" "usr/share/icons/hicolor/${size}/apps/hipchat4-attention.png"
-	done
-	for size in 16x16 24x24 32x32 48x48 128x128 256x256; do
 		doicon -s "${size}" "usr/share/icons/hicolor/${size}/apps/hipchat4.png"
 	done
 
