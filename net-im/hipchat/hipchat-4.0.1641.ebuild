@@ -15,26 +15,22 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-libs/expat
-	media-libs/alsa-lib
-	media-libs/fontconfig
-	media-libs/freetype
-	media-libs/mesa
-	dev-libs/glib:2
-	dev-libs/nspr
-	dev-libs/nss
+DEPEND="dev-libs/glib:2
+	dev-libs/libbsd
+	dev-libs/libpcre
+	dev-libs/openssl:0
+	dev-qt/qtcore:5[icu]
 	dev-qt/qtdbus:5
 	dev-qt/qtdeclarative:5
-	dev-qt/qtgui:5
+	dev-qt/qtgui:5[xcb]
 	dev-qt/qtnetwork:5
-	dev-qt/qtopengl:5
-	dev-qt/qtpositioning:5
 	dev-qt/qtwebengine:5[widgets]
-	dev-qt/qtwebkit:5
-	dev-qt/qtwebsockets:5
-	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
-	dev-qt/qtxml:5"
+	kde-frameworks/kwindowsystem:5
+	media-gfx/graphite2
+	media-libs/freetype
+	media-libs/libpng:0
+	media-libs/mesa"
 
 RDEPEND="${DEPEND}"
 
@@ -42,6 +38,7 @@ S=${WORKDIR}
 
 src_prepare() {
 	rm opt/HipChat4/lib/libQt5*
+	rm -r opt/HipChat4/lib/{Qt,QtQuick}
 }
 
 src_install() {
@@ -52,4 +49,5 @@ src_install() {
 
 	insinto /opt
 	doins -r opt/HipChat4
+	fperms 755 /opt/HipChat4/bin/hellocpp /opt/HipChat4/bin/HipChat4 /opt/HipChat4/bin/QtWebEngineProcess /opt/HipChat4/lib/HipChat.bin
 }
