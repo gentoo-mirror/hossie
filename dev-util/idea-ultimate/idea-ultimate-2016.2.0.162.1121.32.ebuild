@@ -26,7 +26,7 @@ DESCRIPTION="A complete toolset for web, mobile and enterprise development"
 HOMEPAGE="https://www.jetbrains.com/idea"
 
 LICENSE="IDEA"
-IUSE="-custom-jdk"
+IUSE="+custom-jdk"
 
 #https://intellij-support.jetbrains.com/hc/en-us/articles/206544879-Selecting-the-JDK-version-the-IDE-will-run-under
 DEPEND="!dev-util/${PN}:14
