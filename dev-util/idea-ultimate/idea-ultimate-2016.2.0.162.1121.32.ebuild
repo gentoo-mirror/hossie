@@ -43,12 +43,12 @@ src_prepare() {
 	if ! use amd64; then
 		rm -r lib/libpty/linux/x86_64 || die
 		rm -f bin/fsnotifier64 bin/libbreakgen64.so bin/idea64.vmoptions || die
-		rm -r tfsIntegration/lib/native/linux/x86_64 || die
+		rm -r plugins/tfsIntegration/lib/native/linux/x86_64 || die
 	fi
 	if ! use x86; then
 		rm -r lib/libpty/linux/x86 || die
 		rm -f bin/fsnotifier bin/libbreakgen.so bin/idea.vmoptions || die
-		rm -r tfsIntegration/lib/native/linux/x86 || die
+		rm -r plugins/tfsIntegration/lib/native/linux/x86 || die
 	fi
 	rm -f bin/fsnotifier-arm || die
 	rm -r lib/libpty/{win,macosx} || die
