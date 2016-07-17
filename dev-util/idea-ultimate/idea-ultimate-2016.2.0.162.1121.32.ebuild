@@ -77,6 +77,12 @@ src_install() {
 		fperms 755 "${dir}/bin/fsnotifier"
 	fi
 
+	if use custom-jdk; then
+		for jrefile in java jjs keytool orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200; do
+			fperms 755 "{dir}/jre/jre/bin/${jrefile}"
+		done
+	fi
+
 	newicon "bin/idea.png" "${PN}.png"
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
 
