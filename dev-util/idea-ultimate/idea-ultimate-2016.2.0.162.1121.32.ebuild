@@ -10,16 +10,25 @@ PV_STRING="$(get_version_component_range 4-6)"
 MY_PV="$(get_version_component_range 1-2)"
 MY_PN="idea"
 
+if [[ "${PN}" = "idea-ultimate" ]]
+then
+	MY_EDITION="IU"
+	MY_EDITION_FULL="(Ultimate Edition)"
+else
+	MY_EDITION="IC"
+	MY_EDITION_FULL="(Community Edition)"
+fi
+
 # distinguish settings for official stable releases and EAP-version releases
 if [[ "$(get_version_component_range 7)x" = "prex" ]]
 then
 	# upstream EAP
 	KEYWORDS=""
-	SRC_URI="https://download.jetbrains.com/idea/${MY_PN}IU-${PV_STRING}.tar.gz"
+	SRC_URI="https://download.jetbrains.com/idea/${MY_PN}${MY_EDITION}-${PV_STRING}.tar.gz"
 else
 	# upstream stable
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="https://download.jetbrains.com/idea/${MY_PN}IU-${MY_PV}.tar.gz -> ${MY_PN}IU-${PV_STRING}.tar.gz"
+	SRC_URI="https://download.jetbrains.com/idea/${MY_PN}${MY_EDITION}-${MY_PV}.tar.gz -> ${MY_PN}${MY_EDITION}-${PV_STRING}.tar.gz"
 fi
 
 DESCRIPTION="A complete toolset for web, mobile and enterprise development"
@@ -33,7 +42,7 @@ DEPEND="!dev-util/${PN}:14
 	!dev-util/${PN}:15"
 RDEPEND="${DEPEND}
 	>=virtual/jdk-1.8:*"
-S="${WORKDIR}/${MY_PN}-IU-${PV_STRING}"
+S="${WORKDIR}/${MY_PN}-${MY_EDITION}-${PV_STRING}"
 
 QA_PREBUILT="opt/${PN}-${MY_PV}/*"
 
@@ -90,7 +99,7 @@ src_install() {
 	mkdir -p "${D}/etc/sysctl.d/"
 	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-${PN}-inotify-watches.conf"
 
-	make_desktop_entry ${PN} "IntelliJ IDEA (Ultimate Edition)" "${PN}" "Development;IDE"
+	make_desktop_entry ${PN} "IntelliJ IDEA ${MY_EDITION_FULL}" "${PN}" "Development;IDE"
 }
 
 pkg_postinst() {
