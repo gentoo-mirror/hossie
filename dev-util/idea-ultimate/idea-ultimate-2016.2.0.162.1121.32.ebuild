@@ -54,7 +54,7 @@ src_prepare() {
 	rm -r lib/libpty/{win,macosx} || die
 	rm Install-Linux-tar.txt || die
 	rm -r plugins/tfsIntegration/lib/native/{aix,freebsd,hpux,macosx,solaris,win32} || die
-	rm -r plugins/tfsIntegration/lib/native/linux/{arm,pcc} || die
+	rm -r plugins/tfsIntegration/lib/native/linux/{arm,ppc} || die
 
 	if ! use custom-jdk; then
 		if [[ -d jre ]]; then
