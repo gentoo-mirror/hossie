@@ -5,4 +5,7 @@
         <email>hossie@hossie.de</email>
         <name>Daniel Augustin</name>
     </maintainer>
+    <use>
+        <flag name="custom-jdk">Install and use IntelliJ's custom JRE.</flag>
+    </use>
 </pkgmetadata>
