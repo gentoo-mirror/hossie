@@ -31,8 +31,6 @@ DEPEND="app-arch/snappy:*
 	media-libs/freetype:*
 	media-libs/libpng:0
 	media-libs/mesa:*
-	media-libs/x264:*
-	media-libs/x265:*
 	x11-libs/libxkbcommon:*[X]
 	x11-libs/xcb-util-keysyms:*"
 
