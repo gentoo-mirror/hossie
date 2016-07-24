@@ -7,40 +7,40 @@ EAPI=5
 inherit eutils unpacker
 
 DESCRIPTION="Hipchat - persistent group chat using XMPP"
-HOMEPAGE=""
+HOMEPAGE="https://www.hipchat.com/"
 SRC_URI="https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-${PV}-Linux.deb"
 
-LICENSE=""
+LICENSE="Atlassian-Customer-Agreement"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
 QA_PRESTRIPPED="/opt/HipChat4/bin/hellocpp"
 
-DEPEND="dev-libs/glib:2
-	dev-libs/libbsd
-	dev-libs/libpcre
+DEPEND="app-arch/snappy:*
+	dev-libs/glib:2
+	dev-libs/libbsd:*
+	dev-libs/libpcre:*
 	dev-libs/openssl:0
-	dev-qt/qtcore:5[icu]
-	dev-qt/qtdbus:5
-	dev-qt/qtdeclarative:5
-	dev-qt/qtgui:5[xcb]
-	dev-qt/qtnetwork:5
-	dev-qt/qtwebengine:5[widgets]
-	dev-qt/qtx11extras:5
-	kde-frameworks/kwindowsystem:5
-	media-gfx/graphite2
-	media-libs/freetype
+	media-gfx/graphite2:*
+	media-libs/fontconfig:*
+	media-libs/freetype:*
 	media-libs/libpng:0
-	media-libs/mesa"
+	media-libs/mesa:*
+	media-libs/x264:*
+	media-libs/x265:*
+	x11-libs/libxkbcommon:*[X]
+	x11-libs/xcb-util-keysyms:*"
 
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
+#For now, it seems impossible to delete bundled qt
+#Any tips are welcome
+
 src_prepare() {
-	rm opt/HipChat4/lib/libQt5*
-	rm -r opt/HipChat4/lib/{Qt,QtQuick,QtWebEngine}
+	rm opt/HipChat4/lib/libxkbcommon{,-x11}.so.0 || die
 }
 
 src_install() {
