@@ -15,7 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-QA_PRESTRIPPED="/opt/HipChat4/bin/hellocpp"
+QA_PRESTRIPPED="opt/HipChat4/bin/hellocpp
+	opt/HipChat4/lib/QtWebEngineProcess.bin
+	/opt/HipChat4/lib/*.so*
+	/opt/HipChat4/lib/Qt*
+	/opt/HipChat4/lib/plugins/*"
 
 DEPEND="app-arch/snappy:*
 	dev-libs/glib:2
