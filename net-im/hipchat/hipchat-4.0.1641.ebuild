@@ -53,4 +53,7 @@ src_install() {
 	doins -r opt/HipChat4
 	fperms 755 /opt/HipChat4/bin/hellocpp /opt/HipChat4/bin/HipChat4 /opt/HipChat4/bin/QtWebEngineProcess
 	fperms 755 /opt/HipChat4/lib/HipChat.bin /opt/HipChat4/lib/QtWebEngineProcess.bin
+
+	make_wrapper "${PN}" /opt/HipChat4/bin/HipChat4
+	make_desktop_entry "${PN}" HipChat hipchat4 "Network;Chat"
 }
