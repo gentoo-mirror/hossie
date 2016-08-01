@@ -1,15 +1,17 @@
-# media-libs/vulkan-base-9999.ebuild
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
 inherit git-r3
 
-DESCRIPTION="Official Vulkan headerfiles, loader, validation layers and sample binaries"
+DESCRIPTION="Vulkan loader and validation layers"
 HOMEPAGE="https://vulkan.lunarg.com"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers.git"
 
-LICENSE="MIT"
+LICENSE="Apache-2.0"
 IUSE=""
 SLOT="0"
 
@@ -17,6 +19,7 @@ KEYWORDS="~amd64"
 
 DEPEND="dev-util/cmake
 	>=dev-lang/python-3"
+#TODO Dependencies: https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers/blob/master/BUILD.md
 
 src_unpack() {
 	git-r3_fetch "${EGIT_REPO_URI}" "refs/tags/sdk-${PV}.0"
@@ -24,6 +27,7 @@ src_unpack() {
 	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Tools.git"
 	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Headers.git"
 
+#TODO Specify tags for external repos
 	git-r3_checkout "${EGIT_REPO_URI}"
 	git-r3_checkout https://github.com/KhronosGroup/glslang.git \
 		"${S}"/external/glslang
@@ -54,7 +58,7 @@ src_compile() {
 
 	cd "${S}"
 	cmake	\
-		-DCMAKE_SKIP_RPATH=True
+		-DCMAKE_SKIP_RPATH=True \
 		-DBUILD_WSI_XCB_SUPPORT=ON	\
 		-DBUILD_WSI_XLIB_SUPPORT=ON	\
 		-DBUILD_WSI_WAYLAND_SUPPORT=ON	\
