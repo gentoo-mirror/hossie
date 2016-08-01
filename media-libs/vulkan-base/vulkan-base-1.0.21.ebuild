@@ -19,12 +19,12 @@ DEPEND="dev-util/cmake
 	>=dev-lang/python-3"
 
 src_unpack() {
-	git-r3_fetch ${EGIT_REPO_URI}
+	git-r3_fetch "${EGIT_REPO_URI}" "refs/tags/sdk-${PV}.0"
 	git-r3_fetch "https://github.com/KhronosGroup/glslang.git"
 	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Tools.git"
 	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Headers.git"
 
-	git-r3_checkout ${EGIT_REPO_URI}
+	git-r3_checkout "${EGIT_REPO_URI}"
 	git-r3_checkout https://github.com/KhronosGroup/glslang.git \
 		"${S}"/external/glslang
 	git-r3_checkout https://github.com/KhronosGroup/SPIRV-Tools.git \
