@@ -119,11 +119,3 @@ LDPATH="/usr/$(get_libdir)/vulkan;/usr/$(get_libdir)/vulkan/layers"
 PATH="/usr/share/vulkan/demos"
 EOF
 }
-
-pkg_postinst() {
-	env-update
-}
-
-pkg_postrm() {
-	env-update
-}
