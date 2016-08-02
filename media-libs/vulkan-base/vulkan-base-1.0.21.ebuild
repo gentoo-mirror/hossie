@@ -8,27 +8,37 @@ inherit git-r3
 
 DESCRIPTION="Vulkan loader and validation layers"
 HOMEPAGE="https://vulkan.lunarg.com"
-SRC_URI=""
 EGIT_REPO_URI="https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers.git"
 
 LICENSE="Apache-2.0"
-IUSE=""
+IUSE="wayland"
 SLOT="0"
 
 KEYWORDS="~amd64"
 
-DEPEND="dev-util/cmake
-	>=dev-lang/python-3"
+RDEPEND="x11-libs/libX11:=
+	x11-libs/libxcb:=
+	wayland? ( dev-libs/wayland:* )"
+DEPEND="dev-util/cmake:*
+	${RDEPEND}"
+
 #TODO Dependencies: https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers/blob/master/BUILD.md
+
+#The headers dont seem to be fixed to a tag / commit
+#so take a commit that is around the tag of the main repo
+SPIRVHEADERS_REV="3814effb879ab5a98a7b9288a4b4c7849d2bc8ac"
 
 src_unpack() {
 	git-r3_fetch "${EGIT_REPO_URI}" "refs/tags/sdk-${PV}.0"
-	git-r3_fetch "https://github.com/KhronosGroup/glslang.git"
-	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Tools.git"
-	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Headers.git"
-
-#TODO Specify tags for external repos
 	git-r3_checkout "${EGIT_REPO_URI}"
+
+	GLSLANG_REV=$(<glslang_revision)
+	SPIRVTOOLS_REV=$(<spirv-tools_revision)
+
+	git-r3_fetch "https://github.com/KhronosGroup/glslang.git" "${GLSLANG_REV}"
+	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Tools.git" "${SPIRVTOOLS_REV}"
+	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Headers.git" "${SPIRVHEADERS_REV}"
+
 	git-r3_checkout https://github.com/KhronosGroup/glslang.git \
 		"${S}"/external/glslang
 	git-r3_checkout https://github.com/KhronosGroup/SPIRV-Tools.git \
@@ -61,13 +71,13 @@ src_compile() {
 		-DCMAKE_SKIP_RPATH=True \
 		-DBUILD_WSI_XCB_SUPPORT=ON	\
 		-DBUILD_WSI_XLIB_SUPPORT=ON	\
-		-DBUILD_WSI_WAYLAND_SUPPORT=ON	\
+		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland ON OFF) \
 		-DBUILD_WSI_MIR_SUPPORT=OFF	\
-		-DBUILD_VKJSON=OFF		\
-		-DBUILD_LOADER=ON		\
-		-DBUILD_LAYERS=ON		\
-		-DBUILD_DEMOS=ON		\
-		-DBUILD_TESTS=OFF		\
+		-DBUILD_VKJSON=OFF \
+		-DBUILD_LOADER=ON \
+		-DBUILD_LAYERS=ON \
+		-DBUILD_DEMOS=ON \
+		-DBUILD_TESTS=OFF \
 		-H. -Bbuild
 	cd "${S}"/build
 	emake || die "cannot build Vulkan Loader"
@@ -77,7 +87,6 @@ src_install() {
 	mkdir -p "${D}"/etc/vulkan/{icd.d,implicit_layer.d,explicit_layer.d}
 	mkdir -p "${D}"/usr/share/vulkan/{icd.d,implicit_layer.d,explicit_layer.d,demos}
 	mkdir -p "${D}"/usr/$(get_libdir)/vulkan/layers
-	mkdir -p "${D}"/usr/bin
 	mkdir -p "${D}"/usr/include
 	mkdir -p "${D}"/etc/env.d
 
