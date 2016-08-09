@@ -7,7 +7,7 @@ inherit eutils linux-info versionator
 
 SLOT="0"
 PV_STRING="$(get_version_component_range 4-6)"
-MY_PV="$(get_version_component_range 1-2)"
+MY_PV="$(get_version_component_range 1-3)"
 MY_PN="idea"
 
 if [[ "${PN}" = "idea-ultimate" ]]
