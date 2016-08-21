@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="egl examples vulkan"
 
-RDEPEND="vulkan? ( media-libs/vulkan-base )
+RDEPEND="amd64? ( vulkan? ( media-libs/vulkan-base ) )
 	x11-libs/libXrandr
 	x11-libs/libX11
 	x11-libs/libXi

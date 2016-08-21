@@ -25,10 +25,10 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 	https://cdn.kernel.org/pub/linux/kernel/v4.x/incr/patch-4.4.15-16.xz
 	https://cdn.kernel.org/pub/linux/kernel/v4.x/incr/patch-4.4.16-17.xz"
 
-UNIPATCH_LIST="${DISTDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r11-4.4.0.patch
-	${DISTDIR}/0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.4.0.patch
-	${DISTDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch
-	${DISTDIR}/patch-4.4.15-16.xz
+UNIPATCH_LIST="${DISTDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r11-4.4.0.patch \
+	${DISTDIR}/0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.4.0.patch \
+	${DISTDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch \
+	${DISTDIR}/patch-4.4.15-16.xz \
 	${DISTDIR}/patch-4.4.16-17.xz"
 
 pkg_postinst() {
