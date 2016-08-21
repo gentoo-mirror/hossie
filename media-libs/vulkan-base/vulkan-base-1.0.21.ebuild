@@ -22,8 +22,6 @@ RDEPEND="x11-libs/libX11:=
 DEPEND="dev-util/cmake:*
 	${RDEPEND}"
 
-#TODO Dependencies: https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers/blob/master/BUILD.md
-
 #The headers dont seem to be fixed to a tag / commit
 #so take a commit that is around the tag of the main repo
 SPIRVHEADERS_REV="3814effb879ab5a98a7b9288a4b4c7849d2bc8ac"
