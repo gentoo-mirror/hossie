@@ -26,9 +26,9 @@ src_unpack() {
 	git-r3_fetch "${EGIT_REPO_URI}" "refs/tags/sdk-${PV}.0"
 	git-r3_checkout "${EGIT_REPO_URI}"
 
-	GLSLANG_REV=$(<glslang_revision)
-	SPIRVTOOLS_REV=$(<spirv-tools_revision)
-	SPIRVHEADERS_REV=$(<spirv-headers_revision)
+	GLSLANG_REV=$(cat "${S}/glslang_revision")
+	SPIRVTOOLS_REV=$(cat "${S}/spirv-tools_revision")
+	SPIRVHEADERS_REV=$(cat "${S}/spirv-headers_revision")
 
 	git-r3_fetch "https://github.com/KhronosGroup/glslang.git" "${GLSLANG_REV}"
 	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Tools.git" "${SPIRVTOOLS_REV}"
