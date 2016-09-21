@@ -44,12 +44,7 @@ src_install() {
 	insinto /opt/displaylink
 	doins *.spkg
 
-	local udevrules="${T}/99-displaylink.rules"
-
-	cat > "${udevrules}" <<-EOF
-        ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="179", ATTR{bNumInterfaces}=="*5", GROUP="plugdev", MODE="0660"
-	EOF
-	udev_dorules "${udevrules}"
+	udev_dorules "${FILESDIR}/99-displaylink.rules"
 
 	systemd_dounit "${FILESDIR}/dlm.service"
 	newinitd "${FILESDIR}/rc-displaylink" dlm
