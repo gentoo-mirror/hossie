@@ -30,18 +30,18 @@ src_unpack() {
 
 src_install() {
 	case "${ARCH}" in
-		amd64)  DLM="${S}/x64-ubuntu-1404/DisplayLinkManager" ;;
-		x86)    DLM="${S}/x86-ubuntu-1404/DisplayLinkManager" ;;
+		amd64)	DLM="${S}/x64-ubuntu-1404/DisplayLinkManager" ;;
+		x86)	DLM="${S}/x86-ubuntu-1404/DisplayLinkManager" ;;
 	esac
 
-	dodir /usr/lib/displaylink
+	dodir /opt/displaylink
 	dodir /var/log/displaylink
 
-	exeinto /usr/lib/displaylink
+	exeinto /opt/displaylink
 	chrpath -d "${DLM}"
 	doexe "${DLM}"
 
-	insinto /usr/lib/displaylink
+	insinto /opt/displaylink
 	doins *.spkg
 
 	local udevrules="${T}/99-displaylink.rules"
@@ -51,26 +51,25 @@ src_install() {
 	EOF
 	udev_dorules "${udevrules}"
 
+	systemd_dounit "${FILESDIR}/dlm.service"
+	newinitd "${FILESDIR}/rc-displaylink" dlm
+
+	insinto /opt/displaylink
+	insopts -m0755
 	if use systemd; then
-		systemd_dounit "${FILESDIR}/displaylink.service"
-		insinto /usr/lib/displaylink
-		insopts -m0755
-		newins "${FILESDIR}/pm-systemd-displaylink" displaylink.sh
-		dosym /usr/lib/displaylink/displaylink.sh /lib/systemd/system-sleep/displaylink.sh
+		newins "${FILESDIR}/pm-systemd-displaylink" suspend.sh
+		dosym /usr/lib/displaylink/suspend.sh /lib/systemd/system-sleep/displaylink.sh
 	else
-		newinitd "${FILESDIR}/rc-displaylink" displaylink
-		insinto /usr/lib/displaylink
-		insopts -m0755
-		newins "${FILESDIR}/pm-displaylink" displaylink.sh
-		dosym /usr/lib/displaylink/displaylink.sh /etc/pm/sleep.d/displaylink.sh
+		newins "${FILESDIR}/pm-displaylink" suspend.sh
+		dosym /usr/lib/displaylink/suspend.sh /etc/pm/sleep.d/displaylink.sh
 	fi
 }
 
 pkg_postinst() {
-	einfo "Please add the evdi module to /etc/conf.d/modules and"
-	einfo "add the displaylink init.d / systemd service to your default runlevel"
+	einfo "The DisplayLinkManager Init is now called dlm"
+	einfo "and is triggered by udev"
 	einfo ""
-	einfo "Afterwards, you should be able to use xrandr as follows:"
+	einfo "You should be able to use xrandr as follows:"
 	einfo "xrandr --setprovideroutputsource 1 0"
 	einfo "Repeat for more screens, like:"
 	einfo "xrandr --setprovideroutputsource 2 0"
