@@ -8,7 +8,8 @@ depend() {
 }
 
 start() {
-	start-stop-daemon --start --background --chdir /usr/lib/displaylink --make-pidfile --pidfile /run/displaylink.pid --exec /usr/lib/displaylink/DisplayLinkManager
+	modprobe -q evdi
+	start-stop-daemon --start --background --chdir /opt/displaylink --make-pidfile --pidfile /run/displaylink.pid --exec /opt/displaylink/DisplayLinkManager
 	eend $?
 }
 

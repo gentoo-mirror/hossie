@@ -47,16 +47,17 @@ src_install() {
 	udev_dorules "${FILESDIR}/99-displaylink.rules"
 
 	systemd_dounit "${FILESDIR}/dlm.service"
-	newinitd "${FILESDIR}/rc-displaylink" dlm
+	newinitd "${FILESDIR}/rc-displaylink-1.2" dlm
 
 	insinto /opt/displaylink
 	insopts -m0755
+	newins "${FILESDIR}/udev.sh" udev.sh
 	if use systemd; then
 		newins "${FILESDIR}/pm-systemd-displaylink" suspend.sh
-		dosym /usr/lib/displaylink/suspend.sh /lib/systemd/system-sleep/displaylink.sh
+		dosym /opt/displaylink/suspend.sh /lib/systemd/system-sleep/displaylink.sh
 	else
 		newins "${FILESDIR}/pm-displaylink" suspend.sh
-		dosym /usr/lib/displaylink/suspend.sh /etc/pm/sleep.d/displaylink.sh
+		dosym /opt/displaylink/suspend.sh /etc/pm/sleep.d/displaylink.sh
 	fi
 }
 
