@@ -29,6 +29,11 @@ games-strategy/openra:doc - Generate additional documentation
 games-strategy/openra:tools - Install some development tools such as editor.
 games-strategy/openra:xdg - xdg-utils are used to open web pages
 games-strategy/openra:zenity - zenity is used to display crash dialogs
+gnome-extra/gnome-commander:chm - Enable metadata support for Microsoft Compiled HTML Help files
+gnome-extra/gnome-commander:gsf - Add metadata support for OLE, OLE2 and ODF
+gnome-extra/gnome-commander:pdf - Add metadata support for PDF
+gnome-extra/gnome-commander:python - Add support for python plugins"
+gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC and APE
 media-libs/glfw:egl - Use EGL instead of GLX for GL context creation
 media-libs/glfw:vulkan - Add Vulkan support
 net-misc/openconnect:gssapi - Build GSSAPI support.
