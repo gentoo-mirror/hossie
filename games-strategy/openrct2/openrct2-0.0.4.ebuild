@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/jansson:0[abi_x86_32]
-	dev-libs/openssl:0[abi_x86_32]
-	media-libs/libpng:0[abi_x86_32]
-	media-libs/sdl2-ttf:0[abi_x86_32]
-	media-libs/speex:0[abi_x86_32]
-	net-misc/curl:0[abi_x86_32]
+DEPEND="dev-libs/jansson:0[abi_x86_32(-)]
+	dev-libs/openssl:0[abi_x86_32(-)]
+	media-libs/libpng:0[abi_x86_32(-)]
+	media-libs/sdl2-ttf:0[abi_x86_32(-)]
+	media-libs/speex:0[abi_x86_32(-)]
+	net-misc/curl:0[abi_x86_32(-)]
 	virtual/opengl"
 RDEPEND="${DEPEND}"
 
