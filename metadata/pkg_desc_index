@@ -17,7 +17,7 @@ net-im/hipchat 4.0.1641: Hipchat - persistent group chat using XMPP
 net-misc/openconnect 7.06-r4: Free client for Cisco AnyConnect SSL VPN software
 net-misc/pacmanager 4.5.5.7: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
 sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
-sys-kernel/gentoo-sources 4.4.15 4.4.17 4.4.19 4.7.8: Full sources including the Gentoo patchset for the 4.7 kernel tree
+sys-kernel/gentoo-sources 4.4.15 4.4.17 4.4.19 4.7.8 4.7.9: Full sources including the Gentoo patchset for the 4.7 kernel tree
 www-client/uget 2.0.8: Download manager using gtk+ and libcurl
 x11-drivers/displaylink-driver 1.0.335-r1 1.1.68 1.2.58: DisplayLink USB Graphics Software
 x11-drivers/evdi 1.0.68 1.1.61 1.1.65 1.1.65-r1 1.2.55 1.2.64: Extensible Virtual Display Interface
