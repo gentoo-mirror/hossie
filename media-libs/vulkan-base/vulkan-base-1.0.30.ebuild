@@ -87,12 +87,13 @@ src_install() {
 
 	#rename the tri and cube examples
 	mv "${S}"/build/demos/cube "${S}"/build/demos/vulkancube
-	mv "${S}"/build/demos/tri "${S}"/build/demos/vulkantri
+	mv "${S}"/build/demos/smoketest "${S}"/build/demos/vulkansmoketest
+	mv "${S}"/build/demos/cubepp "${S}"/build/demos/vulkancubepp
 	insinto /usr/share/vulkan/demos
 	doins "${S}"/build/demos/*.spv
 	doins "${S}"/build/demos/lunarg.ppm
 	exeinto /usr/share/vulkan/demos
-	doexe "${S}"/build/demos/vulkan{info,cube,tri}
+	doexe "${S}"/build/demos/vulkan{info,cube,smoketest,cubepp}
 
 	insinto /usr/include
 	cp -R "${S}"/include/vulkan "${D}"/usr/include
