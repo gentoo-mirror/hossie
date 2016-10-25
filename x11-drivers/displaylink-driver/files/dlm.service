@@ -5,7 +5,7 @@ Conflicts=getty@tty7.service
 
 [Service]
 ExecStartPre=/sbin/modprobe evdi
-ExecStart=/usr/lib/displaylink/DisplayLinkManager
+ExecStart=/opt/displaylink/DisplayLinkManager
 Restart=always
 WorkingDirectory=/opt/displaylink
 RestartSec=5
