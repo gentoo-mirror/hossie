@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="Open source re-implementation of Roller Coaster Tycoon 2"
 HOMEPAGE="https://openrct2.website/"
@@ -25,3 +25,7 @@ DEPEND="dev-libs/jansson:0[abi_x86_32(-)]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/OpenRCT2-${PV}"
+
+pkg_setup() {
+	use amd64 && { has_multilib_profile || die "needs multilib profile on amd64"; }
+}
