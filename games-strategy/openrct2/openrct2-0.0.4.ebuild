@@ -15,17 +15,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/jansson:0[abi_x86_32(-)]
-	dev-libs/openssl:0[abi_x86_32(-)]
-	media-libs/libpng:0[abi_x86_32(-)]
-	media-libs/sdl2-ttf:0[abi_x86_32(-)]
-	media-libs/speex:0[abi_x86_32(-)]
-	net-misc/curl:0[abi_x86_32(-)]
-	virtual/opengl"
+DEPEND="virtual/opengl
+"
+
+if has_multilib_profile; then
+	DEPEND+="dev-libs/jansson:0[abi_x86_32]
+		dev-libs/openssl:0[abi_x86_32]
+		media-libs/libpng:0[abi_x86_32]
+		media-libs/sdl2-ttf:0[abi_x86_32]
+		media-libs/speex:0[abi_x86_32]
+		net-misc/curl:0[abi_x86_32]"
+fi
+
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/OpenRCT2-${PV}"
 
 pkg_setup() {
-	use amd64 && { has_multilib_profile || die "needs multilib profile on amd64"; }
+	use amd64 && { has_multilib_profile || die "You need a multilib profile on amd64 for now"; }
 }
