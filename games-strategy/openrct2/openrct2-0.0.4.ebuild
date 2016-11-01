@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit cmake-utils multilib
+inherit cmake-utils flag-o-matic multilib
 
 DESCRIPTION="Open source re-implementation of Roller Coaster Tycoon 2"
 HOMEPAGE="https://openrct2.website/"
@@ -25,6 +25,7 @@ DEPEND="dev-libs/jansson:0
 RDEPEND="${DEPEND}"
 
 MAKEOPTS+=" -j1"
+append-flags -Wa,--noexecstack
 
 S="${WORKDIR}/OpenRCT2-${PV}"
 
