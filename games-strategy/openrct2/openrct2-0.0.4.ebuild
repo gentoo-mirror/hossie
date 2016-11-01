@@ -24,13 +24,12 @@ DEPEND="dev-libs/jansson:0
 	virtual/opengl"
 RDEPEND="${DEPEND}"
 
+MAKEOPTS+=" -j1"
+
 S="${WORKDIR}/OpenRCT2-${PV}"
 
 pkg_setup() {
 	use amd64 && { has_multilib_profile || die "You need a multilib profile on amd64 for now"; }
-}
-
-pkg_postinst() {
 	use amd64 && {
 		ewarn "Note, due to how overlays work, we cannot cleanly"
 		ewarn "depend on 32bit libraries (it results in QA issues)"
