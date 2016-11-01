@@ -8,7 +8,4 @@
         OpenRCT2 allows for both scenario and sandbox play. Scenarios require the player to complete a certain objective
         in a set time limit whilst sandbox allows the player to build a more flexible park with optionally no restrictions or finance.
     </longdescription>
-    <use>
-        <flag name="midi">Adds support for background midis via <pkg>media-sound/timidity++</pkg></flag>
-    </use>
 </pkgmetadata>
