@@ -66,7 +66,6 @@ src_prepare() {
 		fi
 	fi
 	rm -f bin/fsnotifier-arm || die
-	rm -r lib/libpty/{win,macosx} || die
 	rm Install-Linux-tar.txt || die
 	if [[ "${MY_EDITION}" == "IU" ]]
 	then
