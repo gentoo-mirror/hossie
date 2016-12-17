@@ -77,6 +77,8 @@ REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 # or fail due to Xvfb's opengl limitations.
 RESTRICT="test"
 
+S="${WORKDIR}/${PN}-${MY_PV}"
+
 COMMON_DEPEND="
 	X? (
 		x11-libs/libXcursor[${MULTILIB_USEDEP}]
