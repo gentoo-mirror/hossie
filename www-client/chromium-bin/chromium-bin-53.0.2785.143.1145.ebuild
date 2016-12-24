@@ -46,5 +46,5 @@ RDEPEND="app-accessibility/speech-dispatcher
 
 src_install() {
 	mv "${S}"/{usr,etc} "${D}"/ || die
-	chmod 4755 "${D}/usr/$(get_libdir)/chromium/chrome-sandbox" || die
+	chmod 4755 "${D}/usr/$(get_libdir)/chromium-browser/chrome-sandbox" || die
 }
