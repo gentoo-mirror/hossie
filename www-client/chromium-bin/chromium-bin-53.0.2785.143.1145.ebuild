@@ -22,6 +22,8 @@ SLOT="0"
 
 QA_PREBUILT="usr/lib*/chromium/*"
 
+S="${WORKDIR}"
+
 RDEPEND="app-accessibility/speech-dispatcher
 	app-crypt/mit-krb5
 	dev-libs/expat
