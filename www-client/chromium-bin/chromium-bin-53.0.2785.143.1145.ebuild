@@ -20,7 +20,7 @@ HOMEPAGE="http://packages.ubuntu.com/trusty/chromium-browser"
 LICENSE="BSD"
 SLOT="0"
 
-QA_PREBUILT="usr/lib*/chromium/*"
+QA_PREBUILT="usr/lib*/chromium-browser/*"
 
 S="${WORKDIR}"
 
