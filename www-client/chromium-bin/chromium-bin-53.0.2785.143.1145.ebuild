@@ -35,14 +35,15 @@ RDEPEND="app-accessibility/speech-dispatcher
 	gnome-base/gnome-keyring
 	media-libs/alsa-lib
 	media-libs/fontconfig
+	media-libs/jpeg:0
 	media-libs/libpng:0
 	net-libs/gnutls
 	net-print/cups
+	sys-apps/lsb-release
 	>=sys-devel/gcc-4.9
 	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
-	x11-libs/pango
-	virtual/jpeg:0"
+	x11-libs/pango"
 
 src_install() {
 	mv "${S}"/{usr,etc} "${D}"/ || die
