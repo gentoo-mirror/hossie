@@ -28,6 +28,10 @@ pkg_setup() {
 	linux-mod_pkg_setup
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/evdi-1.2.64-linux-4.9.0.patch"
+}
+
 src_compile() {
 	linux-mod_src_compile
 	cd "${S}/library"
