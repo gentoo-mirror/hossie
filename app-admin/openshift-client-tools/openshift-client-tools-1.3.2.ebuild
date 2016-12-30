@@ -19,12 +19,8 @@ DEPEND="dev-lang/go
 S="${WORKDIR}/origin-${PV}"
 
 src_compile() {
-	OS_GIT_VERSION="v${PV}"
-	OS_GIT_MAJOR=""
-	OS_GIT_MINOR=""
-
 	use kerberos && MY_TAGS="-tags=gssapi"
-	emake all WHAT="cmd/oc ${MY_TAGS}"
+	emake all OS_GIT_MINOR="" OS_GIT_MAJOR="" OS_GIT_VERSION="v${PV}" WHAT="cmd/oc ${MY_TAGS}"
 }
 
 src_install() {
