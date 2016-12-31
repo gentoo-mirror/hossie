@@ -4,6 +4,8 @@
 
 EAPI=6
 
+inherit bash-completion-r1
+
 DESCRIPTION="Enterprise Kubernetes for Developers (Client Tools)"
 HOMEPAGE="https://www.openshift.org"
 SRC_URI="https://github.com/openshift/origin/archive/v${PV}.tar.gz -> ${P}.tar.gz"
@@ -11,10 +13,11 @@ SRC_URI="https://github.com/openshift/origin/archive/v${PV}.tar.gz -> ${P}.tar.g
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="kerberos"
+IUSE="bash-completion kerberos"
 
 DEPEND="dev-lang/go
 	kerberos? ( app-crypt/mit-krb5 )"
+RDEPEND="bash-completion? ( >=app-shells/bash-completion-2.3-r1 )"
 
 S="${WORKDIR}/origin-${PV}"
 
@@ -30,4 +33,6 @@ src_install() {
 	esac
 
 	dobin "_output/local/bin/linux/${MY_ARCH}/oc"
+	doman docs/man/man1/oc*
+	use bash-completion && dobashcomp contrib/completions/bash/oc
 }
