@@ -10,7 +10,7 @@ SRC_URI="https://github.com/openshift/origin/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="kerberos"
 
 DEPEND="dev-lang/go
@@ -24,5 +24,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin _output/local/bin/linux/amd64/oc
+	case "${ARCH}" in
+		amd64)	MY_ARCH="${ARCH}" ;;
+		x86)	MY_ARCH="386" ;;
+	esac
+
+	dobin "_output/local/bin/linux/${MY_ARCH}/oc"
 }
