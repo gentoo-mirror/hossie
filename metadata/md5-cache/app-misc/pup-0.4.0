@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-lang/go
+DESCRIPTION=pup is a command line tool for processing HTML
+EAPI=6
+HOMEPAGE=https://github.com/ericchiang/pup
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://github.com/ericchiang/pup/archive/v0.4.0.tar.gz -> pup-0.4.0.tar.gz
+_eclass_exported_funcs=src_compile:- src_install:-
+_md5_=34aaf32dd5d77b1b2ea86d824a7e0bd6
