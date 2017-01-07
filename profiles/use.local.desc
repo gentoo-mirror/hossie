@@ -42,6 +42,8 @@ net-misc/pacmanager:mosh - Enable support for net-misc/mosh
 net-misc/pacmanager:webdav - Enable support for net-misc/cadaver
 sys-boot/plymouth-openrc-plugin:silent - Make the bootsplash silent
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
+sys-kernel/raspberrypi-image:kernel - Installs kernel.img for armv6 (rpi1)
+sys-kernel/raspberrypi-image:kernel7 - Installs kernel7.img for armv7+ (rpi2+)
 www-client/uget:openssl - Enable support for dev-libs/openssl
 www-client/uget:rss-notify - Enable rss-notify
 x11-misc/tint2:battery - Enable battery status plugin
