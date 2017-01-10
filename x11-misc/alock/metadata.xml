@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zlg@gentoo.org</email>
+		<name>Daniel Campbell</name>
+	</maintainer>
+	<longdescription>
+		An extremely simple screen locking utility based on xtrlock. Supports
+		multiple hash-types, shadow passwords, and PAM.
+	</longdescription>
+	<use>
+		<flag name="xbacklight">Enable xbacklight support</flag>
+	</use>
+</pkgmetadata>
