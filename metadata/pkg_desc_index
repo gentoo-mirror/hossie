@@ -24,4 +24,5 @@ www-client/chromium-bin 53.0.2785.143.1145: Chromium Binary from Ubuntu for ARM 
 www-client/uget 2.0.8: Download manager using gtk+ and libcurl
 x11-drivers/displaylink-driver 1.0.335-r1 1.1.68 1.2.58: DisplayLink USB Graphics Software
 x11-drivers/evdi 1.0.68 1.1.61 1.1.65 1.1.65-r1 1.2.55 1.2.64-r1: Extensible Virtual Display Interface
+x11-misc/alock 2.3: Simple screen lock application for X server
 x11-misc/tint2 0.12.11: tint2 is a lightweight panel/taskbar for Linux.
