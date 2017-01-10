@@ -10,7 +10,6 @@
 		multiple hash-types, shadow passwords, and PAM.
 	</longdescription>
 	<use>
-		<flag name="dunst">Enable dunst support</flag>
 		<flag name="xbacklight">Enable xbacklight support</flag>
 	</use>
 </pkgmetadata>

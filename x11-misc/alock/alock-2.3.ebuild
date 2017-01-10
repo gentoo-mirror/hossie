@@ -13,7 +13,7 @@ SRC_URI="https://github.com/Arkq/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="debug dunst imlib pam xbacklight"
+IUSE="debug imlib pam xbacklight"
 
 DEPEND="dev-libs/libgcrypt:0
 	x11-libs/libX11
@@ -25,7 +25,6 @@ DEPEND="dev-libs/libgcrypt:0
 	x11-libs/libXpm
 	x11-libs/libXrender
 	x11-libs/libXxf86misc
-	dunst? ( x11-misc/dunst )
 	imlib? ( media-libs/imlib2[X] )
 	pam? ( virtual/pam )
 	xbacklight? ( x11-apps/xbacklight )"
@@ -50,7 +49,6 @@ src_configure() {
 		--enable-xpm \
 		--enable-xrender \
 		$(use_enable debug) \
-		$(use_with dunst) \
 		$(use_enable imlib imlib2) \
 		$(use_enable pam) \
 		$(use_with xbacklight)
