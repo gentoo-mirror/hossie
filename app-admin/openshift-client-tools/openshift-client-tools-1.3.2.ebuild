@@ -28,8 +28,8 @@ src_compile() {
 
 src_install() {
 	case "${ARCH}" in
-		amd64)	MY_ARCH="${ARCH}" ;;
 		x86)	MY_ARCH="386" ;;
+		*)		MY_ARCH="${ARCH}" ;;
 	esac
 
 	dobin "_output/local/bin/linux/${MY_ARCH}/oc"
