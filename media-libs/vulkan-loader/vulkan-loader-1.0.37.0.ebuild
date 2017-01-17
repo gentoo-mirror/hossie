@@ -55,6 +55,6 @@ multilib_src_install() {
 
 	cd "${S}"
 	insinto /usr/include/vulkan
-	doins include/vulkan/*.h
+	doins include/vulkan/{*.h,*.hpp}
 	einstalldocs
 }
