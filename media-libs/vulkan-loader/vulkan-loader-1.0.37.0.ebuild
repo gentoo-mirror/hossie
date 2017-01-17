@@ -21,10 +21,13 @@ HOMEPAGE="https://www.khronos.org/vulkan/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE=""
+IUSE="wayland"
 
-DEPEND="${PYTHON_DEPS}"
-RDEPEND="!media-libs/vulkan-base"
+DEPEND="${PYTHON_DEPS}
+	x11-libs/libX11:=
+	wayland? ( dev-libs/wayland )
+	!media-libs/vulkan-base"
+RDEPEND="${DEPEND}"
 
 DOCS=( README.md LICENSE.txt )
 
@@ -36,7 +39,8 @@ multilib_src_configure() {
 		-DBUILD_DEMOS=False
 		-DBUILD_VKJSON=False
 		-DBUILD_LOADER=True
-		-DBUILD_WSI_MIR_SUPPORT=OFF	\
+		-DBUILD_WSI_MIR_SUPPORT=OFF
+		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland ON OFF)
 	)
 	cmake-utils_src_configure
 }
