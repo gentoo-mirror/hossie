@@ -24,7 +24,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}"
-RDEPEND=""
+RDEPEND="!media-libs/vulkan-base"
 
 DOCS=( README.md LICENSE.txt )
 
