@@ -36,11 +36,11 @@ multilib_src_configure() {
 		-DCMAKE_SKIP_RPATH=True
 		-DBUILD_TESTS=False
 		-DBUILD_LAYERS=False
-		-DBUILD_DEMOS=False
+		-DBUILD_DEMOS=True
 		-DBUILD_VKJSON=False
 		-DBUILD_LOADER=True
-		-DBUILD_WSI_MIR_SUPPORT=OFF
-		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland ON OFF)
+		-DBUILD_WSI_MIR_SUPPORT=False
+		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
 	)
 	cmake-utils_src_configure
 }
@@ -53,8 +53,9 @@ multilib_src_install() {
 	dosym libvulkan.so.1.* /usr/$(get_libdir)/libvulkan.so.1
 	dosym libvulkan.so.1.* /usr/$(get_libdir)/libvulkan.so
 
-	cd "${S}"
+	dobin "${S}"/build/demos/vulkaninfo
+
 	insinto /usr/include/vulkan
-	doins include/vulkan/{*.h,*.hpp}
+	doins "${S}"/include/vulkan/{*.h,*.hpp}
 	einstalldocs
 }
