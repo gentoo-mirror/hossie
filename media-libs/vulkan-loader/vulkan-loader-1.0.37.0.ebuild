@@ -14,7 +14,7 @@ else
 	S="${WORKDIR}/Vulkan-LoaderAndValidationLayers-sdk-${PV}"
 fi
 
-inherit python-any-r1 cmake-multilib
+inherit python-any-r1 cmake-multilib git-r3
 
 DESCRIPTION="Vulkan Installable Client Driver (ICD) Loader"
 HOMEPAGE="https://www.khronos.org/vulkan/"
@@ -30,6 +30,23 @@ DEPEND="${PYTHON_DEPS}
 RDEPEND="${DEPEND}"
 
 DOCS=( README.md LICENSE.txt )
+
+multilib_src_unpack() {
+	GLSLANG_REV=$(cat "${S}/external_revisions/glslang_revision")
+	SPIRVTOOLS_REV=$(cat "${S}/external_revisions/spirv-tools_revision")
+	SPIRVHEADERS_REV=$(cat "${S}/external_revisions/spirv-headers_revision")
+
+	git-r3_fetch "https://github.com/KhronosGroup/glslang.git" "${GLSLANG_REV}"
+	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Tools.git" "${SPIRVTOOLS_REV}"
+	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Headers.git" "${SPIRVHEADERS_REV}"
+
+	git-r3_checkout https://github.com/KhronosGroup/glslang.git \
+		"${S}"/external/glslang
+	git-r3_checkout https://github.com/KhronosGroup/SPIRV-Tools.git \
+		"${S}"/external/spirv-tools
+	git-r3_checkout https://github.com/KhronosGroup/SPIRV-Headers.git \
+		"${S}"/external/spirv-tools/external/spirv-headers
+}
 
 multilib_src_configure() {
 	local mycmakeargs=(
