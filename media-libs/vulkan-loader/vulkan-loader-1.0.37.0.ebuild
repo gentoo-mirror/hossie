@@ -5,13 +5,18 @@
 EAPI=6
 PYTHON_COMPAT=( python3_{4,5} )
 
-SRC_URI="https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers/archive/sdk-${PV}.tar.gz -> ${P}.tar.gz"
-EGIT_REPO_URI="https://github.com/KhronosGroup/glslang.git"
+inherit python-any-r1 cmake-multilib
 
-inherit python-any-r1 cmake-multilib git-r3
+GLSLANG_REV="6a60c2f9ead58eb9040e47e3e2ada01488648901"
+SPIRVHEADERS_REV="c470b68225a04965bf87d35e143ae92f831e8110"
+SPIRVTOOLS_REV="945e9fc4b477ee55d2262249e5d1d886aa6ba679"
 
 DESCRIPTION="Vulkan Installable Client Driver (ICD) Loader"
 HOMEPAGE="https://www.khronos.org/vulkan/"
+SRC_URI="https://github.com/KhronosGroup/Vulkan-LoaderAndValidationLayers/archive/sdk-${PV}.tar.gz -> ${P}.tar.gz
+	https://api.github.com/repos/KhronosGroup/glslang/tarball/${GLSLANG_REV} -> vulkan-glslang-${PV}.tar.gz
+	https://api.github.com/repos/KhronosGroup/SPIRV-Headers/tarball/${SPIRVHEADERS_REV} -> vulkan-spirvheaders-${PV}.tar.gz
+	https://api.github.com/repos/KhronosGroup/SPIRV-Tools/tarball/${SPIRVTOOLS_REV} -> vulkan-spirvtools-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -27,21 +32,11 @@ RDEPEND="${DEPEND}"
 
 DOCS=( README.md LICENSE.txt )
 
+S="${WORKDIR}/Vulkan-LoaderAndValidationLayers-sdk-${PV}"
+
 multilib_src_unpack() {
-	GLSLANG_REV=$(cat "${S}/external_revisions/glslang_revision")
-	SPIRVTOOLS_REV=$(cat "${S}/external_revisions/spirv-tools_revision")
-	SPIRVHEADERS_REV=$(cat "${S}/external_revisions/spirv-headers_revision")
-
-	git-r3_fetch "https://github.com/KhronosGroup/glslang.git" "${GLSLANG_REV}"
-	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Tools.git" "${SPIRVTOOLS_REV}"
-	git-r3_fetch "https://github.com/KhronosGroup/SPIRV-Headers.git" "${SPIRVHEADERS_REV}"
-
-	git-r3_checkout https://github.com/KhronosGroup/glslang.git \
-		"${S}"/external/glslang
-	git-r3_checkout https://github.com/KhronosGroup/SPIRV-Tools.git \
-		"${S}"/external/spirv-tools
-	git-r3_checkout https://github.com/KhronosGroup/SPIRV-Headers.git \
-		"${S}"/external/spirv-tools/external/spirv-headers
+	mkdir -p "${S}/external"/{glslang,spirv-{headers,tools}}
+	cp -a "${WORKDIR}/KhronosGroup-glslang-6a60c2f"/* "${S}/external/glslang"
 }
 
 multilib_src_configure() {
