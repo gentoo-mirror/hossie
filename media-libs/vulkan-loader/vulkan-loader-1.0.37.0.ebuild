@@ -34,9 +34,15 @@ DOCS=( README.md LICENSE.txt )
 
 S="${WORKDIR}/Vulkan-LoaderAndValidationLayers-sdk-${PV}"
 
-multilib_src_unpack() {
-	mkdir -p "${S}/external"/{glslang,spirv-{headers,tools}}
-	cp -a "${WORKDIR}/KhronosGroup-glslang-6a60c2f"/* "${S}/external/glslang"
+src_unpack() {
+	default
+
+	multilib_src_unpack() {
+		mkdir -p "${S}/external"/{glslang,spirv-{headers,tools}} || die
+		cp -a "${WORKDIR}/KhronosGroup-glslang-6a60c2f"/* "${S}/external/glslang"
+	}
+
+	multilib_parallel_foreach_abi multilib_src_unpack
 }
 
 multilib_src_configure() {
@@ -51,6 +57,15 @@ multilib_src_configure() {
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
 	)
 	cmake-utils_src_configure
+}
+
+multilib_src_compile(){
+	einfo "Building glslang"
+	cd external/glslang
+	cmake -H. -Bbuild
+	cd external/glslang/build
+	emake || die "cannot build glslang"
+	make install || die "cannot install glslang"
 }
 
 multilib_src_install() {
