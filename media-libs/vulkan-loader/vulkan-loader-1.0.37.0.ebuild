@@ -38,14 +38,29 @@ src_unpack() {
 	default
 
 	multilib_src_unpack() {
-		mkdir -p "${S}/external"/{glslang,spirv-{headers,tools}} || die
-		cp -a "${WORKDIR}/KhronosGroup-glslang-6a60c2f"/* "${S}/external/glslang"
+		mkdir -p "${BUILD_DIR}/external"/{glslang,spirv-tools{,/external/spirv-headers}} || die
+		cp -a "${WORKDIR}/KhronosGroup-glslang-6a60c2f"/* "${BUILD_DIR}/external/glslang"
+		cp -a "${WORKDIR}/KhronosGroup-SPIRV-Tools-945e9fc"/* "${BUILD_DIR}/external/spirv-tools"
+		cp -a "${WORKDIR}/KhronosGroup-SPIRV-Headers-c470b68"/* "${BUILD_DIR}/external/spirv-tools/external/spirv-headers"
 	}
 
-	multilib_parallel_foreach_abi multilib_src_unpack
+	multilib_foreach_abi multilib_src_unpack
 }
 
 multilib_src_configure() {
+	einfo "Building glslang"
+	cd "${BUILD_DIR}/external/glslang"
+	cmake -H. -Bbuild || die
+	cd "${BUILD_DIR}/external/glslang/build"
+	emake || die "cannot build glslang"
+	emake install || die "cannot install glslang"
+
+	einfo "Building SPIRV-Tools"
+	cd "${BUILD_DIR}/external/spirv-tools"
+	cmake -H. -Bbuild || die
+	cd "${BUILD_DIR}/external/spirv-tools/build"
+	emake || die "cannot build SPIRV-Tools"
+
 	local mycmakeargs=(
 		-DCMAKE_SKIP_RPATH=True
 		-DBUILD_TESTS=False
@@ -55,17 +70,13 @@ multilib_src_configure() {
 		-DBUILD_LOADER=True
 		-DBUILD_WSI_MIR_SUPPORT=False
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
+		-DCUSTOM_GLSLANG_BIN_ROOT="${BUILD_DIR}/external/glslang/build/install"
 	)
 	cmake-utils_src_configure
 }
 
 multilib_src_compile(){
-	einfo "Building glslang"
-	cd external/glslang
-	cmake -H. -Bbuild
-	cd external/glslang/build
-	emake || die "cannot build glslang"
-	make install || die "cannot install glslang"
+	cmake-utils_src_compile
 }
 
 multilib_src_install() {
