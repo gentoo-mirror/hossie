@@ -21,8 +21,8 @@ RDEPEND="dev-lang/perl
 	x11-libs/vte:0"
 
 DEPEND="${RDEPEND}
-	>=dev-perl/extutils-pkgconfig-1.03
 	>=dev-perl/ExtUtils-Depends-0.202
+	dev-perl/ExtUtils-PkgConfig
 	virtual/pkgconfig"
 
 SRC_TEST=do
