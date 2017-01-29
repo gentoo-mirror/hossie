@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~arm"
 IUSE=""
 
-DEPEND="x11-libs/libdrm[video_cards_exynos]"
+DEPEND="x11-libs/libdrm"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
