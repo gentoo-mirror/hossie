@@ -70,7 +70,7 @@ multilib_src_configure() {
 		-DBUILD_LOADER=True
 		-DBUILD_WSI_MIR_SUPPORT=False
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
-		-DCUSTOM_GLSLANG_BIN_ROOT="${BUILD_DIR}/external/glslang/build/install"
+		-DCUSTOM_GLSLANG_BIN_ROOT="${BUILD_DIR}/external/glslang/build"
 	)
 	cmake-utils_src_configure
 }
