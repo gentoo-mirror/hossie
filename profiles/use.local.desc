@@ -39,6 +39,7 @@ net-misc/openconnect:libproxy - Enable proxy support.
 net-misc/openconnect:stoken - Enable stoken support.
 net-misc/pacmanager:freerdp - Enable support for net-misc/freerdp
 net-misc/pacmanager:mosh - Enable support for net-misc/mosh
+net-misc/pacmanager:rdesktop - Enable support for net-misc/rdesktop
 net-misc/pacmanager:webdav - Enable support for net-misc/cadaver
 sys-boot/plymouth-openrc-plugin:silent - Make the bootsplash silent
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
