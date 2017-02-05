@@ -17,6 +17,7 @@ media-libs/vulkan-base 1.0.21-r1 1.0.24 1.0.26 1.0.30: Vulkan loader and validat
 net-im/hipchat 4.0.1641 4.29.4.1662-r1: Hipchat - persistent group chat using XMPP
 net-misc/openconnect 7.06-r4: Free client for Cisco AnyConnect SSL VPN software
 net-misc/pacmanager 4.5.5.7: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
+net-misc/youtube-dl-gui 0.3.8_p20160925: A cross platform front-end GUI of the popular youtube-dl written in wxPython
 sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
 sys-kernel/gentoo-sources 4.8.15: Full sources including the Gentoo patchset for the 4.8 kernel tree
 sys-kernel/raspberrypi-image 4.4.34_p20161125: Raspberry PI kernel image
