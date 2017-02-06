@@ -30,8 +30,6 @@ DEPEND="${PYTHON_DEPS}
 	!media-libs/vulkan-base"
 RDEPEND="${DEPEND}"
 
-DOCS=( README.md LICENSE.txt )
-
 S="${WORKDIR}/Vulkan-LoaderAndValidationLayers-sdk-${PV}"
 
 src_unpack() {
@@ -39,44 +37,46 @@ src_unpack() {
 
 	multilib_src_unpack() {
 		mkdir -p "${BUILD_DIR}/external"/{glslang,spirv-tools{,/external/spirv-headers}} || die
-		cp -a "${WORKDIR}/KhronosGroup-glslang-6a60c2f"/* "${BUILD_DIR}/external/glslang"
-		cp -a "${WORKDIR}/KhronosGroup-SPIRV-Tools-945e9fc"/* "${BUILD_DIR}/external/spirv-tools"
-		cp -a "${WORKDIR}/KhronosGroup-SPIRV-Headers-c470b68"/* "${BUILD_DIR}/external/spirv-tools/external/spirv-headers"
+		cp -a "${WORKDIR}/KhronosGroup-glslang-${GLSLANG_REV:0:7}"/* "${BUILD_DIR}/external/glslang"
+		cp -a "${WORKDIR}/KhronosGroup-SPIRV-Tools-${SPIRVTOOLS_REV:0:7}"/* "${BUILD_DIR}/external/spirv-tools"
+		cp -a "${WORKDIR}/KhronosGroup-SPIRV-Headers-${SPIRVHEADERS_REV:0:7}"/* "${BUILD_DIR}/external/spirv-tools/external/spirv-headers"
 	}
 
 	multilib_foreach_abi multilib_src_unpack
 }
 
 multilib_src_configure() {
-	einfo "Building glslang"
 	cd "${BUILD_DIR}/external/glslang"
-	cmake -H. -Bbuild || die
-	cd "${BUILD_DIR}/external/glslang/build"
-	emake || die "cannot build glslang"
-	emake install || die "cannot install glslang"
+	cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release || die
 
-	einfo "Building SPIRV-Tools"
 	cd "${BUILD_DIR}/external/spirv-tools"
-	cmake -H. -Bbuild || die
-	cd "${BUILD_DIR}/external/spirv-tools/build"
-	emake || die "cannot build SPIRV-Tools"
+	cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release || die
 
 	local mycmakeargs=(
 		-DCMAKE_SKIP_RPATH=True
 		-DBUILD_TESTS=False
-		-DBUILD_LAYERS=False
+		-DBUILD_LAYERS=True
 		-DBUILD_DEMOS=True
-		-DBUILD_VKJSON=False
+		-DBUILD_VKJSON=True
 		-DBUILD_LOADER=True
 		-DBUILD_WSI_MIR_SUPPORT=False
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
-		-DDISABLE_BUILD_PATH_DECORATION=True
 		-DGLSLANG_VALIDATOR="${BUILD_DIR}/external/glslang/build/install/bin/glslangValidator"
+		-DGLSLANG_SPIRV_INCLUDE_DIR="${BUILD_DIR}/external/glslang"
+		-DSPIRV_TOOLS_INCLUDE_DIR="${BUILD_DIR}/external/spirv-tools/include"
+		-DSPIRV_TOOLS_LIB="${BUILD_DIR}/external/spirv-tools/build/source"
 	)
 	cmake-utils_src_configure
 }
 
 multilib_src_compile(){
+	cd "${BUILD_DIR}/external/glslang/build"
+	emake || die "cannot build glslang"
+	emake install || die "cannot install glslang"
+
+	cd "${BUILD_DIR}/external/spirv-tools/build"
+	emake || die "cannot build SPIRV-Tools"
+
 	cmake-utils_src_compile
 }
 
@@ -88,9 +88,15 @@ multilib_src_install() {
 	dosym libvulkan.so.1.* /usr/$(get_libdir)/libvulkan.so.1
 	dosym libvulkan.so.1.* /usr/$(get_libdir)/libvulkan.so
 
-	dobin "${S}"/build/demos/vulkaninfo
+	cd "${BUILD_DIR}/layers"
+	dolib *.so
+	sed -i -e 's#./libVk#libVk#g' *.json || die
+	insinto /usr/share/vulkan/explicit_layer.d
+	doins *.json
+
+	cd "${BUILD_DIR}/demos"
+	dobin vulkaninfo
 
 	insinto /usr/include/vulkan
 	doins "${S}"/include/vulkan/{*.h,*.hpp}
-	einstalldocs
 }
