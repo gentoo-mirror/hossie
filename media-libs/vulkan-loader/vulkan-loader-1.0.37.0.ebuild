@@ -70,7 +70,8 @@ multilib_src_configure() {
 		-DBUILD_LOADER=True
 		-DBUILD_WSI_MIR_SUPPORT=False
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
-		-DCUSTOM_GLSLANG_BIN_ROOT="${BUILD_DIR}/external/glslang/build"
+		-DDISABLE_BUILD_PATH_DECORATION=True
+		-DGLSLANG_VALIDATOR="${BUILD_DIR}/external/glslang/build/install/bin/glslangValidator"
 	)
 	cmake-utils_src_configure
 }
