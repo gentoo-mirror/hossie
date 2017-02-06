@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python3_{4,5} )
 
 inherit python-any-r1 cmake-multilib
 
-GLSLANG_REV="6a60c2f9ead58eb9040e47e3e2ada01488648901"
+GLSLANG_REV="807a0d9e2f4e176f75d62ac3c179c81800ec2608"
 SPIRVHEADERS_REV="c470b68225a04965bf87d35e143ae92f831e8110"
-SPIRVTOOLS_REV="945e9fc4b477ee55d2262249e5d1d886aa6ba679"
+SPIRVTOOLS_REV="37422e9dba1a3a8cb8028b779dd546d43add6ef8"
 
 DESCRIPTION="Vulkan Installable Client Driver (ICD) Loader"
 HOMEPAGE="https://www.khronos.org/vulkan/"
