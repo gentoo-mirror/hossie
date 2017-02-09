@@ -9,4 +9,4 @@ SLOT=0
 SRC_URI=http://ports.ubuntu.com/ubuntu-ports/pool/universe/c/chromium-browser/chromium-browser_53.0.2785.143-0ubuntu0.14.04.1.1145_armhf.deb http://ports.ubuntu.com/ubuntu-ports/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg_53.0.2785.143-0ubuntu0.14.04.1.1145_armhf.deb
 _eclass_exported_funcs=src_unpack:unpacker src_install:-
 _eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=aed591682e3a1fe1ff9da44f9f8f9b68
+_md5_=4af31e1c6e6193b65225b3460ee3aac8
