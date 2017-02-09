@@ -66,5 +66,5 @@ src_install() {
 	done
 
 	cd "${S}"
-	dodoc LICENSE README.md CONTRIBUTING.md
+	dodoc README.md CONTRIBUTING.md
 }
