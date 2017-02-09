@@ -1,5 +1,5 @@
 app-admin/openshift-client-tools 1.3.2: Enterprise Kubernetes for Developers (Client Tools)
-app-emulation/wine 1.9.10 1.9.11 1.9.12 1.9.13 1.9.14 1.9.16 1.9.22 1.9.23 2.0_rc1 2.0_rc2 2.0_rc4 2.0_rc5: Free implementation of Windows(tm) on Unix
+app-emulation/wine 1.9.23 2.0_rc5: Free implementation of Windows(tm) on Unix
 app-misc/pup 0.4.0: pup is a command line tool for processing HTML
 dev-libs/jansson 2.7: C library for encoding, decoding and manipulating JSON data
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
@@ -11,6 +11,7 @@ dev-util/idea-ultimate 2016.1.3.145.1617.8 2016.2.5.162.2228.15 2016.3.1.163.916
 games-simulation/corsix-th 0.60: Open source clone of Theme Hospital
 games-strategy/openra 20160508-r1 20161019: A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k
 games-strategy/openrct2 0.0.4: Open source re-implementation of Roller Coaster Tycoon 2
+games-util/itch 23.2.1: The best way to play itch.io games
 games-util/sc-controller 0.3.1: User-mode driver and GTK3 based GUI for Steam Controller
 media-libs/glfw 3.2: The Portable OpenGL FrameWork
 media-libs/vulkan-base 1.0.21-r1 1.0.24 1.0.26 1.0.30: Vulkan loader and validation layers
