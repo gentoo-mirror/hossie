@@ -33,10 +33,6 @@ games-strategy/openra:xdg - xdg-utils are used to open web pages
 games-strategy/openra:zenity - zenity is used to display crash dialogs
 media-libs/glfw:egl - Use EGL instead of GLX for GL context creation
 media-libs/glfw:vulkan - Add Vulkan support
-net-misc/openconnect:gssapi - Build GSSAPI support.
-net-misc/openconnect:java - Build JNI bindings using jni.h
-net-misc/openconnect:libproxy - Enable proxy support.
-net-misc/openconnect:stoken - Enable stoken support.
 net-misc/pacmanager:freerdp - Enable support for net-misc/freerdp
 net-misc/pacmanager:mosh - Enable support for net-misc/mosh
 net-misc/pacmanager:rdesktop - Enable support for net-misc/rdesktop
