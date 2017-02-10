@@ -29,3 +29,10 @@ RDEPEND="${DEPEND}"
 MAKEOPTS+=" -j1"
 
 S="${WORKDIR}/OpenRCT2-${PV}"
+
+src_prepare() {
+	#https://devmanual.gentoo.org/ebuild-writing/common-mistakes/
+	sed -i 's#-Werror ##' CMakeLists.txt
+
+	default
+}
