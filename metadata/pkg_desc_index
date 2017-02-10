@@ -1,7 +1,6 @@
 app-admin/openshift-client-tools 1.3.2: Enterprise Kubernetes for Developers (Client Tools)
 app-emulation/wine 1.9.23 2.0_rc5 2.1: Free implementation of Windows(tm) on Unix
 app-misc/pup 0.4.0: pup is a command line tool for processing HTML
-dev-libs/jansson 2.7: C library for encoding, decoding and manipulating JSON data
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
 dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
 dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
