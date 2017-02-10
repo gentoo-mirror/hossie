@@ -9,7 +9,7 @@ dev-util/idea-community 2016.1.3.145.1617.8 2016.2.5.162.2228.15 2016.3.4.163.12
 dev-util/idea-ultimate 2016.1.3.145.1617.8 2016.2.5.162.2228.15 2016.3.4.163.12024.16: A complete toolset for web, mobile and enterprise development
 games-simulation/corsix-th 0.60: Open source clone of Theme Hospital
 games-strategy/openra 20160508-r1 20161019: A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k
-games-strategy/openrct2 0.0.4: Open source re-implementation of Roller Coaster Tycoon 2
+games-strategy/openrct2 0.0.4 0.0.6: Open source re-implementation of Roller Coaster Tycoon 2
 games-util/itch 23.2.1: The best way to play itch.io games
 games-util/sc-controller 0.3.1: User-mode driver and GTK3 based GUI for Steam Controller
 media-libs/glfw 3.2: The Portable OpenGL FrameWork
