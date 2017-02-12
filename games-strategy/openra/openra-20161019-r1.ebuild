@@ -42,6 +42,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	#https://github.com/OpenRA/OpenRA/pull/12505
+	epatch "${FILESDIR}/${P}-opennat-naming.patch"
+
 	emake cli-dependencies
 }
 
