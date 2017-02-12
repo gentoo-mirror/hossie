@@ -1,0 +1,27 @@
+From 86785d5aba6134c38ce04668710d7887df8ab01c Mon Sep 17 00:00:00 2001
+From: Oliver Brakmann <ob-web2013+github@posteo.net>
+Date: Sat, 24 Dec 2016 18:42:20 +0100
+Subject: [PATCH] Work around Open.Nat installation by nuget failing randomly
+
+---
+ thirdparty/fetch-thirdparty-deps.sh | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/thirdparty/fetch-thirdparty-deps.sh b/thirdparty/fetch-thirdparty-deps.sh
+index 8461b86..d573506 100755
+--- a/thirdparty/fetch-thirdparty-deps.sh
++++ b/thirdparty/fetch-thirdparty-deps.sh
+@@ -85,9 +85,10 @@
+
+ if [ ! -f Open.Nat.dll ]; then
+ 	echo "Fetching Open.Nat from NuGet"
+-	get Open.NAT 2.1.0
+-	cp ./Open.NAT/lib/net45/Open.Nat.dll .
+-	rm -rf Open.NAT
++	get Open.Nat 2.1.0
++	if [ -d ./Open.NAT ]; then mv Open.NAT Open.Nat; fi
++	cp ./Open.Nat/lib/net45/Open.Nat.dll .
++	rm -rf Open.Nat
+ fi
+
+ if [ ! -f FuzzyLogicLibrary.dll ]; then
