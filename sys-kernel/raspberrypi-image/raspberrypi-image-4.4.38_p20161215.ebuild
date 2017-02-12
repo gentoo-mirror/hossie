@@ -30,22 +30,6 @@ pkg_preinst() {
 }
 
 src_install() {
-	cd "${S}/boot"
-
-	insinto /boot
-	use rpi-b && doins bcm2708-rpi-b.dtb
-	use rpi-b-plus && doins bcm2708-rpi-b-plus.dtb
-	use rpi-cm && doins bcm2708-rpi-cm.dtb
-	use rpi-2-b && doins bcm2709-rpi-2-b.dtb
-	use rpi-3-b && doins bcm2710-rpi-3-b.dtb
-	use rpi-cm3 && doins bcm2710-rpi-cm3.dtb
-
-	insinto /boot/overlays
-	rm overlays/README
-	doins -r overlays/*
-
-	cd "${S}"
-
 	if use rpi-b || use rpi-b-plus || use rpi-cm; then
 		insinto /lib/modules
 		doins -r "modules/${MY_KERNV}+"
