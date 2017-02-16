@@ -38,9 +38,19 @@ net-misc/pacmanager:mosh - Enable support for net-misc/mosh
 net-misc/pacmanager:rdesktop - Enable support for net-misc/rdesktop
 net-misc/pacmanager:webdav - Enable support for net-misc/cadaver
 sys-boot/plymouth-openrc-plugin:silent - Make the bootsplash silent
+sys-boot/raspberrypi-firmware:rpi-2-b - Install files for RPi 2b
+sys-boot/raspberrypi-firmware:rpi-3-b - Install files for RPi 3b
+sys-boot/raspberrypi-firmware:rpi-b - Install files for RPi 1b
+sys-boot/raspberrypi-firmware:rpi-b-plus - Install files for RPi 1b+
+sys-boot/raspberrypi-firmware:rpi-cm - Install files for RPi Compute Module 1
+sys-boot/raspberrypi-firmware:rpi-cm3 - Install files for RPi Compute Module 3
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
-sys-kernel/raspberrypi-image:kernel - Installs kernel.img for armv6 (rpi1)
-sys-kernel/raspberrypi-image:kernel7 - Installs kernel7.img for armv7+ (rpi2+)
+sys-kernel/raspberrypi-image:rpi-2-b - Install files for RPi 2b
+sys-kernel/raspberrypi-image:rpi-3-b - Install files for RPi 3b
+sys-kernel/raspberrypi-image:rpi-b - Install files for RPi 1b
+sys-kernel/raspberrypi-image:rpi-b-plus - Install files for RPi 1b+
+sys-kernel/raspberrypi-image:rpi-cm - Install files for RPi Compute Module 1
+sys-kernel/raspberrypi-image:rpi-cm3 - Install files for RPi Compute Module 3
 www-client/uget:openssl - Enable support for dev-libs/openssl
 www-client/uget:rss-notify - Enable rss-notify
 x11-misc/alock:xbacklight - Enable xbacklight support
