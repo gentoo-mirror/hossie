@@ -6,7 +6,11 @@
         <name>Daniel Augustin</name>
     </maintainer>
     <use>
-        <flag name="kernel">Installs kernel.img for armv6 (rpi1)</flag>
-        <flag name="kernel7">Installs kernel7.img for armv7+ (rpi2+)</flag>
+        <flag name="rpi-b">Install files for RPi 1b</flag>
+        <flag name="rpi-b-plus">Install files for RPi 1b+</flag>
+        <flag name="rpi-cm">Install files for RPi Compute Module 1</flag>
+        <flag name="rpi-2-b">Install files for RPi 2b</flag>
+        <flag name="rpi-3-b">Install files for RPi 3b</flag>
+        <flag name="rpi-cm3">Install files for RPi Compute Module 3</flag>
     </use>
 </pkgmetadata>
