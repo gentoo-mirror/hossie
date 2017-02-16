@@ -13,10 +13,8 @@ LICENSE="GPL-2 raspberrypi-videocore-bin"
 SLOT="${PVR}"
 KEYWORDS="~arm -*"
 
-#We cannot use "armv6", because that use flag is forced on armv7
-#So we would always install the lower kernels too
-IUSE="+kernel +kernel7"
-REQUIRED_USE="|| ( kernel kernel7 )"
+IUSE="rpi-b rpi-b-plus rpi-cm rpi-2-b rpi-3-b rpi-cm3"
+REQUIRED_USE="|| ( $IUSE )"
 
 MY_PV="1.$(get_version_component_range 4)"
 MY_PV="${MY_PV//p}"
@@ -32,13 +30,13 @@ pkg_preinst() {
 }
 
 src_install() {
-	if use kernel; then
+	if use rpi-b || use rpi-b-plus || use rpi-cm; then
 		insinto /lib/modules
 		doins -r "modules/${MY_KERNV}+"
 		insinto /boot
 		newins boot/kernel.img "kernel-${PVR}.img"
 	fi
-	if use kernel7; then
+	if use rpi-2-b || use rpi-3-b || use rpi-cm3; then
 		insinto /lib/modules
 		doins -r "modules/${MY_KERNV}-v7+"
 		insinto /boot
