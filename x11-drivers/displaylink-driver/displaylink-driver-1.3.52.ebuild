@@ -65,7 +65,7 @@ src_install() {
 	else
 		newins "${FILESDIR}/pm-displaylink" suspend.sh
 		dosym /opt/displaylink/suspend.sh /etc/pm/sleep.d/displaylink.sh
-		newinitd "${FILESDIR}/rc-displaylink-1.2" dlm
+		newinitd "${FILESDIR}/rc-displaylink-1.3" dlm
 	fi
 }
 
