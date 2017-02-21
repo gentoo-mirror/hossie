@@ -36,6 +36,8 @@ src_install() {
 		MY_UBUNTU_VERSION=1404
 	fi
 
+	einfo "Using package for Ubuntu ${MY_UBUNTU_VERSION} based on your gcc version: $(gcc-version)"
+
 	case "${ARCH}" in
 		amd64)	MY_ARCH="x64" ;;
 		*)		MY_ARCH="${ARCH}" ;;
