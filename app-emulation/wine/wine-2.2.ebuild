@@ -16,20 +16,19 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	#KEYWORDS=""
 else
-	MAJOR_V=$(get_version_component_range 1-2)
-	SRC_URI="https://dl.winehq.org/wine/source/${MAJOR_V}/$(replace_version_separator 3 - $P).tar.bz2"
+	MAJOR_V=$(get_version_component_range 1)
+	SRC_URI="https://dl.winehq.org/wine/source/${MAJOR_V}.x/${P}.tar.xz"
 	KEYWORDS="-* ~amd64 ~x86"
 fi
 
-MY_PV=$(replace_version_separator 2 -)
 VANILLA_GV="2.47"
 VANILLA_MV="4.6.4"
 STAGING_GV="2.47"
 STAGING_MV="4.6.4"
 [[ ${MAJOR_V} == "1.8" ]] && SUFFIX="-unofficial"
-STAGING_P="wine-staging-${MY_PV}"
+STAGING_P="wine-staging-${PV}"
 STAGING_DIR="${WORKDIR}/${STAGING_P}${SUFFIX}"
-D3D9_P="wine-d3d9-${MY_PV}"
+D3D9_P="wine-d3d9-${PV}"
 D3D9_DIR="${WORKDIR}/wine-d3d9-patches-${D3D9_P}"
 WINE_GENTOO="wine-gentoo-2015.03.07"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
@@ -56,7 +55,7 @@ if [[ ${PV} == "9999" ]] ; then
 	D3D9_EGIT_REPO_URI="git://github.com/sarnex/wine-d3d9-patches.git"
 else
 	SRC_URI="${SRC_URI}
-	staging? ( https://github.com/wine-compholio/wine-staging/archive/v${MY_PV}${SUFFIX}.tar.gz -> ${STAGING_P}.tar.gz )
+	staging? ( https://github.com/wine-compholio/wine-staging/archive/v${PV}${SUFFIX}.tar.gz -> ${STAGING_P}.tar.gz )
 	d3d9? ( https://github.com/sarnex/wine-d3d9-patches/archive/${D3D9_P}.tar.gz )"
 fi
 
@@ -76,8 +75,6 @@ REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 # FIXME: the test suite is unsuitable for us; many tests require net access
 # or fail due to Xvfb's opengl limitations.
 RESTRICT="test"
-
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 COMMON_DEPEND="
 	X? (
