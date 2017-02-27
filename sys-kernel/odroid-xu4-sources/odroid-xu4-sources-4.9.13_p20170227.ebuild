@@ -5,6 +5,7 @@
 EAPI=5
 
 MY_COMMIT="4feec5ce1611313210c2809283b6fa30e26c2a26"
+MY_DIR="linux-odroidxu4-${PVR}"
 
 ETYPE=sources
 K_DEFCONFIG="odroidxu3_defconfig"
@@ -21,4 +22,9 @@ SRC_URI="https://api.github.com/repos/hardkernel/linux/tarball/${MY_COMMIT} -> $
 
 KEYWORDS="~arm"
 
-S="${WORKDIR}/hardkernel-linux-${MY_COMMIT:0:7}"
+S="${WORKDIR}/${MY_DIR}"
+
+src_unpack() {
+	unpack "${P}.tar.gz"
+	mv "hardkernel-linux-${MY_COMMIT:0:7}" "${MY_DIR}" || die
+}
