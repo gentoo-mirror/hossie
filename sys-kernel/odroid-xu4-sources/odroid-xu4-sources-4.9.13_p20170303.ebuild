@@ -4,11 +4,10 @@
 
 EAPI=5
 
-MY_COMMIT="4feec5ce1611313210c2809283b6fa30e26c2a26"
+MY_COMMIT="7daac62886461398ada493b000415e25747343b4"
 MY_DIR="linux-odroidxu4-${PVR}"
 
 ETYPE=sources
-K_DEFCONFIG="odroidxu3_defconfig"
 K_SECURITY_UNSUPPORTED=1
 
 inherit kernel-2
@@ -27,4 +26,6 @@ S="${WORKDIR}/${MY_DIR}"
 src_unpack() {
 	unpack "${P}.tar.gz"
 	mv "hardkernel-linux-${MY_COMMIT:0:7}" "${MY_DIR}" || die
+	env_setup_xmakeopts
+	cd "${S}"
 }
