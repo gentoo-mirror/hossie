@@ -26,6 +26,14 @@ S="${WORKDIR}/${MY_DIR}"
 src_unpack() {
 	unpack "${P}.tar.gz"
 	mv "hardkernel-linux-${MY_COMMIT:0:7}" "${MY_DIR}" || die
+	epatch_user
 	env_setup_xmakeopts
 	cd "${S}"
+}
+
+pkg_postinst() {
+	einfo "The default config is called odroidxu3_defconfig"
+	einfo ""
+
+	default
 }
