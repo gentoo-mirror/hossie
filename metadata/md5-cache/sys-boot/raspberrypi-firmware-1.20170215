@@ -1,0 +1,13 @@
+DEFINED_PHASES=install preinst
+DESCRIPTION=Raspberry PI boot loader and firmware
+EAPI=5
+HOMEPAGE=https://github.com/raspberrypi/firmware
+IUSE=rpi-b rpi-b-plus rpi-cm rpi-2-b rpi-3-b rpi-cm3
+KEYWORDS=~arm -*
+LICENSE=GPL-2 raspberrypi-videocore-bin
+REQUIRED_USE=|| ( rpi-b rpi-b-plus rpi-cm rpi-2-b rpi-3-b rpi-cm3 )
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=https://github.com/raspberrypi/firmware/archive/1.20170215.tar.gz -> raspberrypi-firmware-1.20170215.tar.gz
+_eclass_exported_funcs=pkg_preinst:- src_install:-
+_md5_=4424409a808af5e6a57d9fbb68051095
