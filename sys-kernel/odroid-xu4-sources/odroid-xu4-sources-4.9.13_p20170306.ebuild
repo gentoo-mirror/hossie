@@ -35,5 +35,5 @@ pkg_postinst() {
 	einfo "The default config is called odroidxu3_defconfig"
 	einfo ""
 
-	default
+	kernel-2_pkg_postinst
 }
