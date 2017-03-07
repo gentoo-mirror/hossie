@@ -44,7 +44,6 @@ sys-boot/raspberrypi-firmware:rpi-b - Install files for RPi 1b
 sys-boot/raspberrypi-firmware:rpi-b-plus - Install files for RPi 1b+
 sys-boot/raspberrypi-firmware:rpi-cm - Install files for RPi Compute Module 1
 sys-boot/raspberrypi-firmware:rpi-cm3 - Install files for RPi Compute Module 3
-sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/raspberrypi-image:rpi-2-b - Install files for RPi 2b
 sys-kernel/raspberrypi-image:rpi-3-b - Install files for RPi 3b
 sys-kernel/raspberrypi-image:rpi-b - Install files for RPi 1b
