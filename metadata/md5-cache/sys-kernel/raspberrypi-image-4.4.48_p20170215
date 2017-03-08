@@ -9,5 +9,5 @@ REQUIRED_USE=|| ( rpi-b rpi-b-plus rpi-cm rpi-2-b rpi-3-b rpi-cm3 )
 SLOT=4.4.48_p20170215
 SRC_URI=https://github.com/raspberrypi/firmware/archive/1.20170215.tar.gz -> raspberrypi-firmware-1.20170215.tar.gz
 _eclass_exported_funcs=pkg_preinst:- pkg_postinst:- src_install:-
-_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=721f153f878f9d496d0b2097a4997a3c
