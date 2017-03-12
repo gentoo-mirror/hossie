@@ -10,4 +10,4 @@ RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://github.com/raspberrypi/firmware/archive/1.20161215.tar.gz -> raspberrypi-firmware-1.20161215.tar.gz
 _eclass_exported_funcs=pkg_preinst:- src_install:-
-_md5_=4424409a808af5e6a57d9fbb68051095
+_md5_=fca04064874a87b617aee50fbb356500
