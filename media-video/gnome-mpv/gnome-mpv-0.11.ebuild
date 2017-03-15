@@ -25,7 +25,10 @@ pkg_preinst(){
 }
 
 src_prepare(){
+	epatch "${FILESDIR}/gnome-mpv-makefile.patch"
+	eapply_user
 	mkdir m4
+
 	eautoreconf
 }
 
