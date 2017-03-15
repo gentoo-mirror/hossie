@@ -24,6 +24,10 @@ pkg_preinst(){
 	gnome2_schemas_savelist
 }
 
+src_prepare(){
+	eautoreconf
+}
+
 pkg_postinst(){
 	gnome2_schemas_update
 }
