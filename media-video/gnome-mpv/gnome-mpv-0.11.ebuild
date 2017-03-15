@@ -25,6 +25,7 @@ pkg_preinst(){
 }
 
 src_prepare(){
+	mkdir m4
 	eautoreconf
 }
 
