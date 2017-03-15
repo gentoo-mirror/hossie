@@ -1,7 +1,7 @@
 DEFINED_PHASES=postinst postrm preinst prepare
 DEPEND=dev-libs/appstream-glib dev-libs/glib media-libs/libepoxy media-video/mpv[libmpv] x11-libs/gtk+:3 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
 DESCRIPTION=A simple GTK+ frontend for mpv
-EAPI=5
+EAPI=6
 HOMEPAGE=https://github.com/gnome-mpv/gnome-mpv
 KEYWORDS=~arm ~x86 ~amd64
 LICENSE=GPL-3
@@ -10,4 +10,4 @@ SLOT=0
 SRC_URI=https://github.com/gnome-mpv/gnome-mpv/archive/v0.11.tar.gz -> gnome-mpv-0.11.tar.gz
 _eclass_exported_funcs=pkg_preinst:- pkg_postrm:- pkg_postinst:- src_prepare:-
 _eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	3c847a0129fed780bd709b98e426f89c	gnome2-utils	fe8e9099c6fc74a40946623c593c7236	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	b9389dfad0ee8f8e0b2a41b79fcf7120
-_md5_=36615f7f773ed45abdceadc2c8c69b7e
+_md5_=cc9d37380ea7b657f2988a162fbecfe5
