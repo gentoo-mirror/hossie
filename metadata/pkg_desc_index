@@ -15,6 +15,7 @@ games-util/sc-controller 0.3.1: User-mode driver and GTK3 based GUI for Steam Co
 media-libs/glfw 3.2: The Portable OpenGL FrameWork
 media-libs/vulkan-base 1.0.30: Vulkan loader and validation layers
 media-libs/vulkan-loader 1.0.39.1: Vulkan Installable Client Driver (ICD) Loader
+media-video/gnome-mpv 0.11: A simple GTK+ frontend for mpv
 net-im/hipchat 4.0.1641 4.29.4.1662-r1: Hipchat - persistent group chat using XMPP
 net-misc/pacmanager 4.5.5.7: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
 net-misc/youtube-dl-gui 0.3.8_p20160925: A cross platform front-end GUI of the popular youtube-dl written in wxPython
