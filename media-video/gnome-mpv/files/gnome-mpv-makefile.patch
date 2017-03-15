@@ -1,0 +1,14 @@
+--- a/Makefile.am	2017-03-15 22:36:50.572090962 +0100
++++ b/Makefile.am	2017-03-15 22:37:16.474992948 +0100
+@@ -19,11 +19,3 @@
+ # Ensure that the dist tarball does not contain own/group from build system
+ TAR_OPTIONS = --owner=0 --group=0
+ export TAR_OPTIONS
+-
+-install-data-hook:
+-	$(UPDATE_DESKTOP)
+-	$(UPDATE_ICON)
+-
+-uninstall-hook:
+-	$(UPDATE_DESKTOP)
+-	$(UPDATE_ICON)
