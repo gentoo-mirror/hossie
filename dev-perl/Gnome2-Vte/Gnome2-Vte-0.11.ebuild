@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-	>=dev-perl/gtk2-perl-1.00
+	dev-perl/Gtk2
 	>=dev-perl/glib-perl-1.01
 	x11-libs/vte:0"
 
