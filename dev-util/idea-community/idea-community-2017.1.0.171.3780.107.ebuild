@@ -95,7 +95,7 @@ src_install() {
 
 	if use custom-jdk; then
 		for jrefile in java jjs keytool orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200; do
-			fperms 755 "${dir}/jre/jre/bin/${jrefile}"
+			fperms 755 "${dir}/jre/bin/${jrefile}"
 		done
 	fi
 
