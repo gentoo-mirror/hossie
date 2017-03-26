@@ -19,6 +19,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 LICENSE="Franz"
 
+QA_EXECSTACK="usr*/lib64/franz/Franz"
+
 DEPEND="dev-libs/libpcre:3
 	dev-libs/libtasn1:0
 	dev-libs/nettle:0
@@ -42,5 +44,5 @@ src_install() {
 	doicon resources/app.asar.unpacked/assets/franz.png
 
 	make_wrapper franz "/usr/$(get_libdir)/${PN}/Franz"
-	make_desktop_entry franz Franz franz.png
+	make_desktop_entry franz Franz franz
 }
