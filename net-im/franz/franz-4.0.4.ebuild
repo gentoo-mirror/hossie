@@ -19,7 +19,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 LICENSE="Franz"
 
-QA_EXECSTACK="usr*/lib64/franz/Franz"
+QA_EXECSTACK="usr*/lib64/${PN}/Franz"
+QA_PRESTRIPPED="usr/lib.*/${PN}/lib.*
+	usr/lib.*/${PN}/Franz"
 
 DEPEND="dev-libs/libpcre:3
 	dev-libs/libtasn1:0
