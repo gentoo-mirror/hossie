@@ -30,7 +30,7 @@ DEPEND="dev-libs/libpcre:3
 	dev-libs/nss:0
 	media-libs/libpng:0
 	net-libs/gnutls:0
-	>=sys-devel/gcc-4.6.0
+	>=sys-devel/gcc-4.6.0:*
 	x11-libs/gtk+:2"
 
 RDEPEND="${DEPEND}"
