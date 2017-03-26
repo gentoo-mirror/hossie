@@ -13,12 +13,21 @@ esac
 
 DESCRIPTION="Franz is a free messaging app"
 HOMEPAGE="http://meetfranz.com/"
-SRC_URI="https://github.com/meetfranz/franz-app/releases/download/4.0.4/Franz-linux-${MY_ARCH}-4.0.4.tgz -> ${P}.tar.gz"
+SRC_URI="https://github.com/meetfranz/franz-app/releases/download/4.0.4/Franz-linux-${MY_ARCH}-4.0.4.tgz -> ${P}-${MY_ARCH}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
+LICENSE="Franz"
 
-DEPEND=""
+DEPEND="dev-libs/libpcre:3
+	dev-libs/libtasn1:0
+	dev-libs/nettle:0
+	dev-libs/nspr:0
+	dev-libs/nss:0
+	media-libs/libpng:0
+	net-libs/gnutls:0
+	>=sys-devel/gcc-4.6.0
+	x11-libs/gtk+:2"
 
 RDEPEND="${DEPEND}"
 
