@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit multilib
+inherit eutils multilib
 
 case "${ARCH}" in
 	x86)	MY_ARCH="ia32" ;;
@@ -37,4 +37,10 @@ src_install() {
 	insinto "/usr/$(get_libdir)/${PN}"
 	doins -r *.pak *.so *.bin *.dat locales resources Franz
 	fperms 755 "/usr/$(get_libdir)/${PN}/Franz"
+
+	doicon -s scalable resources/app.asar.unpacked/assets/franz.svg
+	doicon resources/app.asar.unpacked/assets/franz.png
+
+	make_wrapper franz "/usr/$(get_libdir)/${PN}/Franz"
+	make_desktop_entry franz Franz franz.png
 }
