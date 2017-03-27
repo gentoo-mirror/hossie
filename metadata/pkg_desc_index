@@ -11,7 +11,7 @@ games-simulation/corsix-th 0.60: Open source clone of Theme Hospital
 games-strategy/openra 20160508-r1 20161019-r1 20170304: A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k
 games-strategy/openrct2 0.0.4 0.0.6: Open source re-implementation of Roller Coaster Tycoon 2
 games-util/itch 23.2.1 23.3.1: The best way to play itch.io games
-games-util/sc-controller 0.3.1: User-mode driver and GTK3 based GUI for Steam Controller
+games-util/sc-controller 0.3.1 0.3.8: User-mode driver and GTK3 based GUI for Steam Controller
 media-libs/glfw 3.2: The Portable OpenGL FrameWork
 media-libs/vulkan-base 1.0.30: Vulkan loader and validation layers
 media-libs/vulkan-loader 1.0.39.1: Vulkan Installable Client Driver (ICD) Loader
