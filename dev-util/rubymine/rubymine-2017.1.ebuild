@@ -49,7 +49,7 @@ src_install() {
 	doins -r *
 
 	fperms +x "${dir}/bin/format.sh" "${dir}/bin/printenv.py" "${dir}/bin/restart.py" \
-		"${dir}/bin/rinspect.sh" "${dir}/bin/${MY_PN}.sh"
+		"${dir}/bin/rinspect.sh" "${dir}/bin/${PN}.sh"
 
 	use amd64 && fperms +x "${dir}/bin/fsnotifier64"
 	use x86 && fperms +x "${dir}/bin/fsnotifier"
