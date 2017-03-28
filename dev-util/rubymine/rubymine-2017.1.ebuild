@@ -47,12 +47,18 @@ src_install() {
 
 	insinto "${dir}"
 	doins -r *
-	fperms +x "${dir}/bin/"*.sh "${dir}/bin/"*.py
+
+	fperms +x "${dir}/bin/format.sh" "${dir}/bin/printenv.py" "${dir}/bin/restart.py" \
+		"${dir}/bin/rinspect.sh" "${dir}/bin/${MY_PN}.sh"
 
 	use amd64 && fperms +x "${dir}/bin/fsnotifier64"
 	use x86 && fperms +x "${dir}/bin/fsnotifier"
 
-	use custom-jdk && fperms +x "${dir}/jre/bin/"*
+	if use custom-jdk; then
+		for jrefile in java jjs keytool orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200; do
+			fperms +x "${dir}/jre/bin/${jrefile}"
+		done
+	fi
 
 	doicon "bin/${PN}.png"
 	newicon -s scalable "bin/RMlogo.svg" "${PN}.svg"
