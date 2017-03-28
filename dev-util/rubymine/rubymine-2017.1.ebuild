@@ -62,13 +62,13 @@ src_install() {
 
 	doicon "bin/${PN}.png"
 	newicon -s scalable "bin/RMlogo.svg" "${PN}.svg"
-	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
+	make_wrapper "${PN}" "${dir}/bin/${PN}.sh"
 
 	#https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
 	mkdir -p "${D}/etc/sysctl.d/"
 	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-${PN}-inotify-watches.conf"
 
-	make_desktop_entry "${PN}" "${PN}" "${PN}" "Development;IDE"
+	make_desktop_entry "${PN}" "Ruby Mine" "${PN}" "Development;IDE"
 }
 
 pkg_postinst() {
