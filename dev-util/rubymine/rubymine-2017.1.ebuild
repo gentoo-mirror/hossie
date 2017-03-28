@@ -68,7 +68,7 @@ src_install() {
 	mkdir -p "${D}/etc/sysctl.d/"
 	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-${PN}-inotify-watches.conf"
 
-	make_desktop_entry "${PN}" "${MY_PN}" "${PN}" "Development;IDE"
+	make_desktop_entry "${PN}" "${PN}" "${PN}" "Development;IDE"
 }
 
 pkg_postinst() {
