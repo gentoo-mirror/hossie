@@ -25,6 +25,7 @@ app-emulation/wine:themes - Support GTK+:3 window theming through Wine-Staging
 app-emulation/wine:udev - Use virtual/libudev to provide plug and play support
 dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
+dev-util/rubymine:custom-jdk - Install and use JetBrains's custom JRE.
 games-simulation/corsix-th:midi - Adds support for background midis via media-sound/timidity++
 games-strategy/openra:debug - Compile and run with full debugging information
 games-strategy/openra:doc - Generate additional documentation
