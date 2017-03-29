@@ -52,7 +52,7 @@ src_install() {
 	fperms +x "/usr/$(get_libdir)/${PN}/cerebro"
 
 	cd "${S}/build/icons"
-	for size in 16 32 48 72 128 256 512; do
+	for size in 16 32 48 128 256 512; do
 		newicon -s "${size}" "${size}x${size}.png" "${PN}.png"
 	done
 
