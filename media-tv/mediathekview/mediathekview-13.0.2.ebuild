@@ -19,6 +19,8 @@ RDEPEND="|| ( dev-java/oracle-jdk-bin:1.8[javafx] dev-java/oracle-jre-bin:1.8[ja
 	media-video/vlc
 	virtual/ffmpeg"
 
+S="${WORKDIR}/MediathekView-${PV}"
+
 src_compile() {
 	gradle --no-daemon jar
 }
