@@ -22,5 +22,5 @@ RDEPEND="|| ( dev-java/oracle-jdk-bin:1.8[javafx] dev-java/oracle-jre-bin:1.8[ja
 S="${WORKDIR}/MediathekView-${PV}"
 
 src_compile() {
-	gradle --no-daemon jar
+	gradle -g "${WORKDIR}" --no-daemon jar
 }
