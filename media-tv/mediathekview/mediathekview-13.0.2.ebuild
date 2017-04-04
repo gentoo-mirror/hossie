@@ -14,9 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="
+DEPEND="virtual/jdk:1.8
 	dev-java/gradle-bin:*"
 RDEPEND="|| ( virtual/jre:1.8 virtual/jdk:1.8 )
+	dev-java/commons-lang:3.3
+	dev-java/jackson:2
+	dev-java/jchart2d
 	media-video/flvstreamer
 	media-video/vlc
 	virtual/ffmpeg"
