@@ -24,6 +24,7 @@ RDEPEND="|| ( virtual/jre:1.8 virtual/jdk:1.8 )
 	dev-java/jgoodies-common:1.8
 	dev-java/jgoodies-forms:1.8
 	dev-java/jide-oss:0
+	dev-java/swingx:1.6
 	dev-java/xz-java:0
 	media-video/flvstreamer
 	media-video/vlc
@@ -44,6 +45,7 @@ src_install() {
 	java-pkg_register-dependency jgoodies-common-1.8
 	java-pkg_register-dependency jgoodies-forms-1.8
 	java-pkg_register-dependency jide-oss
+	java-pkg_register-dependency swingx-1.6
 	java-pkg_register-dependency xz-java
 
 	java-pkg_dolauncher "${PN}" --main mediathek.Main
