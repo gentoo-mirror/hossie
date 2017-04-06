@@ -42,6 +42,7 @@ src_install() {
 	java-pkg_dojar build/libs/MSearch-2.1.1.jar
 
 	java-pkg_register-dependency commons-lang-3.3
+	java-pkg_register-dependency jackson-2
 	java-pkg_register-dependency jchart2d
 	java-pkg_register-dependency jgoodies-common-1.8
 	java-pkg_register-dependency jgoodies-forms-1.8
