@@ -30,8 +30,8 @@ RDEPEND="|| ( virtual/jre:1.8 virtual/jdk:1.8 )
 S="${WORKDIR}/MediathekView-${PV}"
 
 src_compile() {
-	gradle -g "${WORKDIR}" --no-daemon jar
-	cp "${DISTDIR}/MSearch-2.1.1.jar" build/libs
+	gradle -g "${WORKDIR}" --no-daemon jar || die
+	cp "${DISTDIR}/MSearch-2.1.1.jar" build/libs || die
 }
 
 src_install() {
