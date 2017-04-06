@@ -7,7 +7,8 @@ inherit java-pkg-2
 
 DESCRIPTION="MediathekView searches the online portals of public broadcasting services"
 HOMEPAGE="https://mediathekview.de/"
-SRC_URI="https://github.com/${PN}/MediathekView/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/${PN}/MediathekView/archive/${PV}.tar.gz -> ${P}.tar.gz
+	https://repo.mediathekview.de/repository/maven-releases/de/mediathekview/MSearch/2.1.1/MSearch-2.1.1.jar"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -33,6 +34,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar build/libs/MediathekView.jar
+	java-pkg_dojar "${DISTDIR}/MSearch-2.1.1.jar"
 
 	java-pkg_register-dependency commons-lang-3.3
 	java-pkg_register-dependency jide-oss
