@@ -22,6 +22,7 @@ RDEPEND="|| ( virtual/jre:1.8 virtual/jdk:1.8 )
 	dev-java/jackson:2
 	dev-java/jchart2d
 	dev-java/jide-oss:0
+	dev-java/xz-java:0
 	media-video/flvstreamer
 	media-video/vlc
 	virtual/ffmpeg"
@@ -39,6 +40,7 @@ src_install() {
 
 	java-pkg_register-dependency commons-lang-3.3
 	java-pkg_register-dependency jide-oss
+	java-pkg_register-dependency xz-java
 
 	java-pkg_dolauncher "${PN}" --main mediathek.Main
 }
