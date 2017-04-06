@@ -22,6 +22,7 @@ RDEPEND="|| ( virtual/jre:1.8 virtual/jdk:1.8 )
 	dev-java/jackson:2
 	dev-java/jchart2d
 	dev-java/jgoodies-common:1.8
+	dev-java/jgoodies-forms:1.8
 	dev-java/jide-oss:0
 	dev-java/xz-java:0
 	media-video/flvstreamer
@@ -41,6 +42,7 @@ src_install() {
 
 	java-pkg_register-dependency commons-lang-3.3
 	java-pkg_register-dependency jgoodies-common-1.8
+	java-pkg_register-dependency jgoodies-forms-1.8
 	java-pkg_register-dependency jide-oss
 	java-pkg_register-dependency xz-java
 
