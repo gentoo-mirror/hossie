@@ -21,7 +21,7 @@ RDEPEND="|| ( virtual/jre:1.8 virtual/jdk:1.8 )
 	dev-java/commons-lang:3.3
 	dev-java/jackson:2
 	dev-java/jchart2d
-	dev-java/jide-oss
+	dev-java/jide-oss:0
 	media-video/flvstreamer
 	media-video/vlc
 	virtual/ffmpeg"
@@ -30,11 +30,12 @@ S="${WORKDIR}/MediathekView-${PV}"
 
 src_compile() {
 	gradle -g "${WORKDIR}" --no-daemon jar
+	cp "${DISTDIR}/MSearch-2.1.1.jar" build/libs
 }
 
 src_install() {
 	java-pkg_dojar build/libs/MediathekView.jar
-	java-pkg_dojar "${DISTDIR}/MSearch-2.1.1.jar"
+	java-pkg_dojar build/libs/MSearch-2.1.1.jar
 
 	java-pkg_register-dependency commons-lang-3.3
 	java-pkg_register-dependency jide-oss
