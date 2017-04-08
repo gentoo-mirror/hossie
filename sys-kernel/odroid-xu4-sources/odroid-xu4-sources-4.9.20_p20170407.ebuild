@@ -4,7 +4,7 @@
 EAPI=5
 
 MY_COMMIT="e9913196a786a8b66959b314e39c204e1d4e7451"
-MY_DIR="linux-odroidxu4-${PVR}"
+MY_DIR="linux-${PVR}-odroid"
 
 ETYPE=sources
 K_SECURITY_UNSUPPORTED=1
@@ -24,7 +24,7 @@ S="${WORKDIR}/${MY_DIR}"
 
 src_unpack() {
 	unpack "${P}.tar.gz"
-	mv "hardkernel-linux-${MY_COMMIT:0:7}" "linux-${PVR}-odroid" || die
+	mv "hardkernel-linux-${MY_COMMIT:0:7}" "${MY_DIR}" || die
 	epatch_user
 	env_setup_xmakeopts
 	cd "${S}"
