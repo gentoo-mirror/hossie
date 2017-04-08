@@ -24,7 +24,7 @@ S="${WORKDIR}/${MY_DIR}"
 
 src_unpack() {
 	unpack "${P}.tar.gz"
-	mv "hardkernel-linux-${MY_COMMIT:0:7}" "${MY_DIR}" || die
+	mv "hardkernel-linux-${MY_COMMIT:0:7}" "linux-${PVR}-odroid" || die
 	epatch_user
 	env_setup_xmakeopts
 	cd "${S}"
