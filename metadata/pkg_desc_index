@@ -24,7 +24,7 @@ net-misc/youtube-dl-gui 0.3.8_p20160925: A cross platform front-end GUI of the p
 sys-apps/yarn 0.22.0: Fast, reliable, and secure node dependency management
 sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
 sys-boot/raspberrypi-firmware 1.20161215 1.20170215: Raspberry PI boot loader and firmware
-sys-kernel/odroid-xu4-sources 4.9.13_p20170306: Kernel sources for Odroid XU4
+sys-kernel/odroid-xu4-sources 4.9.13_p20170306 4.9.20_p20170407: Kernel sources for Odroid XU4
 sys-kernel/raspberrypi-image 4.4.38_p20161215 4.4.48_p20170215: Raspberry PI kernel image
 www-client/chromium-bin 53.0.2785.143.1145: Chromium Binary from Ubuntu for ARM (e.g. Raspberry Pi)
 www-client/uget 2.0.8: Download manager using gtk+ and libcurl
