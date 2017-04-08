@@ -32,7 +32,6 @@ src_unpack() {
 
 pkg_postinst() {
 	einfo "The default config is called odroidxu3_defconfig"
-	einfo ""
 
 	kernel-2_pkg_postinst
 }
