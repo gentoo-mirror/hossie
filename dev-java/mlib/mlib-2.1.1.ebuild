@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	"java-pkg_dojar build/libs/MSearch-${PV}.jar"
+	java-pkg_dojar "build/libs/MSearch-${PV}.jar"
 
 	java-pkg_register-dependency commons-lang-3.3
 	java-pkg_register-dependency jackson-2
