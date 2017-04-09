@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit java-pkg-2
+inherit eutils java-pkg-2
 
 DESCRIPTION="MediathekView searches the online portals of public broadcasting services"
 HOMEPAGE="https://mediathekview.de/"
@@ -50,4 +50,7 @@ src_install() {
 	java-pkg_register-dependency xz-java
 
 	java-pkg_dolauncher "${PN}" --main mediathek.Main
+
+	newicon -s scalable res/Info/MediathekView.svg "${PN}.svg"
+	make_desktop_entry "${PN}" "MediathekView" mediathekview
 }
