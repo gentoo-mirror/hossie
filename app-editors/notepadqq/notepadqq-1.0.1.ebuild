@@ -32,6 +32,7 @@ src_unpack() {
 	mkdir "${S}/src/editor/libs/codemirror/mode/m4" || die
 
 	sed -i '/Desktop Action/,$d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
+	sed -i '/Actions=/d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
 }
 
 src_configure() {
