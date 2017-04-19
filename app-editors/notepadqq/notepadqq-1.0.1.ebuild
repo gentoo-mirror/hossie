@@ -30,6 +30,8 @@ src_unpack() {
 	rmdir "${S}/src/editor/libs/codemirror" || die
 	mv "${WORKDIR}/CodeMirror-${MY_CM_VER}" "${S}/src/editor/libs/codemirror" || die
 	mkdir "${S}/src/editor/libs/codemirror/mode/m4" || die
+
+	sed -i '/Desktop Action/,$d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
 }
 
 src_configure() {
