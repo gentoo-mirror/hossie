@@ -13,4 +13,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
+RDEPEND="!app-emulation/lxd"
+
 EGO_PN="github.com/gorilla/mux"

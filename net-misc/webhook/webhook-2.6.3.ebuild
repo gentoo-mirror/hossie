@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 RDEPEND=""
-DEPEND="dev-go/mux
+DEPEND="|| ( dev-go/mux app-emulation/lxd )
 	dev-lang/go"
 
 src_compile() {
