@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit golang-build
+
 DESCRIPTION="A lightweight tool that allows you to easily create HTTP endpoints to run commands"
 HOMEPAGE="https://github.com/adnanh/webhook"
 SRC_URI="https://github.com/adnanh/webhook/archive/${PV}.tar.gz -> ${P}.tar.gz"
@@ -21,5 +23,5 @@ src_compile() {
 	mkdir -p "${GOPATH}/src/github.com/adnanh/webhook" || die
 	mv "${S}/hook" "${GOPATH}/src/github.com/adnanh/webhook" || die
 
-	go build
+	default
 }
