@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit golang-build
+inherit golang-build golang-vcs-snapshot
 
 DESCRIPTION="A powerful URL router and dispatcher for golang"
 HOMEPAGE="http://www.gorillatoolkit.org/pkg/mux"
