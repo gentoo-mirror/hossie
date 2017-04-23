@@ -7,7 +7,7 @@ inherit golang-build golang-vcs-snapshot
 
 DESCRIPTION="Idiomatic HTTP Middleware for Golang"
 HOMEPAGE="https://github.com/urfave/negroni"
-SRC_URI="https://github.com/urfave/negroni/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://api.github.com/repos/urfave/negroni/tarball/c0db5feaa33826cd5117930c8f4ee5c0f565eec6 -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
