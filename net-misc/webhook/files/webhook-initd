@@ -20,6 +20,6 @@ start_pre() {
 
 start() {
 	ebegin "Starting webhook"
-	start-stop-daemon --start --exec "${command}"
+	start-stop-daemon --start --exec "${command}" -- ${command_args}
 	eend $?
 }
