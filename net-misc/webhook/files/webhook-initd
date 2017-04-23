@@ -17,11 +17,3 @@ start_pre() {
 	fi
 	return 0
 }
-
-start() {
-
-}
-
-stop() {
-
-}
