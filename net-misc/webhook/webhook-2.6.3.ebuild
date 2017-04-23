@@ -15,6 +15,7 @@ KEYWORDS="~x86 ~amd64"
 
 RDEPEND=""
 DEPEND="|| ( dev-go/mux app-emulation/lxd )
+	dev-go/fsnotify
 	dev-go/negroni"
 
 src_compile() {
