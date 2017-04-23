@@ -13,4 +13,4 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-EGO_PN="github.com/gorilla/mux/..."
+EGO_PN="github.com/gorilla/mux"
