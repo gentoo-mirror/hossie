@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit golang-base
+
 DESCRIPTION="A lightweight tool that allows you to easily create HTTP endpoints to run commands"
 HOMEPAGE="https://github.com/adnanh/webhook"
 SRC_URI="https://github.com/adnanh/webhook/archive/${PV}.tar.gz -> ${P}.tar.gz"
