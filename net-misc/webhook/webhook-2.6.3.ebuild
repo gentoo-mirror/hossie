@@ -20,8 +20,8 @@ DEPEND="|| ( dev-go/mux app-emulation/lxd )
 src_compile() {
 	export GOPATH="$(get_golibdir_gopath):${WORKDIR}/.gopath"
 
-	mkdir -p "${GOPATH}/src/github.com/adnanh/webhook" || die
-	mv "${S}/hook" "${GOPATH}/src/github.com/adnanh/webhook" || die
+	mkdir -p "${WORKDIR}/.gopath/src/github.com/adnanh/webhook" || die
+	mv "${S}/hook" "${WORKDIR}/.gopath/src/github.com/adnanh/webhook" || die
 
 	go build
 }
