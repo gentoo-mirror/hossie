@@ -13,4 +13,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
+DEPEND="dev-go/go-sys"
+
 EGO_PN="gopkg.in/fsnotify.v1"
