@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 RDEPEND=""
-DEPEND="|| ( dev-go/mux app-emulation/lxd )
-	dev-go/fsnotify
-	dev-go/negroni"
+DEPEND="dev-go/fsnotify
+	|| ( app-emulation/lxd dev-go/mux )
+	>=dev-go/negroni-0.2.0_p20170226"
 
 src_compile() {
 	export GOPATH="$(get_golibdir_gopath):${WORKDIR}/.gopath"
@@ -25,4 +25,13 @@ src_compile() {
 	mv "${S}/hook" "${WORKDIR}/.gopath/src/github.com/adnanh/webhook" || die
 
 	go build -v -work -x ${EGO_BUILD_FLAGS} || die
+}
+
+src_install() {
+	newbin "${P}" "${PN}"
+
+	insinto "/etc/${PN}"
+	doins hooks.json.example
+
+	newinitd "${FILESDIR}/webhook-initd" "${PN}"
 }
