@@ -17,3 +17,9 @@ start_pre() {
 	fi
 	return 0
 }
+
+start() {
+	ebegin "Starting webhook"
+	start-stop-daemon --start --exec "${command}"
+	eend $?
+}
