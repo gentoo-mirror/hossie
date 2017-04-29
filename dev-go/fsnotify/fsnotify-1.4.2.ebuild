@@ -11,7 +11,7 @@ SRC_URI="https://github.com/fsnotify/fsnotify/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64"
 
 DEPEND="dev-go/go-sys"
 
