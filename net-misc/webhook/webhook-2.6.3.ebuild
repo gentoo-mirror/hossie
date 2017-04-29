@@ -15,7 +15,7 @@ KEYWORDS="~amd64"
 
 RDEPEND=""
 DEPEND="dev-go/fsnotify
-	|| ( app-emulation/lxd dev-go/mux )
+	|| ( dev-go/mux app-emulation/lxd )
 	>=dev-go/negroni-0.2.0_p20170226"
 
 src_compile() {
