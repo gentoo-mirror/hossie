@@ -34,4 +34,5 @@ src_install() {
 	doins hooks.json.example
 
 	newinitd "${FILESDIR}/webhook-initd" "${PN}"
+	newconfd "${FILESDIR}/webhook-confd" "${PN}"
 }
