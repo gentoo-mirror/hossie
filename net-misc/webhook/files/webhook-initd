@@ -1,0 +1,25 @@
+#!/sbin/openrc-run
+# Copyright 1999-2017 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+command="/usr/bin/webhook"
+command_args="-verbose -hooks /etc/webhook/hooks.json ${WEBHOOK_OPTS}"
+
+depend() {
+	need net
+}
+
+start_pre() {
+	if [ ! -f "/etc/webhook/hooks.json" ]; then
+		eerror "You should setup your hooks.json file in /etc/webhook!"
+		eerror "An example is installed as /etc/webhook/hooks.json.example."
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	ebegin "Starting webhook"
+	start-stop-daemon --start --exec "${command}" --background -- ${command_args}
+	eend $?
+}
