@@ -23,7 +23,7 @@ RDEPEND="dev-libs/libpcre:3
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	>=net-libs/nodejs-6.0:0
-	>=sys-apps/yarn-0.22.0"
+	>=sys-apps/yarn-0.21.3-r1" #Gentoo Bug 614094
 
 QA_EXECSTACK="usr/lib*/${PN}/cerebro"
 QA_PRESTRIPPED="usr/lib.*/${PN}/lib.*
