@@ -1,0 +1,6 @@
+#!/bin/bash
+#https://youtrack.jetbrains.com/issue/IDEA-157989
+(
+trap - SIGINT
+exec /bin/bash /opt/RubyMine/bin/rubymine.sh "$*"
+) &
