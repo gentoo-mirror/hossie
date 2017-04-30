@@ -37,7 +37,7 @@ src_prepare() {
 	rm Install-Linux-tar.txt || die
 
 	if ! use custom-jdk; then
-		rm -r jre || die
+		rm -r jre64 || die
 	fi
 }
 
@@ -53,9 +53,9 @@ src_install() {
 	use amd64 && fperms +x "${dir}/bin/fsnotifier64"
 	use x86 && fperms +x "${dir}/bin/fsnotifier"
 
-	if use custom-jdk; then
+	if use custom-jdk && use amd64; then
 		for jrefile in java jjs keytool orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200; do
-			fperms +x "${dir}/jre/bin/${jrefile}"
+			fperms +x "${dir}/jre64/bin/${jrefile}"
 		done
 	fi
 
