@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-    <longdescription lang="en">
-        This project provides Khronos official ICD loader and validation layers for Vulkan developers on Windows and Linux.
-    </longdescription>
-</pkgmetadata>

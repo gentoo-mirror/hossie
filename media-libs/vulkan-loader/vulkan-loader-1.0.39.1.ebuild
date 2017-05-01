@@ -25,8 +25,7 @@ KEYWORDS="~amd64"
 
 DEPEND="${PYTHON_DEPS}
 	x11-libs/libX11:=
-	wayland? ( dev-libs/wayland )
-	!media-libs/vulkan-base"
+	wayland? ( dev-libs/wayland )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Vulkan-LoaderAndValidationLayers-sdk-${PV}"
