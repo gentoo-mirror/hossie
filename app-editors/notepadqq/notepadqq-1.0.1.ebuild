@@ -5,12 +5,12 @@ EAPI=6
 
 inherit qmake-utils
 
-MY_CM_VER="5.18.2"
+MY_CM_COMMIT="d790fc39c1a5f06aa66415110b8ebe3026df665a"
 
 DESCRIPTION="Notepad++-like editor for Linux"
 HOMEPAGE="http://notepadqq.altervista.org"
 SRC_URI="https://github.com/notepadqq/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/notepadqq/CodeMirror/archive/${MY_CM_VER}.tar.gz -> codemirror-${MY_CM_VER}.tar.gz"
+	https://api.github.com/repos/notepadqq/CodeMirror/tarball/${MY_CM_COMMIT} -> codemirror-${MY_CM_COMMIT}.tar.gz"
 
 LICENSE="GPL-3 MIT"
 SLOT="0"
@@ -28,7 +28,7 @@ src_unpack() {
 	default
 
 	rmdir "${S}/src/editor/libs/codemirror" || die
-	mv "${WORKDIR}/CodeMirror-${MY_CM_VER}" "${S}/src/editor/libs/codemirror" || die
+	mv "${WORKDIR}/CodeMirror-${MY_CM_COMMIT:0:7}" "${S}/src/editor/libs/codemirror" || die
 	mkdir "${S}/src/editor/libs/codemirror/mode/m4" || die
 
 	sed -i '/Desktop Action/,$d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
@@ -40,5 +40,5 @@ src_configure() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" -j1 install
+	emake INSTALL_ROOT="${D}" install
 }
