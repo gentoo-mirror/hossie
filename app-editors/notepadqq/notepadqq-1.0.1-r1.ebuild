@@ -28,7 +28,7 @@ src_unpack() {
 	default
 
 	rmdir "${S}/src/editor/libs/codemirror" || die
-	mv "${WORKDIR}/CodeMirror-${MY_CM_COMMIT:0:7}" "${S}/src/editor/libs/codemirror" || die
+	mv "${WORKDIR}/notepadqq-CodeMirror-${MY_CM_COMMIT:0:7}" "${S}/src/editor/libs/codemirror" || die
 	mkdir "${S}/src/editor/libs/codemirror/mode/m4" || die
 }
 
