@@ -32,6 +32,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	default
+
 	sed -i '/Desktop Action/,$d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
 	sed -i '/Actions=/d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
 }
