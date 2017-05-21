@@ -30,7 +30,9 @@ src_unpack() {
 	rmdir "${S}/src/editor/libs/codemirror" || die
 	mv "${WORKDIR}/CodeMirror-${MY_CM_COMMIT:0:7}" "${S}/src/editor/libs/codemirror" || die
 	mkdir "${S}/src/editor/libs/codemirror/mode/m4" || die
+}
 
+src_prepare() {
 	sed -i '/Desktop Action/,$d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
 	sed -i '/Actions=/d' "${S}/support_files/shortcuts/notepadqq.desktop" || die
 }
