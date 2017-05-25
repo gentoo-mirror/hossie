@@ -42,6 +42,8 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 	dev-perl/YAML"
 
 src_prepare() {
+	default
+
 	rm -rf lib/ex/vte*
 	find utils lib pac -type f | while read f
 	do
