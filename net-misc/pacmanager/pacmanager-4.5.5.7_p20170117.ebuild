@@ -15,7 +15,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="freerdp mosh rdesktop webdav vnc"
+IUSE="freerdp mosh rdesktop vnc webdav"
+
+S="${WORKDIR}/perseo22-${PN}-${MY_COMMIT:0:7}"
 
 RDEPEND="freerdp? ( net-misc/freerdp )
 	mosh? ( net-misc/mosh )
@@ -36,7 +38,8 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 	dev-perl/Gtk2-Unique
 	dev-perl/IO-Stty
 	dev-perl/Net-ARP
-	dev-perl/Socket6"
+	dev-perl/Socket6
+	dev-perl/YAML"
 
 src_prepare() {
 	rm -rf lib/ex/vte*
