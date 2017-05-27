@@ -12,28 +12,29 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="freerdp mosh +rdesktop webdav vnc"
+IUSE="freerdp mosh +rdesktop vnc webdav"
 
 RDEPEND="freerdp? ( net-misc/freerdp )
 	mosh? ( net-misc/mosh )
 	rdesktop? ( net-misc/rdesktop )
-	webdav? ( net-misc/cadaver )
 	vnc? ( net-misc/tigervnc )
+	webdav? ( net-misc/cadaver )
 	dev-libs/ossp-uuid[perl]
-	dev-perl/Crypt-CBC
-	dev-perl/Gtk2
-	dev-perl/Socket6
-	dev-perl/Net-ARP
-	dev-perl/Crypt-Rijndael
 	dev-perl/Crypt-Blowfish
-	dev-perl/Gtk2-Ex-Simple-List
-	dev-perl/Gtk2-Unique
-	dev-perl/gnome2-perl
-	dev-perl/Gnome2-GConf
-	dev-perl/gtk2-gladexml
-	dev-perl/Gnome2-Vte
+	dev-perl/Crypt-CBC
+	dev-perl/Crypt-Rijndael
 	dev-perl/Expect
-	dev-perl/IO-Stty"
+	dev-perl/Gnome2-GConf
+	dev-perl/gnome2-perl
+	dev-perl/Gnome2-Vte
+	dev-perl/Gtk2
+	dev-perl/Gtk2-Ex-Simple-List
+	dev-perl/gtk2-gladexml
+	dev-perl/Gtk2-Unique
+	dev-perl/IO-Stty
+	dev-perl/Net-ARP
+	dev-perl/Socket6
+	dev-perl/YAML"
 
 S="${WORKDIR}/pac"
 
@@ -44,6 +45,8 @@ src_prepare() {
 		sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/lib@\1/usr/$(get_libdir)/pacmanager@g" "$f"
 		sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/res@\1/usr/share/pacmanager@g" "$f"
 	done
+
+	sed -i 's/Categories=.*/Categories=Network;/' res/pac.desktop
 }
 
 src_install() {
