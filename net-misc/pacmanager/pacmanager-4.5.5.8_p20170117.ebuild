@@ -13,7 +13,6 @@ SRC_URI="https://api.github.com/repos/perseo22/pacmanager/tarball/${MY_COMMIT} -
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 
 IUSE="freerdp mosh rdesktop vnc webdav"
 
