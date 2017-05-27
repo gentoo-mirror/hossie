@@ -18,5 +18,6 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="${PYTHON_DEPS}
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/pylibacl[${PYTHON_USEDEP}]
+	gnome-base/librsvg:2[introspection]
 	>=x11-libs/gtk+-3.10:3"
 DEPEND="${RDEPEND}"
