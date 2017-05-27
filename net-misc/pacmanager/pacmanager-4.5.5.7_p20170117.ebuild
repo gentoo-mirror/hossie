@@ -50,6 +50,8 @@ src_prepare() {
 		sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/lib@\1/usr/$(get_libdir)/pacmanager@g" "$f"
 		sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/res@\1/usr/share/pacmanager@g" "$f"
 	done
+
+	sed -i 's/Categories=.*/Categories=Network;/' res/pac.desktop
 }
 
 src_install() {
