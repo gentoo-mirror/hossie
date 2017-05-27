@@ -24,7 +24,7 @@ media-tv/mediathekview 13.0.2: MediathekView searches the online portals of publ
 media-video/gnome-mpv 0.11: A simple GTK+ frontend for mpv
 net-im/franz 4.0.4: Franz is a free messaging app
 net-im/hipchat 4.0.1641 4.29.4.1662-r1: Hipchat - persistent group chat using XMPP
-net-misc/pacmanager 4.5.5.7 4.5.5.8_p20170117: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
+net-misc/pacmanager 4.5.5.7-r1 4.5.5.8_p20170117: PAC is a Perl/GTK replacement for SecureCRT/Putty/etc
 net-misc/webhook 2.6.3: A lightweight tool that allows you to create HTTP endpoints to run commands
 net-misc/youtube-dl-gui 0.3.8_p20160925: A cross platform front-end GUI of the popular youtube-dl written in wxPython
 sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
