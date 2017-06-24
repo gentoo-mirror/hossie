@@ -45,7 +45,7 @@ src_unpack() {
 
 multilib_src_configure() {
 	cd "${BUILD_DIR}/external/glslang"
-	cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release || die
+	cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install || die
 
 	cd "${BUILD_DIR}/external/spirv-tools"
 	cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release || die
