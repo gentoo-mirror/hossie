@@ -59,7 +59,7 @@ multilib_src_configure() {
 		-DBUILD_LOADER=True
 		-DBUILD_WSI_MIR_SUPPORT=False
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
-		-DGLSLANG_VALIDATOR="${BUILD_DIR}/external/glslang/build/install/bin/glslangValidator"
+		-DGLSLANG_VALIDATOR="${BUILD_DIR}/external/glslang/install/bin/glslangValidator"
 		-DGLSLANG_SPIRV_INCLUDE_DIR="${BUILD_DIR}/external/glslang"
 		-DSPIRV_TOOLS_INCLUDE_DIR="${BUILD_DIR}/external/spirv-tools/include"
 		-DSPIRV_TOOLS_LIB="${BUILD_DIR}/external/spirv-tools/build/source"
