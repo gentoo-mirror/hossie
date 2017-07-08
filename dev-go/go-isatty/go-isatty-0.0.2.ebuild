@@ -14,3 +14,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 EGO_PN="github.com/mattn/go-isatty"
+
+DEPEND="dev-go/go-sys"
