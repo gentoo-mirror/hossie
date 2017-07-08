@@ -14,3 +14,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 EGO_PN="github.com/mattn/go-colorable"
+
+DEPEND="dev-go/go-isatty"
