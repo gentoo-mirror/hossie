@@ -16,3 +16,9 @@ KEYWORDS="~amd64"
 EGO_PN="github.com/fatih/color"
 
 DEPEND="dev-go/go-colorable"
+
+src_prepare (){
+	rm -rf "${S}/src/github.com/fatih/color/vendor" || die
+
+	default
+}
