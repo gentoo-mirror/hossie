@@ -14,3 +14,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 EGO_PN="github.com/fatih/color"
+
+DEPEND="dev-go/go-colorable"
