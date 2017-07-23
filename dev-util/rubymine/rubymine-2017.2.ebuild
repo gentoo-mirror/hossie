@@ -20,7 +20,7 @@ RDEPEND="!custom-jdk? ( >=virtual/jdk-1.8:* )"
 CONFIG_CHECK="~INOTIFY_USER"
 IUSE="+custom-jdk"
 
-QA_PREBUILT="opt/${MY_PN}-${PV}/*"
+QA_PREBUILT="opt/${MY_PN}/*"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
