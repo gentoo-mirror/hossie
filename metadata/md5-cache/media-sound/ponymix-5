@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=virtual/pkgconfig
+DESCRIPTION=CLI volume control for PulseAudio
+EAPI=6
+HOMEPAGE=https://github.com/falconindy/ponymix
+IUSE=bash-completion
+KEYWORDS=~x86 ~amd64
+LICENSE=MIT
+RDEPEND=media-sound/pulseaudio
+SLOT=0
+SRC_URI=https://github.com/falconindy/ponymix/archive/5.tar.gz -> ponymix-5.tar.gz
+_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
+_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_md5_=ed182196a014018e554dbbb10f039298
