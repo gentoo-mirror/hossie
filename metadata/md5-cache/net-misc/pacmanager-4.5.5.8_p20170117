@@ -9,5 +9,5 @@ RDEPEND=freerdp? ( net-misc/freerdp ) mosh? ( net-misc/mosh ) rdesktop? ( net-mi
 SLOT=0
 SRC_URI=https://api.github.com/repos/perseo22/pacmanager/tarball/98f099e2fe1ff2c82bb77e35d1e0dc8a79bc67ca -> pacmanager-4.5.5.8_p20170117.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
-_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=129dacc7c6aabf9cf801a54c58581a83
