@@ -25,8 +25,3 @@ Bug Tracker
 If you encounter any problems, want to report bugs or have any questions,
 please open a [Jira-Ticket](https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000).
 No account required.
-
-Repoman Status
---------------
-
-[![Build Status](https://jenkins.hossie.de/buildStatus/icon?job=gentoo-overlay-repoman)](https://jenkins.hossie.de/job/gentoo-overlay-repoman)
