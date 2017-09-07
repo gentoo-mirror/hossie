@@ -9,5 +9,4 @@ REQUIRED_USE=|| ( rpi-b rpi-b-plus rpi-cm rpi-2-b rpi-3-b rpi-cm3 )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://github.com/raspberrypi/firmware/archive/1.20161215.tar.gz -> raspberrypi-firmware-1.20161215.tar.gz
-_eclass_exported_funcs=pkg_preinst:- src_install:-
 _md5_=fca04064874a87b617aee50fbb356500
