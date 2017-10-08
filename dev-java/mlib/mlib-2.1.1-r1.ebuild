@@ -24,7 +24,8 @@ RDEPEND="|| ( virtual/jre:1.8 virtual/jdk:1.8 )
 S="${WORKDIR}/MLib-${PV}"
 
 src_compile() {
-	gradle -g "${WORKDIR}" --no-daemon jar || die
+	GRADLE="$(ls -1 ${EPREFIX}/usr/bin/gradle-* | sort | head -n1)"
+	${GRADLE} -g "${WORKDIR}" --no-daemon jar || die
 }
 
 src_install() {
