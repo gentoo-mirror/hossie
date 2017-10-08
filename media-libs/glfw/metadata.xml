@@ -7,7 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="egl">Use EGL instead of GLX for GL context creation</flag>
-        <flag name="vulkan">Add Vulkan support</flag>
+		<flag name="vulkan">Add Vulkan support</flag>
 	</use>
 	<upstream>
 		<remote-id type="sourceforge">glfw</remote-id>

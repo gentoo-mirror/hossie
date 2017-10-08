@@ -6,8 +6,8 @@
 		<name>Default maintainer for orphaned packages</name>
 	</maintainer>
 	<use>
-        <flag name="silent">Make the bootsplash silent</flag>
-    </use>
+		<flag name="silent">Make the bootsplash silent</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">aidecoe/plymouth-openrc-plugin</remote-id>
 	</upstream>
