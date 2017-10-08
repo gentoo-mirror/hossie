@@ -7,7 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="silent">Make the bootsplash silent</flag>
-    </use>
+	</use>
 	<upstream>
 		<remote-id type="github">aidecoe/plymouth-openrc-plugin</remote-id>
 	</upstream>
