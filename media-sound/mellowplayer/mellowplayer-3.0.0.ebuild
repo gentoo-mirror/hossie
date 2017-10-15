@@ -16,3 +16,5 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/MellowPlayer-${PV}"
