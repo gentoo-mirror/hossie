@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-qt/qtquickcontrols2-5.9:5
+	>=dev-qt/qtwebengine-5.9:5[-bindist,widgets]"
+DEPEND="${RDEPEND}
+	dev-util/cmake"
 
 S="${WORKDIR}/MellowPlayer-${PV}"
