@@ -29,5 +29,5 @@ src_configure() {
 		fi
 	fi
 
-	default
+	cmake-utils_src_configure
 }
