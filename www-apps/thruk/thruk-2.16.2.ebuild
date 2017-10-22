@@ -14,10 +14,24 @@ SRC_URI="https://download.thruk.org/pkg/v${MY_VERSION}/src/thruk-${MY_VERSION}.t
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="mysql"
 
-DEPEND=""
-RDEPEND="net-analyzer/nagios"
+DEPEND="mysql? ( dev-perl/DBD-mysql )
+	dev-perl/Class-Inspector
+	dev-perl/Date-Manip
+	dev-perl/Date-Calc
+	dev-perl/DateTime
+	dev-perl/File-Slurp
+	dev-perl/GD
+	dev-perl/IO-String
+	dev-perl/JSON-XS
+	dev-perl/libwww-perl
+	dev-perl/Log-Dispatch
+	dev-perl/Log-Log4perl
+	dev-perl/Plack
+	dev-perl/Template-Toolkit
+	net-analyzer/nagios"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_VERSION}"
 
