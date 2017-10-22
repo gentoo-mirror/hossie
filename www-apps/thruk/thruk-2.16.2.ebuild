@@ -19,6 +19,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="net-analyzer/nagios"
 
+S="${WORKDIR}/${PN}-${MY_VERSION}"
+
 src_configure () {
 	local myeconfargs=(
 		--without-thruk-libs
