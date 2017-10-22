@@ -42,5 +42,12 @@ S="${WORKDIR}/${PN}-${MY_VERSION}"
 
 src_configure () {
 	econf \
+		--datadir="/usr/share/${PN}" \
+		--sysconfdir="/etc/${PN}" \
+		--with-httpd-conf=/etc/apache2/vhosts.d \
+		--with-initdir=/etc/init.d \
+		--with-logdir="/var/log/${PN}" \
+		--with-logrotatedir=/etc/logrotate.d \
+		--with-tempdir=/var/tmp \
 		--without-thruk-libs
 }
