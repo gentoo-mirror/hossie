@@ -21,6 +21,7 @@ DEPEND="mysql? ( dev-perl/DBD-mysql )
 	dev-perl/Date-Manip
 	dev-perl/Date-Calc
 	dev-perl/DateTime
+	dev-perl/Excel-Template
 	dev-perl/File-Slurp
 	dev-perl/GD
 	dev-perl/IO-String
