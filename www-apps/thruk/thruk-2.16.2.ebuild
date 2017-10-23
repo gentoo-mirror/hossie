@@ -55,3 +55,10 @@ src_configure () {
 		--with-thruk-user=apache \
 		--without-thruk-libs
 }
+
+src_install () {
+	default
+
+	fowners apache /var/lib/thruk
+	fowners apache /var/log/thruk
+}
