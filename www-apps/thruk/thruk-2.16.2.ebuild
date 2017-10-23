@@ -35,7 +35,9 @@ DEPEND="dev-perl/Class-Inspector
 	dev-perl/MIME-Lite
 	dev-perl/Plack
 	dev-perl/Template-Toolkit
-	net-analyzer/nagios"
+	net-analyzer/nagios
+	www-apache/mod_fcgid
+	www-servers/apache"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_VERSION}"
