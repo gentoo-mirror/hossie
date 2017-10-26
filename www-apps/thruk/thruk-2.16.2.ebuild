@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-perl/Class-Inspector
-	dev-perl/Date-Manip
 	dev-perl/Date-Calc
+	dev-perl/Date-Manip
 	dev-perl/DateTime
 	dev-perl/DBD-mysql
 	dev-perl/DBI
@@ -35,6 +35,7 @@ DEPEND="dev-perl/Class-Inspector
 	dev-perl/MIME-Lite
 	dev-perl/Plack
 	dev-perl/Template-Toolkit
+	net-analyzer/mk-livestatus
 	net-analyzer/nagios
 	www-apache/mod_fcgid
 	www-servers/apache"
@@ -53,6 +54,7 @@ src_configure () {
 		--with-logrotatedir=/etc/logrotate.d \
 		--with-tempdir=/var/tmp \
 		--with-thruk-user=apache \
+		--with-thruk-group=apache \
 		--without-thruk-libs
 }
 
