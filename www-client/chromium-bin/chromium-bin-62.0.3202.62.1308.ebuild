@@ -37,4 +37,5 @@ RDEPEND="dev-libs/libtasn1
 src_install() {
 	mv "${S}"/{usr,etc} "${D}"/ || die
 	chmod 4755 "${D}/usr/$(get_libdir)/chromium-browser/chrome-sandbox" || die
+	rm "${D}/usr/share/doc/chromium-browser/changelog.Debian.gz"
 }
