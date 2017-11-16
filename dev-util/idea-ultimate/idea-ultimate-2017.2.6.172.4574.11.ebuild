@@ -6,7 +6,7 @@ inherit eutils linux-info versionator
 
 SLOT="0"
 PV_STRING="$(get_version_component_range 4-6)"
-MY_PV="$(get_version_component_range 1-2)"
+MY_PV="$(get_version_component_range 1-3)"
 MY_PN="idea"
 MY_DOWNLOAD_BASE="https://download.jetbrains.com/idea"
 
@@ -68,7 +68,7 @@ src_prepare() {
 }
 
 src_install() {
-	local dir="/opt/${PN}-${MY_PV}"
+	local dir="/opt/${PN}"
 
 	insinto "${dir}"
 	doins -r *
@@ -89,7 +89,7 @@ src_install() {
 	fi
 
 	newicon "bin/idea.png" "${PN}.png"
-	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
+	newbin "${FILESDIR}/idea-launcher" "${PN}"
 
 	#https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
 	mkdir -p "${D}/etc/sysctl.d/"
