@@ -42,7 +42,7 @@ src_prepare() {
 
 src_compile() {
 	emake $(usex tools "all" "") $(usex debug "" "DEBUG=false")
-	emake VERSION=${MY_PV} docs man-page
+	emake VERSION=${MY_PV} man-page
 }
 
 src_install()
