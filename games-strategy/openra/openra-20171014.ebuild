@@ -13,7 +13,7 @@ SRC_URI="https://github.com/OpenRA/OpenRA/archive/${MY_PV}.tar.gz -> ${P}.tar.gz
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc +tools +xdg +zenity"
+IUSE="debug doc +xdg +zenity"
 RESTRICT="mirror"
 
 RDEPEND="dev-dotnet/libgdiplus
@@ -51,7 +51,7 @@ src_install()
 		prefix=/usr \
 		libdir="/usr/$(get_libdir)" \
 		DESTDIR="${D}" \
-		$(usex tools "install-all" "install") install-linux-scripts install-man-page
+		install install-linux-scripts install-man-page
 	emake \
 		datadir="/usr/share" \
 		DESTDIR="${D}" install-linux-mime install-linux-icons
