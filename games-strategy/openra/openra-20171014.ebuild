@@ -13,7 +13,7 @@ SRC_URI="https://github.com/OpenRA/OpenRA/archive/${MY_PV}.tar.gz -> ${P}.tar.gz
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc +xdg +zenity"
+IUSE="debug +xdg +zenity"
 RESTRICT="mirror"
 
 RDEPEND="dev-dotnet/libgdiplus
@@ -41,7 +41,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake $(usex tools "all" "") $(usex debug "" "DEBUG=false")
+	emake all $(usex debug "" "DEBUG=false")
 	emake VERSION=${MY_PV} man-page
 }
 
