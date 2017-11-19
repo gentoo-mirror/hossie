@@ -57,12 +57,9 @@ src_install()
 		DESTDIR="${D}" install-linux-mime install-linux-icons
 
 	# desktop entries
-	make_desktop_entry "${PN} Game.Mod=cnc" "OpenRA ver. ${MY_PV}" ${PN} \
-		"StrategyGame" "GenericName=OpenRA - Command & Conquer"
-	make_desktop_entry "${PN} Game.Mod=ra" "OpenRA ver. ${MY_PV}" ${PN} \
-		"StrategyGame" "GenericName=OpenRA - Red Alert"
-	make_desktop_entry "${PN} Game.Mod=d2k" "OpenRA ver. ${MY_PV}" ${PN} \
-		"StrategyGame" "GenericName=OpenRA - Dune 2000"
+	make_desktop_entry "${PN}-cnc" "OpenRA - Command & Conquer" "${PN}-cnc" "StrategyGame"
+	make_desktop_entry "${PN}-ra" "OpenRA - Red Alert" "${PN}-ra" "StrategyGame"
+	make_desktop_entry "${PN}-d2k" "OpenRA - Dune 2000" "${PN}-d2k" "StrategyGame"
 
 	# desktop directory
 	insinto /usr/share/desktop-directories
