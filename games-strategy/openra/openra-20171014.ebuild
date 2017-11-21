@@ -48,7 +48,10 @@ src_compile() {
 
 src_install() {
 	dodoc "${FILESDIR}"/README.gentoo AUTHORS COPYING
+
 	rm AUTHORS COPYING
+	sed -i '/.*INSTALL_DATA) AUTHORS.*/d' Makefile
+	sed -i '/.*INSTALL_DATA) COPYING.*/d' Makefile
 
 	emake $(usex debug "" "DEBUG=false") \
 		prefix=/usr \
