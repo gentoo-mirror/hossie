@@ -57,12 +57,9 @@ src_install() {
 		prefix=/usr \
 		libdir="/usr/$(get_libdir)" \
 		bindir="/usr/bin" \
-		DESTDIR="${D}" \
-		install install-linux-scripts install-man-page
-	emake \
 		datadir="/usr/share" \
-		bindir="/usr/bin" \
-		DESTDIR="${D}" install-linux-mime install-linux-shortcuts
+		DESTDIR="${D}" \
+		install install-man-page install-linux-mime install-linux-shortcuts
 }
 
 pkg_preinst() {
