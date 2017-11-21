@@ -37,13 +37,13 @@ src_unpack() {
 }
 
 src_prepare() {
-	#sed -i "s/^\(VERSION\).*/\1 = ${MY_PV}/g" Makefile
+	sed -i "s/^\(VERSION\).*/\1 = ${MY_PV}/g" Makefile
 
-	emake cli-dependencies
+	emake cli-dependencies version
 }
 
 src_compile() {
-	emake all man-page $(usex debug "" "DEBUG=false") VERSION="${MY_PV}"
+	emake all man-page $(usex debug "" "DEBUG=false")
 }
 
 src_install() {
@@ -56,10 +56,12 @@ src_install() {
 	emake $(usex debug "" "DEBUG=false") \
 		prefix=/usr \
 		libdir="/usr/$(get_libdir)" \
+		bindir="/usr/bin" \
 		DESTDIR="${D}" \
 		install install-linux-scripts install-man-page
 	emake \
 		datadir="/usr/share" \
+		bindir="/usr/bin" \
 		DESTDIR="${D}" install-linux-mime install-linux-shortcuts
 }
 
