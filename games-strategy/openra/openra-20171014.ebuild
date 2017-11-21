@@ -47,9 +47,9 @@ src_compile() {
 }
 
 src_install() {
-	dodoc "${FILESDIR}"/README.gentoo AUTHORS COPYING
+	dodoc "${FILESDIR}"/README.gentoo AUTHORS
 
-	rm AUTHORS COPYING
+	rm AUTHORS
 	sed -i '/.*INSTALL_DATA) AUTHORS.*/d' Makefile
 	sed -i '/.*INSTALL_DATA) COPYING.*/d' Makefile
 
