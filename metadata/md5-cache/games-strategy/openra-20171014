@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup unpack
+DEPEND=dev-dotnet/libgdiplus >=dev-lang/mono-3.2 media-libs/freetype:2[X] media-libs/libsdl2[X,opengl,video] media-libs/openal virtual/jpeg:0 virtual/opengl =dev-lang/lua-5.1*:0 xdg? ( x11-misc/xdg-utils ) zenity? ( gnome-extra/zenity ) >=sys-apps/sed-4
+DESCRIPTION=A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k
+EAPI=5
+HOMEPAGE=http://www.openra.net/
+IUSE=debug +xdg +zenity
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-dotnet/libgdiplus >=dev-lang/mono-3.2 media-libs/freetype:2[X] media-libs/libsdl2[X,opengl,video] media-libs/openal virtual/jpeg:0 virtual/opengl =dev-lang/lua-5.1*:0 xdg? ( x11-misc/xdg-utils ) zenity? ( gnome-extra/zenity )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/OpenRA/OpenRA/archive/release-20171014.tar.gz -> openra-20171014.tar.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	gnome2-utils	4d211d7614f303710fca59db6ec12c88	ltprune	2770eed66a9b8ef944714cd0e968182e	mono-env	1f24c032c78290b0d9a07d5b343051a7	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af	vcs-snapshot	03289f51c769cf409d200d2d628cdd6e	xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
+_md5_=3acbb1b715701e5c0caac048a3791bc7
