@@ -37,13 +37,13 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i "s/^\(VERSION\).*/\1 = ${MY_PV}/g" Makefile
+	#sed -i "s/^\(VERSION\).*/\1 = ${MY_PV}/g" Makefile
 
 	emake cli-dependencies
 }
 
 src_compile() {
-	emake all man-page $(usex debug "" "DEBUG=false")
+	emake all man-page $(usex debug "" "DEBUG=false") VERSION="${MY_PV}"
 }
 
 src_install() {
