@@ -37,16 +37,15 @@ src_unpack() {
 }
 
 src_prepare() {
+	echo "${MY_PV}" > VERSION
 	emake cli-dependencies
 }
 
 src_compile() {
-	emake all $(usex debug "" "DEBUG=false")
-	emake VERSION=${MY_PV} man-page
+	emake all man-page $(usex debug "" "DEBUG=false")
 }
 
-src_install()
-{
+src_install() {
 	emake $(usex debug "" "DEBUG=false") \
 		prefix=/usr \
 		libdir="/usr/$(get_libdir)" \
@@ -54,23 +53,23 @@ src_install()
 		install install-linux-scripts install-man-page
 	emake \
 		datadir="/usr/share" \
-		DESTDIR="${D}" install-linux-mime install-linux-icons
+		DESTDIR="${D}" install-linux-mime install-linux-shortcuts
 
 	# desktop entries
-	make_desktop_entry "${PN}-cnc" "OpenRA - Command & Conquer" "${PN}-cnc" "StrategyGame"
-	make_desktop_entry "${PN}-ra" "OpenRA - Red Alert" "${PN}-ra" "StrategyGame"
-	make_desktop_entry "${PN}-d2k" "OpenRA - Dune 2000" "${PN}-d2k" "StrategyGame"
+	# make_desktop_entry "${PN}-cnc" "OpenRA - Command & Conquer" "${PN}-cnc" "StrategyGame"
+	# make_desktop_entry "${PN}-ra" "OpenRA - Red Alert" "${PN}-ra" "StrategyGame"
+	# make_desktop_entry "${PN}-d2k" "OpenRA - Dune 2000" "${PN}-d2k" "StrategyGame"
 
 	# desktop directory
-	insinto /usr/share/desktop-directories
-	doins "${FILESDIR}"/${PN}.directory
+	# insinto /usr/share/desktop-directories
+	# doins "${FILESDIR}"/${PN}.directory
 
 	# desktop menu
-	insinto /etc/xdg/menus/applications-merged
-	doins "${FILESDIR}"/games-${PN}.menu
+	# insinto /etc/xdg/menus/applications-merged
+	# doins "${FILESDIR}"/games-${PN}.menu
 
-	# docs
-	dodoc "${FILESDIR}"/README.gentoo
+	dodoc "${FILESDIR}"/README.gentoo AUTHORS COPYING
+	rm AUTHORS COPYING
 }
 
 pkg_preinst() {
