@@ -37,7 +37,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	echo "${MY_PV}" > VERSION
+	sed -i "s/^\(VERSION\).*/\1 = ${MY_PV}/g" Makefile
+
 	emake cli-dependencies
 }
 
@@ -46,6 +47,9 @@ src_compile() {
 }
 
 src_install() {
+	dodoc "${FILESDIR}"/README.gentoo AUTHORS COPYING
+	rm AUTHORS COPYING
+
 	emake $(usex debug "" "DEBUG=false") \
 		prefix=/usr \
 		libdir="/usr/$(get_libdir)" \
@@ -54,22 +58,6 @@ src_install() {
 	emake \
 		datadir="/usr/share" \
 		DESTDIR="${D}" install-linux-mime install-linux-shortcuts
-
-	# desktop entries
-	# make_desktop_entry "${PN}-cnc" "OpenRA - Command & Conquer" "${PN}-cnc" "StrategyGame"
-	# make_desktop_entry "${PN}-ra" "OpenRA - Red Alert" "${PN}-ra" "StrategyGame"
-	# make_desktop_entry "${PN}-d2k" "OpenRA - Dune 2000" "${PN}-d2k" "StrategyGame"
-
-	# desktop directory
-	# insinto /usr/share/desktop-directories
-	# doins "${FILESDIR}"/${PN}.directory
-
-	# desktop menu
-	# insinto /etc/xdg/menus/applications-merged
-	# doins "${FILESDIR}"/games-${PN}.menu
-
-	dodoc "${FILESDIR}"/README.gentoo AUTHORS COPYING
-	rm AUTHORS COPYING
 }
 
 pkg_preinst() {
