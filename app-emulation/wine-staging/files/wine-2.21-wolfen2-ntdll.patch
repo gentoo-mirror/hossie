@@ -1,0 +1,13 @@
+--- a/dlls/ntdll/file.c	2017-11-09 18:37:38.433258842 +0100
++++ b/dlls/ntdll/file.c	2017-11-13 22:04:13.096568323 +0100
+@@ -1188,8 +1188,9 @@ NTSTATUS WINAPI NtReadFileScatter
+ 
+  error:
+     if (needs_close) close( unix_handle );
+-    if (status == STATUS_SUCCESS)
++    if (status == STATUS_SUCCESS || status == STATUS_END_OF_FILE)
+     {
++        status = STATUS_PENDING;
+         io_status->u.Status = status;
+         io_status->Information = total;
+         TRACE("= SUCCESS (%u)\n", total);
