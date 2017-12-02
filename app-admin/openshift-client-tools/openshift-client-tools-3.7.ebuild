@@ -20,7 +20,7 @@ DEPEND="dev-lang/go
 	kerberos? ( app-crypt/mit-krb5 )"
 RDEPEND="bash-completion? ( >=app-shells/bash-completion-2.3-r1 )"
 
-S="${WORKDIR}/origin-${PV}"
+S="${WORKDIR}/origin-${MY_PV}"
 
 src_compile() {
 	use kerberos && MY_TAGS="-tags=gssapi"
