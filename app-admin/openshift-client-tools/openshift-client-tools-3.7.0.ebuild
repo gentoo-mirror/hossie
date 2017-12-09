@@ -5,11 +5,9 @@ EAPI=6
 
 inherit bash-completion-r1
 
-MY_PV="${PV}.0"
-
 DESCRIPTION="Enterprise Kubernetes for Developers (Client Tools)"
 HOMEPAGE="https://www.openshift.org"
-SRC_URI="https://github.com/openshift/origin/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/openshift/origin/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -20,16 +18,18 @@ DEPEND="dev-lang/go
 	kerberos? ( app-crypt/mit-krb5 )"
 RDEPEND="bash-completion? ( >=app-shells/bash-completion-2.3-r1 )"
 
-S="${WORKDIR}/origin-${MY_PV}"
+S="${WORKDIR}/origin-${PV}"
 
 src_compile() {
 	use kerberos && MY_TAGS="-tags=gssapi"
-	emake all \
-		OS_GIT_CATALOG_VERSION="v${MY_PV}" \
-		OS_GIT_MINOR="" \
-		OS_GIT_MAJOR="" \
-		OS_GIT_VERSION="v${MY_PV}" \
-		WHAT="cmd/oc ${MY_TAGS} -v"
+
+	export OS_GIT_CATALOG_VERSION="v${PV}"
+	export OS_GIT_MINOR=""
+	export OS_GIT_MAJOR=""
+	export OS_GIT_VERSION="v${PV}"
+
+	emake all WHAT="cmd/oc ${MY_TAGS} -v"
+	emake all WHAT="tools/gendocs -v"
 }
 
 src_install() {
