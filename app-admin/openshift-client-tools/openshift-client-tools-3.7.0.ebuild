@@ -29,6 +29,7 @@ src_compile() {
 	export OS_GIT_VERSION="v${PV}"
 
 	emake all WHAT="cmd/oc ${MY_TAGS} -v"
+	emake all WHAT="tools/gendocs -v"
 	hack/generate-docs.sh
 }
 
