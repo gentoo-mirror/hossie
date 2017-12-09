@@ -25,7 +25,7 @@ S="${WORKDIR}/origin-${MY_PV}"
 src_compile() {
 	use kerberos && MY_TAGS="-tags=gssapi"
 	emake all \
-		OS_GIT_CATALOG_VERSION="" \
+		OS_GIT_CATALOG_VERSION="v${MY_PV}" \
 		OS_GIT_MINOR="" \
 		OS_GIT_MAJOR="" \
 		OS_GIT_VERSION="v${MY_PV}" \
