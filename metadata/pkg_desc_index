@@ -1,4 +1,4 @@
-app-admin/openshift-client-tools 1.3.2 1.4.1: Enterprise Kubernetes for Developers (Client Tools)
+app-admin/openshift-client-tools 1.3.2 1.4.1 3.7.0: Enterprise Kubernetes for Developers (Client Tools)
 app-emulation/wine 1.9.23 2.17: Free implementation of Windows(tm) on Unix
 app-emulation/wine-any 2.18 2.19 2.20 2.21: Free implementation of Windows(tm) on Unix, with optional external patchsets
 app-emulation/wine-staging 2.18 2.19 2.20 2.21: Free implementation of Windows(tm) on Unix, with Wine-Staging patchset
