@@ -5,8 +5,8 @@ EAPI=5
 inherit eutils linux-info versionator
 
 SLOT="0"
-PV_STRING="$(get_version_component_range 3-5)"
-MY_PV="$(get_version_component_range 1-2)"
+PV_STRING="$(get_version_component_range 4-6)"
+MY_PV="$(get_version_component_range 1-3)"
 MY_PN="idea"
 MY_DOWNLOAD_BASE="https://download.jetbrains.com/idea"
 
