@@ -7,12 +7,7 @@ EAPI="5"
 
 inherit autotools eutils
 
-LANGUAGES="linguas_ar linguas_be linguas_bn_BD linguas_cs linguas_da linguas_de
-	linguas_es linguas_fr linguas_hu linguas_id linguas_it linguas_ka_GE linguas_pl
-	linguas_pt_BR linguas_ru linguas_tr linguas_uk linguas_vi linguas_zh_CN
-	linguas_zh_TW"
-
-IUSE="gnutls gstreamer libnotify nls openssl rss-notify ${LANGUAGES}"
+IUSE="gnutls gstreamer libnotify nls openssl rss-notify"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 SRC_URI="mirror://sourceforge/urlget/${P}.tar.gz"
 
