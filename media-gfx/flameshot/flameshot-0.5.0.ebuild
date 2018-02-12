@@ -21,7 +21,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare () {
 	sed -i "s/\(VERSION = \).*/\1${PV}/" "${PN}.pro"
-	epatch "${FILESDIR}/${P}-desktop-fixes.patch"
+	sed -i "s/icons/pixmaps/" "${PN}.pro"
+	cp "${FILESDIR}/${PN}.desktop" "${S}/docs/desktopEntry/package"
 
 	eapply_user
 }
