@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare () {
 	sed -i "s/\(VERSION = \).*/\1${PV}/" "${PN}.pro"
+	epatch "${FILESDIR}/${P}-desktop-fixes.patch"
 
 	eapply_user
 }
