@@ -19,6 +19,16 @@ DEPEND="dev-qt/qtdbus:5
 	dev-qt/qtwidgets:5"
 RDEPEND="${DEPEND}"
 
+src_prepare () {
+	sed -i "s/\(VERSION = \).*/\1${PV}/" "${PN}.pro"
+
+	eapply_user
+}
+
 src_configure() {
 	eqmake5 "CONFIG+=packaging" "${PN}.pro"
+}
+
+src_install () {
+	emake INSTALL_ROOT="${D}" install
 }
