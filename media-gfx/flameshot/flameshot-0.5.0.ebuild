@@ -22,6 +22,8 @@ RDEPEND="${DEPEND}"
 src_prepare () {
 	sed -i "s/\(VERSION = \).*/\1${PV}/" "${PN}.pro"
 	sed -i "s/icons/pixmaps/" "${PN}.pro"
+	sed -i "s/^Icon=.*/Icon=${PN}/" "${S}/docs/desktopEntry/package/${PN}-config.desktop" \
+		"${S}/docs/desktopEntry/package/${PN}-init.desktop"
 	cp "${FILESDIR}/${PN}.desktop" "${S}/docs/desktopEntry/package"
 
 	eapply_user
