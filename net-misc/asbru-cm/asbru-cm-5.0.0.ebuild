@@ -25,6 +25,7 @@ RDEPEND="freerdp? ( net-misc/freerdp )
 	dev-perl/Crypt-CBC
 	dev-perl/Crypt-Rijndael
 	dev-perl/Expect
+	dev-perl/File-KeePass
 	dev-perl/Gnome2-GConf
 	dev-perl/gnome2-perl
 	dev-perl/Gnome2-Vte
@@ -50,6 +51,8 @@ src_prepare() {
 
 
 src_install() {
+	rm lib/ex/KeePass.pm
+
 	dobin "${PN}"
 
 	doman "res/${PN}.1"
