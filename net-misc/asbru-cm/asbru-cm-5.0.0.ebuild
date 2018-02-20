@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils multilib
+inherit bash-completion-r1 eutils multilib
 
 DESCRIPTION="Asbru Connection Manager is a user interface that helps organizing remote terminal sessions"
 HOMEPAGE="https://www.asbru-cm.net/"
@@ -42,15 +42,21 @@ src_install() {
 	dobin "${PN}"
 
 	doman "res/${PN}.1"
+	rm "res/${PN}.1"
+
 	insinto /usr/share/applications
 	doins "res/${PN}.desktop"
-	rm "res/{${PN}.1,${PN}.desktop}"
+	rm "res/${PN}.desktop}"
 
-	doicon -s scalable res/asbru-logo.svg
+	newicon -s scalable res/asbru-logo.svg asbru-cm.svg
 
 	insinto "/usr/$(get_libdir)/${PN}"
 	doins -r lib/*
+
 	insinto "/usr/share/${PN}"
 	doins -r res/*
 	doins -r utils
+
+	newbashcomp res/asbru_bash_completion "${PN}"
+	rm res/asbru_bash_completion
 }
