@@ -57,7 +57,7 @@ src_install() {
 
 	insinto /usr/share/applications
 	doins "res/${PN}.desktop"
-	rm "res/${PN}.desktop}"
+	rm "res/${PN}.desktop"
 
 	newicon -s scalable res/asbru-logo.svg asbru-cm.svg
 
