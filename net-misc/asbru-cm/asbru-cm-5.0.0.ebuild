@@ -68,6 +68,7 @@ src_install() {
 	doins -r res/*
 	doins -r utils
 
-	newbashcomp res/asbru_bash_completion "${PN}"
+	# https://github.com/asbru-cm/asbru-cm/pull/64
+	# newbashcomp res/asbru_bash_completion "${PN}"
 	rm res/asbru_bash_completion
 }
