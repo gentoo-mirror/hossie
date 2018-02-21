@@ -46,6 +46,9 @@ src_prepare() {
 		sed -i -e "s@\$RealBin[^']*\('\?\)\([./]*\)/res@\1/usr/share/${PN}@g" "$f"
 	done
 
+	# https://github.com/asbru-cm/asbru-cm/pull/64
+	epatch "${FILESDIR}/${P}-bash-completion.patch"
+
 	eapply_user
 }
 
@@ -71,7 +74,6 @@ src_install() {
 	doins -r res/*
 	doins -r utils
 
-	# https://github.com/asbru-cm/asbru-cm/pull/64
-	# newbashcomp res/asbru_bash_completion "${PN}"
+	newbashcomp res/asbru_bash_completion "${PN}"
 	rm res/asbru_bash_completion
 }
