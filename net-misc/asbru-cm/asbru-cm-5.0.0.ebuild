@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit bash-completion-r1 eutils multilib
+inherit bash-completion-r1 eutils gnome2 multilib
 
 DESCRIPTION="Asbru Connection Manager is a user interface that helps organizing remote terminal sessions"
 HOMEPAGE="https://www.asbru-cm.net/"
@@ -77,4 +77,12 @@ src_install() {
 
 	newbashcomp res/asbru_bash_completion "${PN}"
 	rm res/asbru_bash_completion
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
