@@ -66,7 +66,13 @@ src_install() {
 	doins "res/${PN}.desktop"
 	rm "res/${PN}.desktop"
 
-	newicon -s scalable res/asbru-logo.svg asbru-cm.svg
+	newicon -s scalable res/asbru-logo.svg "${PN}".svg
+	newicon -s 24 res/asbru-logo-24.png "${PN}".png
+	newicon -s 256 res/asbru-logo-24.png "${PN}".png
+	newicon -s 64 res/asbru-logo-24.png "${PN}".png
+
+	newbashcomp res/asbru_bash_completion "${PN}"
+	rm res/asbru_bash_completion
 
 	insinto "/usr/$(get_libdir)/${PN}"
 	doins -r lib/*
@@ -74,9 +80,6 @@ src_install() {
 	insinto "/usr/share/${PN}"
 	doins -r res/*
 	doins -r utils
-
-	newbashcomp res/asbru_bash_completion "${PN}"
-	rm res/asbru_bash_completion
 }
 
 pkg_postinst() {
