@@ -53,6 +53,7 @@ src_prepare() {
 	eapply_user
 }
 
+src_configure() { :; }
 
 src_install() {
 	rm lib/ex/KeePass.pm
