@@ -1,0 +1,28 @@
+From 710c683b2a82e193b65b196e2c169121cf77db07 Mon Sep 17 00:00:00 2001
+From: Daniel Augustin <hossie@hossie.de>
+Date: Tue, 20 Feb 2018 19:19:17 +0100
+Subject: [PATCH] Removed deprecated "have" function
+
+---
+ res/asbru_bash_completion | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/res/asbru_bash_completion b/res/asbru_bash_completion
+index 89f4285..d388d4c 100644
+--- a/res/asbru_bash_completion
++++ b/res/asbru_bash_completion
+@@ -3,7 +3,6 @@ _asbru_commands()
+ 	asbru-cm --help | sed -e '1,/^Options:/d' -e '/^See /Q' -e 's/^[\t]\+\(--[^=]\+\)\(=.\+\)* : .*/\1/g' -e 's/^\(.\+\)=.\+/\1=/g' | uniq
+ }
+ 
+-have asbru-cm &&
+ _asbru()
+ {
+ 	cur=${COMP_WORDS[COMP_CWORD]}
+@@ -18,5 +17,4 @@ _asbru()
+ 	COMPREPLY=( $( compgen -W "$options" -- ${cur} ) )
+ }
+ 
+-[ "$have" ] && complete -F _asbru asbru-cm
+-
++complete -F _asbru asbru-cm
