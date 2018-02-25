@@ -1,3 +1,2 @@
-#Seems to have severe bugs,
-#Project might be dead
->=net-misc/pacmanager-4.5.5.8
+#Use asbru-cm fork, pacmanager is dead
+net-misc/pacmanager
