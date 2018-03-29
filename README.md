@@ -25,3 +25,9 @@ Bug Tracker
 If you encounter any problems, want to report bugs or have any questions,
 please open a [Jira-Ticket](https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000).
 No account required.
+
+You can also [browse open tickets](<https://jira.hossie.de/issues/?jql=project%20%3D%20GOV%20AND%20status%20in%20(Open%2C%20"In%20Progress"%2C%20"In%20Review"%2C%20"Need%20Info")>).
+
+Bitbucket does seem to have problems with that link as text, so here it is in plain format:
+
+<pre>https://jira.hossie.de/issues/?jql=project%20%3D%20GOV%20AND%20status%20in%20(Open%2C%20"In%20Progress"%2C%20"In%20Review"%2C%20"Need%20Info")</pre>
