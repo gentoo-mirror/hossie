@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils multilib
+inherit eutils multilib xdg-utils
 
 DESCRIPTION="The best way to play itch.io games"
 HOMEPAGE="https://itch.io/app"
@@ -67,4 +67,12 @@ src_install() {
 
 	cd "${S}"
 	dodoc README.md CONTRIBUTING.md
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
 }
