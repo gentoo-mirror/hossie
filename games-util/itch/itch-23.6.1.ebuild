@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit eutils multilib
+inherit eutils multilib xdg-utils
 
 DESCRIPTION="The best way to play itch.io games"
 HOMEPAGE="https://itch.io/app"
@@ -18,6 +18,7 @@ RDEPEND="dev-libs/libpcre:3
 	dev-libs/nettle:0
 	dev-libs/nspr:0
 	dev-libs/nss:0
+	gnome-base/gconf:2
 	media-libs/libpng:0
 	net-libs/gnutls:0
 	x11-libs/gtk+:2"
@@ -52,7 +53,7 @@ src_compile() {
 src_install() {
 	cd "${S}/build/v${PV}/${PN}-linux-${MY_ARCH}"
 	insinto "/usr/$(get_libdir)/${PN}"
-	doins -r *.pak *.so *.bin *.dat locales resources itch
+	doins -r *.pak *.so *.bin *.dat locales resources "${PN}"
 	fperms 755 "/usr/$(get_libdir)/${PN}/itch"
 
 	cd "${S}/linux-extras"
@@ -66,4 +67,12 @@ src_install() {
 
 	cd "${S}"
 	dodoc README.md CONTRIBUTING.md
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
 }
