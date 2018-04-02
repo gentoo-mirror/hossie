@@ -23,7 +23,7 @@ RDEPEND="dev-libs/libpcre:3
 	net-libs/gnutls:0
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	>=net-libs/nodejs-5.1:0[npm]"
+	>=net-libs/nodejs-8.0:0[npm]"
 
 QA_EXECSTACK="usr/lib64/${PN}/itch"
 QA_PRESTRIPPED="usr/lib.*/${PN}/lib.*
