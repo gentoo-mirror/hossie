@@ -3,14 +3,13 @@
 
 EAPI=6
 
-inherit eutils linux-info versionator
+inherit eutils gnome2-utils linux-info versionator
 
 MY_PN="RubyMine"
-MY_BUILD="181.4203.562"
 
 DESCRIPTION="The most intelligent Ruby on Rails IDE"
 HOMEPAGE="https://www.jetbrains.com/idea"
-SRC_URI="https://download.jetbrains.com/ruby/${MY_PN}-${MY_BUILD}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download.jetbrains.com/ruby/${MY_PN}-${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="JetBrainsToolbox"
 SLOT="0"
@@ -23,7 +22,7 @@ IUSE="+custom-jdk"
 
 QA_PREBUILT="opt/${MY_PN}/*"
 
-S="${WORKDIR}/${MY_PN}-$(get_version_component_range 1-2)"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	if ! use amd64; then
@@ -75,4 +74,9 @@ src_install() {
 
 pkg_postinst() {
 	sysctl fs.inotify.max_user_watches=524288 >/dev/null
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
