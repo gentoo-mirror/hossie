@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst unpack
+DEFINED_PHASES=install nofetch postinst unpack
 DEPEND=app-admin/chrpath virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=DisplayLink USB Graphics Software
 EAPI=5
