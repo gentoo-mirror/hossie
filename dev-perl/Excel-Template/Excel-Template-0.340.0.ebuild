@@ -20,6 +20,7 @@ RDEPEND="dev-perl/IO-stringy
 	virtual/perl-Test-Simple
 "
 DEPEND="${RDEPEND}
+	dev-perl/Module-Install
 	>=dev-perl/Test-Deep-0.95.0
 	>=dev-perl/Test-Exception-0.210.0
 	>=virtual/perl-ExtUtils-MakeMaker-6.42
