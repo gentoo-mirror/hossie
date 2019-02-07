@@ -1,11 +1,12 @@
 DEFINED_PHASES=compile install test unpack
-DEPEND=>=dev-lang/go-1.9
+DEPEND=>=dev-lang/go-1.10
 DESCRIPTION=Idiomatic HTTP Middleware for Golang
 EAPI=6
 HOMEPAGE=https://github.com/urfave/negroni
 KEYWORDS=~x86 ~amd64
 LICENSE=MIT
+RESTRICT=strip
 SLOT=0
 SRC_URI=https://api.github.com/repos/urfave/negroni/tarball/c0db5feaa33826cd5117930c8f4ee5c0f565eec6 -> negroni-0.2.0_p20170226.tar.gz
-_eclasses_=golang-base	8e4d7f712ec0e170e2c190c1e3da6501	golang-build	42942532e7429ed9b2efaabf93dc0615	golang-vcs-snapshot	6f66975a5b570c5e05ed96910c574abc
+_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-build	dc25bafa8fc1305a4de66a0a448472e7	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b
 _md5_=f8ff4acb6ae39d7a2c03929a9ebe7557

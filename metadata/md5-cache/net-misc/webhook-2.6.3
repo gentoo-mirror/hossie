@@ -1,11 +1,12 @@
 DEFINED_PHASES=compile install
-DEPEND=dev-go/fsnotify || ( dev-go/mux app-emulation/lxd ) >=dev-go/negroni-0.2.0_p20170226 >=dev-lang/go-1.9
+DEPEND=dev-go/fsnotify || ( dev-go/mux app-emulation/lxd ) >=dev-go/negroni-0.2.0_p20170226 >=dev-lang/go-1.10
 DESCRIPTION=A lightweight tool that allows you to create HTTP endpoints to run commands
 EAPI=6
 HOMEPAGE=https://github.com/adnanh/webhook
 KEYWORDS=~amd64
 LICENSE=MIT
+RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/adnanh/webhook/archive/2.6.3.tar.gz -> webhook-2.6.3.tar.gz
-_eclasses_=golang-base	8e4d7f712ec0e170e2c190c1e3da6501
+_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892
 _md5_=eed8da7abaab9440b6ab9ebba64a9c60
