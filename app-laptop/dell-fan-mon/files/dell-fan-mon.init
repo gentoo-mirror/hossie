@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+# Copyright 2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="dell-fan-mon Daemon"
+description="Dell laptop thermal monitoring"
+pidfile="/run/dell-fan-mon.pid"
+command="/usr/bin/dell-fan-mon"
+
+depend() {
+	after modules
+}
