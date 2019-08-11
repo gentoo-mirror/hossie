@@ -34,3 +34,8 @@ src_install() {
 	insinto /etc
 	doins "${PN}.conf"
 }
+
+pkg_postinst() {
+	einfo "If you want i8k methods working, you need"
+	einfo "CONFIG_I8K in your kernel"
+}
