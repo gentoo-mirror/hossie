@@ -28,6 +28,7 @@ src_install() {
 	dobin "${PN}"
 	doman "${PN}.1"
 
+	newinitd "${FILESDIR}/${PN}.init" "${PN}"
 	systemd_dounit "${PN}.service"
 
 	insinto /etc
