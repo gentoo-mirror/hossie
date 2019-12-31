@@ -1,6 +1,6 @@
 app-admin/openshift-client-tools 1.3.2 1.4.1 3.7.0: Enterprise Kubernetes for Developers (Client Tools)
 app-emulation/wine-mono 4.7.5: A replacement for the .NET runtime and class libraries in Wine
-app-emulation/wine-staging 3.7 4.0: Free implementation of Windows(tm) on Unix, with Wine-Staging patchset
+app-emulation/wine-staging 4.0: Free implementation of Windows(tm) on Unix, with Wine-Staging patchset
 app-laptop/dell-fan-mon 1.1: Fan monitor for some Dell laptops
 app-misc/pup 0.4.0: pup is a command line tool for processing HTML
 dev-go/color 1.5.0: Color package for Go
@@ -23,10 +23,10 @@ dev-perl/Module-Build-Pluggable-PPPort 0.04: Generate ppport.h
 dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
 dev-python/fritzconnection 0.6.5: Communicate with the AVM FritzBox
 dev-util/DataGrip 2018.1: Many databases, one tool
-dev-util/idea-community 2017.1.5.171.4694.70 2017.2.6.172.4574.11 2017.3.5.173.4674.33 2018.1.1.181.4445.78: A complete toolset for web, mobile and enterprise development
-dev-util/idea-ultimate 2017.1.5.171.4694.70 2017.2.6.172.4574.11 2017.3.5.173.4674.33 2018.1.1.181.4445.78: A complete toolset for web, mobile and enterprise development
+dev-util/idea-community 2018.1.1.181.4445.78: A complete toolset for web, mobile and enterprise development
+dev-util/idea-ultimate 2018.1.1.181.4445.78: A complete toolset for web, mobile and enterprise development
 dev-util/jetbrains-toolbox 1.9.3935 1.10.4088 1.11.4269 1.13.4733: Manage all your JetBrains Projects and Tools
-dev-util/rubymine 2017.1.5 2017.2.4 2017.3 2017.3.1 2018.1.1: The most intelligent Ruby on Rails IDE
+dev-util/rubymine 2018.1.1: The most intelligent Ruby on Rails IDE
 games-simulation/corsix-th 0.60: Open source clone of Theme Hospital
 games-strategy/openra 20160508-r1 20161019-r1 20170304 20170408 20171014: A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k
 games-strategy/openrct2 0.0.4 0.0.6: Open source re-implementation of Roller Coaster Tycoon 2
