@@ -45,8 +45,7 @@ media-sound/ponymix 5: CLI volume control for PulseAudio
 media-tv/mediathekview 13.0.2-r1: MediathekView searches the online portals of public broadcasting services
 media-video/gnome-mpv 0.11: A simple GTK+ frontend for mpv
 net-im/franz 4.0.4: Franz is a free messaging app
-net-im/hipchat 4.30.3.1670: Hipchat - persistent group chat using XMPP
-net-im/rambox-bin 0.5.14: Free and Open Source messaging and emailing app
+net-im/rambox-bin 0.5.14 0.7.5: Free and Open Source messaging and emailing app
 net-misc/asbru-cm 5.0.0: Asbru CM is a user interface that helps organizing remote terminal sessions
 net-misc/webhook 2.6.3: A lightweight tool that allows you to create HTTP endpoints to run commands
 net-misc/youtube-dl-gui 0.3.8_p20160925: A cross platform front-end GUI of the popular youtube-dl written in wxPython
