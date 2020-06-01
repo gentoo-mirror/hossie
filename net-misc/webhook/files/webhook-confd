@@ -1,3 +1,0 @@
-#Additional Options to pass to webhook
-#See webhook -help for a list
-WEBHOOK_OPTS=""
