@@ -11,4 +11,4 @@ repoman:
   services:
     - docker:dind
   script:
-    - docker run gitlab-registry.hossie.de/docker/repoman .
+    - docker run --rm -v $PWD:/repo gitlab-registry.hossie.de/docker/repoman full
