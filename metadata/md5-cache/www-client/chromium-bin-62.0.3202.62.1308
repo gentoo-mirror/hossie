@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=dev-libs/libtasn1 dev-libs/nss media-libs/alsa-lib media-libs/fontconfig media-libs/libpng:0 net-libs/gnutls net-print/cups sys-apps/lsb-release x11-libs/gtk+:3 x11-libs/libXScrnSaver
 SLOT=0
 SRC_URI=http://ports.ubuntu.com/ubuntu-ports/pool/universe/c/chromium-browser/chromium-browser_62.0.3202.62-0ubuntu0.16.04.1308_armhf.deb http://ports.ubuntu.com/ubuntu-ports/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg_62.0.3202.62-0ubuntu0.16.04.1308_armhf.deb
-_eclasses_=estack	686eaab303305a908fd57b2fd7617800	multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	unpacker	8ee8c1a2f31437d1766aac890d07a7f4	versionator	2352c3fc97241f6a02042773c8287748
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	unpacker	8ee8c1a2f31437d1766aac890d07a7f4	versionator	2352c3fc97241f6a02042773c8287748
 _md5_=abf9adf219719954c5ee56a8bbb19ee3
