@@ -8,5 +8,5 @@ LICENSE=MIT
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://api.github.com/repos/heppu/rawterm/tarball/f84711c380fdfbaa529baff2605283945313a03c -> rawterm-0_p20170404.tar.gz
-_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-build	dc25bafa8fc1305a4de66a0a448472e7	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b
+_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-build	dc25bafa8fc1305a4de66a0a448472e7	golang-vcs-snapshot	4a615ccf588f8bc48d956500949af39e
 _md5_=6c6caea9680cf3f6abba9c9709165c37
