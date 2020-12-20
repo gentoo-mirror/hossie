@@ -19,7 +19,7 @@ dev-perl/LWP-Protocol-connect 6.09: Provides HTTP/CONNECT proxy support for LWP:
 dev-perl/Module-Build-Pluggable 0.10: Module::Build meets plugins
 dev-perl/Module-Build-Pluggable-PPPort 0.04: Generate ppport.h
 dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
-dev-python/fritzconnection 0.6.5 1.2.1: Communicate with the AVM FritzBox
+dev-python/fritzconnection 1.2.1: Communicate with the AVM FritzBox
 dev-util/DataGrip 2018.1: Many databases, one tool
 dev-util/glslang 8.13.3727_pre20200331: Khronos reference front-end for GLSL and ESSL, and sample SPIR-V generator
 dev-util/idea-community 2018.1.1.181.4445.78: A complete toolset for web, mobile and enterprise development
@@ -30,8 +30,6 @@ dev-util/spirv-headers 1.5.1_p20200317: Machine-readable files for the SPIR-V Re
 dev-util/spirv-tools 2020.2: Provides an API and commands for processing SPIR-V modules
 dev-util/vulkan-headers 1.2.135: Vulkan Header files and API registry
 dev-util/vulkan-tools 1.2.135: Official Vulkan Tools and Utilities for Windows, Linux, Android, and MacOS
-games-simulation/corsix-th 0.60: Open source clone of Theme Hospital
-games-strategy/openra 20160508-r1 20161019-r1 20170304 20170408 20171014: A free RTS engine supporting games like Command & Conquer, Red Alert and Dune2k
 games-strategy/openrct2 0.0.4 0.0.6: Open source re-implementation of Roller Coaster Tycoon 2
 games-util/itch 23.3.1 23.4.0 23.6.1: The best way to play itch.io games
 media-gfx/flameshot 0.5.0: Powerful yet simple to use screenshot software

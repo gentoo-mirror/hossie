@@ -31,12 +31,6 @@ dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/rubymine:custom-jdk - Install and use JetBrains's custom JRE.
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
-games-simulation/corsix-th:midi - Adds support for background midis via media-sound/timidity++
-games-strategy/openra:debug - Compile and run with full debugging information
-games-strategy/openra:doc - Generate additional documentation
-games-strategy/openra:tools - Install some development tools such as editor.
-games-strategy/openra:xdg - xdg-utils are used to open web pages
-games-strategy/openra:zenity - zenity is used to display crash dialogs
 media-libs/glfw:egl - Use EGL instead of GLX for GL context creation
 media-libs/glfw:vulkan - Add Vulkan support
 media-libs/vulkan-loader:layers - Include the vulkan layers
