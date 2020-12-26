@@ -32,7 +32,6 @@ dev-util/vulkan-headers 1.2.135: Vulkan Header files and API registry
 dev-util/vulkan-tools 1.2.135: Official Vulkan Tools and Utilities for Windows, Linux, Android, and MacOS
 games-strategy/openrct2 0.0.4 0.0.6: Open source re-implementation of Roller Coaster Tycoon 2
 games-util/itch 23.3.1 23.4.0 23.6.1: The best way to play itch.io games
-media-gfx/flameshot 0.5.0: Powerful yet simple to use screenshot software
 media-libs/glfw 3.2: The Portable OpenGL FrameWork
 media-libs/vulkan-layers 1.2.135: Vulkan Validation Layers
 media-libs/vulkan-loader 1.2.135: Vulkan Installable Client Driver (ICD) Loader
