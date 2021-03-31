@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst preinst
 DESCRIPTION=Raspberry PI kernel image
 EAPI=6
 HOMEPAGE=https://github.com/raspberrypi/firmware
+INHERIT=versionator
 IUSE=rpi-b rpi-b-plus rpi-cm rpi-2-b rpi-3-b rpi-cm3
 KEYWORDS=~arm -*
 LICENSE=GPL-2 raspberrypi-videocore-bin
