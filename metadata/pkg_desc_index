@@ -52,6 +52,5 @@ x11-apps/cerebro 0.2.7 0.2.8 0.3.0 0.3.1: Open-source productivity booster with 
 x11-drivers/displaylink-driver 4.1.9: DisplayLink USB Graphics Software
 x11-drivers/evdi 1.5.0: Extensible Virtual Display Interface
 x11-drivers/nvidia-drivers 440.66.04 440.66.08: NVIDIA Accelerated Graphics Driver
-x11-drivers/xf86-video-armsoc 1.4.1: xf86-video-armsoc driver, e.g. for Odroid
 x11-misc/alock 2.3: Simple screen lock application for X server
 x11-misc/tint2 0.12.11 0.14.5 15.2: tint2 is a lightweight panel/taskbar for Linux.
