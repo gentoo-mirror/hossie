@@ -3,13 +3,6 @@ app-emulation/wine-mono 4.7.5: A replacement for the .NET runtime and class libr
 app-emulation/wine-staging 4.0: Free implementation of Windows(tm) on Unix, with Wine-Staging patchset
 app-laptop/dell-fan-mon 1.1: Fan monitor for some Dell laptops
 app-misc/pup 0.4.0: pup is a command line tool for processing HTML
-dev-go/color 1.5.0: Color package for Go
-dev-go/go-ansi 0_p20170109: Windows-portable ANSI escape sequence utility for Go language
-dev-go/go-colorable 0.0.8: Colorable writer for windows
-dev-go/go-isatty 0.0.2: isatty for golang
-dev-go/go-ps 0_p20170309: Find, list, and inspect processes from Go
-dev-go/mux 1.3.0: A powerful URL router and dispatcher for golang
-dev-go/rawterm 0_p20170404: Striped down version of readline
 dev-java/mlib 2.1.1-r1: Java library for mediathekview
 dev-perl/Excel-Template 0.340.0: Excel::Template
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
@@ -45,7 +38,6 @@ sys-boot/plymouth-openrc-plugin 0.1.2-r1: Plymouth plugin for OpenRC
 sys-boot/raspberrypi-firmware 1.20161215 1.20170215: Raspberry PI boot loader and firmware
 sys-kernel/odroidxu4-sources 4.14.28_p124: Kernel sources for Odroid XU4
 sys-kernel/raspberrypi-image 4.4.38_p20161215 4.4.48_p20170215: Raspberry PI kernel image
-sys-process/gkill 1.0.2: Interactice process killer for Linux and macOS
 www-apps/thruk 2.16.2 2.18: Webinterface for Nagios, Icinga, Shinken and Naemon
 www-client/chromium-bin 62.0.3202.62.1308: Chromium Binary from Ubuntu for ARM (e.g. Raspberry Pi)
 x11-apps/cerebro 0.2.7 0.2.8 0.3.0 0.3.1: Open-source productivity booster with a brain
