@@ -38,7 +38,6 @@ net-misc/asbru-cm:freerdp - Enable support for net-misc/freerdp
 net-misc/asbru-cm:mosh - Enable support for net-misc/mosh
 net-misc/asbru-cm:rdesktop - Enable support for net-misc/rdesktop
 net-misc/asbru-cm:webdav - Enable support for net-misc/cadaver
-sys-boot/plymouth-openrc-plugin:silent - Make the bootsplash silent
 sys-boot/raspberrypi-firmware:rpi-2-b - Install files for RPi 2b
 sys-boot/raspberrypi-firmware:rpi-3-b - Install files for RPi 3b
 sys-boot/raspberrypi-firmware:rpi-b - Install files for RPi 1b
