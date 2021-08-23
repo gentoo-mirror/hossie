@@ -11,5 +11,5 @@ RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-
 RESTRICT=binchecks strip
 SLOT=4.14.28_p124
 SRC_URI=https://github.com/hardkernel/linux/archive/4.14.28-124.tar.gz -> odroidxu4-sources-4.14.28_p124.tar.gz
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	kernel-2	6b17cdaee897466001a472284e0421c8	versionator	d3fb3ba33acc3bbbdc4d7970227c100d
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	kernel-2	404bf5d1d57941bc2f965382f4534645	versionator	d3fb3ba33acc3bbbdc4d7970227c100d
 _md5_=6c72c40767d6ffdbc62a8a2756582869
