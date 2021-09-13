@@ -1,0 +1,15 @@
+name: Repo QA
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  pkgcheck:
+    runs-on: ubuntu-latest
+    name: Run PkgCheck
+    steps:
+      - uses: actions/checkout@master
+      - name: Pkgcheck
+        uses: daugustin/docker-pkgcheck@master
+        continue-on-error: true
