@@ -4,13 +4,11 @@ hossie overlay
 Add the overlay
 ---------------
 
-If you don't have it installed yet, install [layman](https://wiki.gentoo.org/wiki/Layman).
-
 My overlay is in the main overlays.gentoo.org list.
 
 So you can just run:
 
-    layman -a hossie
+    eselect repository enable hossie
 
 
 What is in the overlay?
@@ -22,12 +20,11 @@ What is in the overlay?
 Bug Tracker
 -----------
 
-If you encounter any problems, want to report bugs or have any questions,
-please open a [Jira-Ticket](https://jira.hossie.de/secure/CreateIssue.jspa?pid=10000).
-No account required.
+Bugs are on GitHub now.
 
-You can also [browse open tickets](<https://jira.hossie.de/issues/?jql=project%20%3D%20GOV%20AND%20status%20in%20(Open%2C%20"In%20Progress"%2C%20"In%20Review"%2C%20"Need%20Info")>).
+Repo QA
+-------
 
-Bitbucket does seem to have problems with that link as text, so here it is in plain format:
+Repo QA is running on GitHub (always green for now):
 
-<pre>https://jira.hossie.de/issues/?jql=project%20%3D%20GOV%20AND%20status%20in%20(Open%2C%20"In%20Progress"%2C%20"In%20Review"%2C%20"Need%20Info")</pre>
+![repoqa](https://github.com/daugustin/gentoo-overlay/actions/workflows/main.yml/badge.svg)
