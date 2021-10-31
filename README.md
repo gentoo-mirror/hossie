@@ -14,7 +14,7 @@ So you can just run:
 What is in the overlay?
 -----------------------
 
-[Details of the available ebuilds](https://wiki.hossie.de/display/PROJ/Gentoo+Overlay)
+[Details of the available ebuilds](https://wiki.hossie.de/projekte:gentoo-overlay)
 
 
 Bug Tracker
