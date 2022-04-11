@@ -26,6 +26,8 @@ sys-kernel/raspberrypi-image:rpi-b - Install files for RPi 1b
 sys-kernel/raspberrypi-image:rpi-b-plus - Install files for RPi 1b+
 sys-kernel/raspberrypi-image:rpi-cm - Install files for RPi Compute Module 1
 sys-kernel/raspberrypi-image:rpi-cm3 - Install files for RPi Compute Module 3
+sys-process/cpu-x:glfw - Build with support for media-libs/glfw
+sys-process/cpu-x:opencl - Enable OpenCL support
 x11-misc/alock:xbacklight - Enable xbacklight support
 x11-misc/tint2:battery - Enable battery status plugin
 x11-misc/tint2:examples - Install tint2rc examples
