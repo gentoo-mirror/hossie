@@ -33,7 +33,6 @@ net-im/franz 4.0.4: Franz is a free messaging app
 net-im/rambox-bin 0.5.14 0.7.5: Free and Open Source messaging and emailing app
 net-misc/asbru-cm 5.0.0: Asbru CM is a user interface that helps organizing remote terminal sessions
 sys-boot/raspberrypi-firmware 1.20161215 1.20170215: Raspberry PI boot loader and firmware
-sys-kernel/odroidxu4-sources 4.14.28_p124: Kernel sources for Odroid XU4
 sys-kernel/raspberrypi-image 4.4.38_p20161215 4.4.48_p20170215: Raspberry PI kernel image
 sys-libs/libcpuid 0.5.1: A small C library for x86 (and x86_64) CPU detection and feature extraction
 sys-process/cpu-x 4.3.0: A Free software that gathers information on CPU, motherboard and more
