@@ -31,7 +31,6 @@ sys-kernel/raspberrypi-image 4.4.38_p20161215 4.4.48_p20170215: Raspberry PI ker
 sys-libs/glibc 2.34-r11: GNU libc C library
 sys-libs/libcpuid 0.5.1: A small C library for x86 (and x86_64) CPU detection and feature extraction
 sys-process/cpu-x 4.3.0: A Free software that gathers information on CPU, motherboard and more
-www-apps/thruk 2.16.2 2.18: Webinterface for Nagios, Icinga, Shinken and Naemon
 x11-apps/cerebro 0.2.7 0.2.8 0.3.0 0.3.1: Open-source productivity booster with a brain
 x11-drivers/displaylink-driver 4.1.9: DisplayLink USB Graphics Software
 x11-drivers/evdi 1.5.0: Extensible Virtual Display Interface
