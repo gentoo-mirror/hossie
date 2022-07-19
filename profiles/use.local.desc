@@ -2,13 +2,7 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-dev-util/DataGrip:custom-jdk - Install and use IntelliJ's custom JRE.
-dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
-dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
-dev-util/rubymine:custom-jdk - Install and use JetBrains's custom JRE.
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
-media-libs/glfw:egl - Use EGL instead of GLX for GL context creation
-media-libs/glfw:vulkan - Add Vulkan support
 media-libs/vulkan-loader:layers - Include the vulkan layers
 net-misc/asbru-cm:freerdp - Enable support for net-misc/freerdp
 net-misc/asbru-cm:mosh - Enable support for net-misc/mosh
@@ -43,7 +37,3 @@ sys-libs/glibc:systemtap - enable systemtap static probe points
 sys-process/cpu-x:glfw - Build with support for media-libs/glfw
 sys-process/cpu-x:opencl - Enable OpenCL support
 x11-misc/alock:xbacklight - Enable xbacklight support
-x11-misc/tint2:battery - Enable battery status plugin
-x11-misc/tint2:examples - Install tint2rc examples
-x11-misc/tint2:themes - Install additional tint2 themes
-x11-misc/tint2:tint2conf - Build/Install tint2conf as well

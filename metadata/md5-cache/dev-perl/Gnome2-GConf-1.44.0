@@ -1,0 +1,13 @@
+BDEPEND=dev-lang/perl
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=gnome-base/gconf:2 >=dev-perl/glib-perl-1.120 dev-lang/perl >=dev-perl/ExtUtils-Depends-0.202 dev-perl/ExtUtils-PkgConfig virtual/pkgconfig dev-lang/perl
+DESCRIPTION=Perl wrappers for the GConf configuration engine.
+EAPI=7
+HOMEPAGE=https://metacpan.org/release/Gnome2-GConf
+INHERIT=perl-module
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86
+LICENSE=LGPL-2.1
+RDEPEND=gnome-base/gconf:2 >=dev-perl/glib-perl-1.120 dev-lang/perl dev-lang/perl:=
+SLOT=0
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	c3fca037246e877693badea0df3b0ef8	perl-module	4f80b00fab088c2f6d68edb55a6c4bf4
+_md5_=3f45518481e398e613c8e33860cb8da5
