@@ -8,11 +8,9 @@ dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
 dev-python/fritzconnection 1.2.1: Communicate with the AVM FritzBox
 dev-util/glslang 8.13.3727_pre20200331: Khronos reference front-end for GLSL and ESSL, and sample SPIR-V generator
 dev-util/jetbrains-toolbox 1.9.3935 1.10.4088 1.11.4269 1.13.4733: Manage all your JetBrains Projects and Tools
-dev-util/spirv-headers 1.5.1_p20200317: Machine-readable files for the SPIR-V Registry
 dev-util/spirv-tools 2020.2: Provides an API and commands for processing SPIR-V modules
 dev-util/vulkan-headers 1.2.135: Vulkan Header files and API registry
 dev-util/vulkan-tools 1.2.135: Official Vulkan Tools and Utilities for Windows, Linux, Android, and MacOS
-games-strategy/openrct2 0.0.4 0.0.6: Open source re-implementation of Roller Coaster Tycoon 2
 games-util/itch 23.3.1 23.4.0 23.6.1: The best way to play itch.io games
 games-util/steamtinkerlaunch 9.2: Wrapper script for Steam custom launch options
 gnome-extra/yad 11.1: Display GTK+ dialog boxes from command line or shell scripts
