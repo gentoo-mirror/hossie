@@ -2,8 +2,6 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-dev-util/vulkan-tools:cube - Build the cube/cubepp demos
-media-libs/vulkan-loader:layers - Include the vulkan layers
 net-misc/asbru-cm:freerdp - Enable support for net-misc/freerdp
 net-misc/asbru-cm:mosh - Enable support for net-misc/mosh
 net-misc/asbru-cm:rdesktop - Enable support for net-misc/rdesktop
