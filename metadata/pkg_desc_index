@@ -5,7 +5,6 @@ dev-java/mlib 2.1.1-r1: Java library for mediathekview
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
 dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
 dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
-dev-python/fritzconnection 1.2.1: Communicate with the AVM FritzBox
 dev-util/jetbrains-toolbox 1.9.3935 1.10.4088 1.11.4269 1.13.4733: Manage all your JetBrains Projects and Tools
 games-util/itch 23.3.1 23.4.0 23.6.1: The best way to play itch.io games
 games-util/steamtinkerlaunch 9.2: Wrapper script for Steam custom launch options
