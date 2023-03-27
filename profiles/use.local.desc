@@ -6,18 +6,6 @@ net-misc/asbru-cm:freerdp - Enable support for net-misc/freerdp
 net-misc/asbru-cm:mosh - Enable support for net-misc/mosh
 net-misc/asbru-cm:rdesktop - Enable support for net-misc/rdesktop
 net-misc/asbru-cm:webdav - Enable support for net-misc/cadaver
-sys-boot/raspberrypi-firmware:rpi-2-b - Install files for RPi 2b
-sys-boot/raspberrypi-firmware:rpi-3-b - Install files for RPi 3b
-sys-boot/raspberrypi-firmware:rpi-b - Install files for RPi 1b
-sys-boot/raspberrypi-firmware:rpi-b-plus - Install files for RPi 1b+
-sys-boot/raspberrypi-firmware:rpi-cm - Install files for RPi Compute Module 1
-sys-boot/raspberrypi-firmware:rpi-cm3 - Install files for RPi Compute Module 3
-sys-kernel/raspberrypi-image:rpi-2-b - Install files for RPi 2b
-sys-kernel/raspberrypi-image:rpi-3-b - Install files for RPi 3b
-sys-kernel/raspberrypi-image:rpi-b - Install files for RPi 1b
-sys-kernel/raspberrypi-image:rpi-b-plus - Install files for RPi 1b+
-sys-kernel/raspberrypi-image:rpi-cm - Install files for RPi Compute Module 1
-sys-kernel/raspberrypi-image:rpi-cm3 - Install files for RPi Compute Module 3
 sys-libs/glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
 sys-libs/glibc:clone3 - Enable the new clone3 syscall within glibc. Can be disabled to allow compatibility with older Electron applications.
 sys-libs/glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
