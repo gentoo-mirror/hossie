@@ -15,7 +15,6 @@ media-video/gnome-mpv 0.11: A simple GTK+ frontend for mpv
 net-im/franz 4.0.4: Franz is a free messaging app
 net-im/rambox-bin 0.5.14 0.7.5: Free and Open Source messaging and emailing app
 net-misc/asbru-cm 5.0.0: Asbru CM is a user interface that helps organizing remote terminal sessions
-sys-libs/glibc 2.34-r11: GNU libc C library
 sys-libs/libcpuid 0.5.1: A small C library for x86 (and x86_64) CPU detection and feature extraction
 sys-process/cpu-x 4.3.0: A Free software that gathers information on CPU, motherboard and more
 x11-apps/cerebro 0.2.7 0.2.8 0.3.0 0.3.1: Open-source productivity booster with a brain
