@@ -1,8 +1,8 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-inherit autotools eutils toolchain-funcs
+EAPI=7
+inherit autotools toolchain-funcs
 
 # we need this since there are no tagged releases yet
 DESCRIPTION="Simple screen lock application for X server"
@@ -29,7 +29,7 @@ DEPEND="dev-libs/libgcrypt:0
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-xlib-null-pointer.patch"
+	eapply "${FILESDIR}/${P}-xlib-null-pointer.patch"
 
 	default
 
