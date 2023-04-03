@@ -11,7 +11,7 @@ SRC_URI="https://github.com/falconindy/ponymix/archive/${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="bash-completion"
 
 RDEPEND="media-sound/pulseaudio"
