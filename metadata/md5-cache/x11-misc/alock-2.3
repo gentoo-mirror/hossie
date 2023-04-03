@@ -1,14 +1,15 @@
+BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
 DEFINED_PHASES=compile configure install prepare
-DEPEND=dev-libs/libgcrypt:0 x11-libs/libX11 x11-libs/libXau x11-libs/libxcb x11-libs/libXcursor x11-libs/libXext x11-libs/libXfixes x11-libs/libXpm x11-libs/libXrender imlib? ( media-libs/imlib2[X] ) pam? ( sys-libs/pam ) xbacklight? ( x11-apps/xbacklight ) sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
+DEPEND=dev-libs/libgcrypt:0 x11-libs/libX11 x11-libs/libXau x11-libs/libxcb x11-libs/libXcursor x11-libs/libXext x11-libs/libXfixes x11-libs/libXpm x11-libs/libXrender imlib? ( media-libs/imlib2[X] ) pam? ( sys-libs/pam ) xbacklight? ( x11-apps/xbacklight )
 DESCRIPTION=Simple screen lock application for X server
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/Arkq/alock
-INHERIT=autotools eutils toolchain-funcs
+INHERIT=autotools toolchain-funcs
 IUSE=debug imlib pam xbacklight
 KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=MIT
 RDEPEND=dev-libs/libgcrypt:0 x11-libs/libX11 x11-libs/libXau x11-libs/libxcb x11-libs/libXcursor x11-libs/libXext x11-libs/libXfixes x11-libs/libXpm x11-libs/libXrender imlib? ( media-libs/imlib2[X] ) pam? ( sys-libs/pam ) xbacklight? ( x11-apps/xbacklight )
 SLOT=0
 SRC_URI=https://github.com/Arkq/alock/archive/v2.3.tar.gz -> alock-2.3.tar.gz
-_eclasses_=eqawarn	c9847c43b3253a276ae2eabddedab3d7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	f0d3196128225dee3220e65f3371bc7a	desktop	021728fdc1b03b36357dbc89489e0f0d	edos2unix	33e347e171066657f91f8b0c72ec8773	estack	055c42df72f76a4f45ec92b35e83cd56	epatch	2b02655f061dfa25067b543539110259	ltprune	97143780d341cc8d8f1d4c6187a36d29	preserve-libs	a8e50acee31b5759b4df1f7707cae54b	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	vcs-clean	d271b7bc7e6a009758d7d4ef749174e3	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32
-_md5_=f9b4a8b8036ff2bbbaae39d4b1796644
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	f0d3196128225dee3220e65f3371bc7a
+_md5_=c098768aaf6773c958d7fbf4d6564354

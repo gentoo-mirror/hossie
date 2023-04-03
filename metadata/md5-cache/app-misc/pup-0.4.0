@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=https://github.com/ericchiang/pup/archive/v0.4.0.tar.gz -> pup-0.4.0.tar.gz
-_md5_=8746d6fcdfec61a50261602f7d4e99b5
+_md5_=3c761bd758fbd0a23ce3a42e08507869
