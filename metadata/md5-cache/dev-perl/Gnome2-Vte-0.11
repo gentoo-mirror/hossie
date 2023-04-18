@@ -10,4 +10,4 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-lang/perl dev-perl/Gtk2 >=dev-perl/glib-perl-1.01 x11-libs/vte:0 dev-lang/perl:=
 SLOT=0
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	c3fca037246e877693badea0df3b0ef8	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	perl-module	8c55459fea879ccdec282839a3b22f78
-_md5_=1456509538df23ea0a9f1c89a2274cdb
+_md5_=58014f8d4556c247b5fd674130a04064

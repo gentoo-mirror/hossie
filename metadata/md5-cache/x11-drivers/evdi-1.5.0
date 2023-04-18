@@ -5,10 +5,10 @@ EAPI=7
 HOMEPAGE=https://github.com/DisplayLink/evdi
 INHERIT=linux-mod
 IUSE=dist-kernel
-KEYWORDS=~x86 ~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 LGPL-2.1
 RDEPEND=x11-libs/libdrm kernel_linux? ( sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= ) )
 SLOT=0
 SRC_URI=https://github.com/DisplayLink/evdi/archive/v1.5.0.tar.gz -> evdi-1.5.0.tar.gz
 _eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	linux-mod	e02e2112f542b74962d5d264c60a08de
-_md5_=86e15eabe4f683b73065b33f93b8b053
+_md5_=1ead78d971f35800d49d3bdbeed0fd01
