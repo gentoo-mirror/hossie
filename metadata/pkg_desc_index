@@ -4,19 +4,18 @@ dev-java/mlib 2.1.1-r1: Java library for mediathekview
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
 dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
 dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
-dev-util/jetbrains-toolbox 1.9.3935 1.10.4088 1.11.4269 1.13.4733: Manage all your JetBrains Projects and Tools
+dev-util/jetbrains-toolbox 1.13.4733: Manage all your JetBrains Projects and Tools
 games-util/itch 23.3.1 23.4.0 23.6.1: The best way to play itch.io games
 games-util/steamtinkerlaunch 9.2: Wrapper script for Steam custom launch options
 gnome-extra/yad 11.1: Display GTK+ dialog boxes from command line or shell scripts
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-tv/mediathekview 13.0.2-r1: MediathekView searches the online portals of public broadcasting services
-media-video/gnome-mpv 0.11: A simple GTK+ frontend for mpv
 net-im/franz 4.0.4: Franz is a free messaging app
 net-im/rambox-bin 0.5.14 0.7.5: Free and Open Source messaging and emailing app
 net-misc/asbru-cm 5.0.0: Asbru CM is a user interface that helps organizing remote terminal sessions
 sys-libs/libcpuid 0.5.1: A small C library for x86 (and x86_64) CPU detection and feature extraction
 sys-process/cpu-x 4.3.0: A Free software that gathers information on CPU, motherboard and more
-x11-apps/cerebro 0.2.7 0.2.8 0.3.0 0.3.1: Open-source productivity booster with a brain
+x11-apps/cerebro 0.3.1: Open-source productivity booster with a brain
 x11-drivers/displaylink-driver 4.1.9: DisplayLink USB Graphics Software
 x11-drivers/evdi 1.5.0: Extensible Virtual Display Interface
 x11-misc/alock 2.3: Simple screen lock application for X server
