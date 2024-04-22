@@ -13,3 +13,5 @@ jobs:
       - name: Pkgcheck
         uses: daugustin/docker-pkgcheck@master
         continue-on-error: true
+        with:
+          profiles: stable
