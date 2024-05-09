@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst postrm prepare pretend
+DEPEND=!media-gfx/blender:4.1
+DESCRIPTION=3D Creation/Animation/Publishing System
+EAPI=8
+HOMEPAGE=https://www.blender.org
+INHERIT=desktop wrapper xdg-utils
+IUSE=cuda oneapi
+KEYWORDS=~amd64
+LICENSE=Apache-2.0 BSD FTL GPL-3 MIT MPL-2.0 openssl PYTHON
+RDEPEND=!media-gfx/blender:4.1 cuda? ( dev-util/nvidia-cuda-toolkit ) oneapi? ( dev-libs/level-zero ) virtual/opengl
+RESTRICT=binchecks strip
+SLOT=4.1
+SRC_URI=https://ftp.halifax.rwth-aachen.de/blender/release/Blender4.1/blender-4.1.1-linux-x64.tar.xz
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=0d2defbfff44fb121bec41eb3048ee05
