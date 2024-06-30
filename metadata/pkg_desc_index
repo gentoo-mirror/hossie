@@ -1,9 +1,9 @@
 app-laptop/dell-fan-mon 1.1: Fan monitor for some Dell laptops
 app-misc/pup 0.4.0: pup is a command line tool for processing HTML
-dev-java/mlib 2.1.1-r1: Java library for mediathekview
 dev-perl/Gnome2-GConf 1.44.0: Perl wrappers for the GConf configuration engine.
 dev-perl/Gnome2-Vte 0.11: Perl interface to the Virtual Terminal Emulation library.
 dev-perl/Net-ARP 1.0.9: Perl extension for creating ARP packets
+games-util/itch 23.6.1: The best way to play itch.io games
 games-util/steamtinkerlaunch 9.2: Wrapper script for Steam custom launch options
 gnome-extra/yad 11.1: Display GTK+ dialog boxes from command line or shell scripts
 media-gfx/blender-bin 4.1.1: 3D Creation/Animation/Publishing System
