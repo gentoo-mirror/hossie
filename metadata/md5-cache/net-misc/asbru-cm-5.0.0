@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare
+DEPEND=freerdp? ( net-misc/freerdp ) mosh? ( net-misc/mosh ) rdesktop? ( net-misc/rdesktop ) vnc? ( net-misc/tigervnc ) webdav? ( net-misc/cadaver ) dev-libs/ossp-uuid[perl] dev-perl/Crypt-Blowfish dev-perl/Crypt-CBC dev-perl/Crypt-Rijndael dev-perl/Expect dev-perl/File-KeePass dev-perl/Gnome2-GConf dev-perl/gnome2-perl dev-perl/Gnome2-Vte dev-perl/Gtk2 dev-perl/Gtk2-Ex-Simple-List dev-perl/gtk2-gladexml dev-perl/Gtk2-Unique dev-perl/IO-Stty dev-perl/Net-ARP dev-perl/Socket6 dev-perl/YAML >=app-portage/elt-patches-20240116 app-arch/xz-utils dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=Asbru CM is a user interface that helps organizing remote terminal sessions
+EAPI=6
+HOMEPAGE=https://www.asbru-cm.net/
+INHERIT=bash-completion-r1 gnome2 multilib
+IUSE=freerdp mosh rdesktop vnc webdav
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=freerdp? ( net-misc/freerdp ) mosh? ( net-misc/mosh ) rdesktop? ( net-misc/rdesktop ) vnc? ( net-misc/tigervnc ) webdav? ( net-misc/cadaver ) dev-libs/ossp-uuid[perl] dev-perl/Crypt-Blowfish dev-perl/Crypt-CBC dev-perl/Crypt-Rijndael dev-perl/Expect dev-perl/File-KeePass dev-perl/Gnome2-GConf dev-perl/gnome2-perl dev-perl/Gnome2-Vte dev-perl/Gtk2 dev-perl/Gtk2-Ex-Simple-List dev-perl/gtk2-gladexml dev-perl/Gtk2-Unique dev-perl/IO-Stty dev-perl/Net-ARP dev-perl/Socket6 dev-perl/YAML
+SLOT=0
+SRC_URI=https://github.com/asbru-cm/asbru-cm/archive/5.0.0.tar.gz -> asbru-cm-5.0.0.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	ltprune	8178ee51ec70a8551be1bd4318c2ae3c	libtool	5f49a16f67f81bdf873e3d1f10b10001	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	estack	c61c368a76fdf3a82fdf8dbaebea3804	versionator	d3fb3ba33acc3bbbdc4d7970227c100d	gnome.org	6b39404f1491c60a2d32e3c693a683fe	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	30dbce54b89e77b86f366548f94419ad	xdg	4a14c5c24f121e7da66e5aab4a168c6e	gnome2	fc9e598eaac41c6ac9ed1a44bc004d03
+_md5_=f57fd82676f646228d7054214680b56d

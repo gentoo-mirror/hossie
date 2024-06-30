@@ -9,6 +9,7 @@ gnome-extra/yad 11.1: Display GTK+ dialog boxes from command line or shell scrip
 media-gfx/blender-bin 4.1.1: 3D Creation/Animation/Publishing System
 media-sound/ponymix 5: CLI volume control for PulseAudio
 net-im/rambox-bin 0.7.5: Free and Open Source messaging and emailing app
+net-misc/asbru-cm 5.0.0: Asbru CM is a user interface that helps organizing remote terminal sessions
 sys-libs/libcpuid 0.5.1: A small C library for x86 (and x86_64) CPU detection and feature extraction
 sys-process/cpu-x 4.3.0: A Free software that gathers information on CPU, motherboard and more
 x11-misc/alock 2.3: Simple screen lock application for X server
