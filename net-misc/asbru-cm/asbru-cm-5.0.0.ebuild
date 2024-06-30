@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit bash-completion-r1 eutils gnome2 multilib
+inherit bash-completion-r1 gnome2 multilib
 
 DESCRIPTION="Asbru CM is a user interface that helps organizing remote terminal sessions"
 HOMEPAGE="https://www.asbru-cm.net/"
@@ -48,7 +48,7 @@ src_prepare() {
 	done
 
 	# https://github.com/asbru-cm/asbru-cm/pull/64
-	epatch "${FILESDIR}/${P}-bash-completion.patch"
+	eapply "${FILESDIR}/${P}-bash-completion.patch"
 
 	eapply_user
 }
