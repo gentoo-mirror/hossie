@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils multilib xdg-utils
+inherit multilib wrapper xdg-utils
 
 DESCRIPTION="The best way to play itch.io games"
 HOMEPAGE="https://itch.io/app"
