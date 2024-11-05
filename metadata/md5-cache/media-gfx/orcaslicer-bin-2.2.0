@@ -1,0 +1,14 @@
+BDEPEND=app-admin/chrpath
+DEFINED_PHASES=install postinst postrm prepare unpack
+DEPEND=!media-gfx/orcaslicer
+DESCRIPTION=G-code generator for 3D printers
+EAPI=8
+HOMEPAGE=https://github.com/SoftFever/OrcaSlicer
+INHERIT=desktop xdg-utils
+KEYWORDS=~amd64
+LICENSE=AGPL-3
+RDEPEND=!media-gfx/orcaslicer dev-libs/expat dev-libs/glib dev-libs/wayland media-libs/fontconfig media-libs/gstreamer media-libs/libglvnd net-libs/webkit-gtk:4 x11-libs/cairo x11-libs/gtk+:3 x11-libs/pango
+SLOT=0
+SRC_URI=https://github.com/SoftFever/OrcaSlicer/releases/download/v2.2.0/OrcaSlicer_Linux_V2.2.0.AppImage -> orcaslicer-bin-2.2.0.AppImage
+_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=cd461f41f0626861a51cc5b6dab6491d
