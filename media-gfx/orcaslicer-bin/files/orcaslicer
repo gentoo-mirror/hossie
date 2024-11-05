@@ -1,0 +1,4 @@
+#!/bin/sh
+export WEBKIT_DISABLE_COMPOSITING_MODE=1
+cd /opt/orcaslicer &&
+exec /opt/orcaslicer/bin/orca-slicer "$@"
