@@ -7,6 +7,16 @@ net-misc/asbru-cm:freerdp - Enable support for net-misc/freerdp
 net-misc/asbru-cm:mosh - Enable support for net-misc/mosh
 net-misc/asbru-cm:rdesktop - Enable support for net-misc/rdesktop
 net-misc/asbru-cm:webdav - Enable support for net-misc/cadaver
+sys-apps/firejail:X - Enable X11 sandboxing
+sys-apps/firejail:apparmor - Enable support for custom AppArmor profiles
+sys-apps/firejail:chroot - Enable chrooting to custom directory
+sys-apps/firejail:contrib - Install contrib scripts
+sys-apps/firejail:dbusproxy - Enable DBus proxying to filter access in supporting profiles
+sys-apps/firejail:file-transfer - Enable file transfers between sandboxes and the host system
+sys-apps/firejail:globalcfg - Enable global config file
+sys-apps/firejail:network - Enable networking features
+sys-apps/firejail:private-home - Enable private home feature
+sys-apps/firejail:userns - Enable attaching a new user namespace to a sandbox (--noroot option)
 sys-process/cpu-x:glfw - Build with support for media-libs/glfw
 sys-process/cpu-x:opencl - Enable OpenCL support
 x11-misc/alock:xbacklight - Enable xbacklight support
