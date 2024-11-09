@@ -1,0 +1,74 @@
+--- a/src/firecfg/firecfg.config        2024-11-09 11:11:09.552717659 +0100
++++ b/src/firecfg/firecfg.config        2024-11-09 11:12:25.827346626 +0100
+@@ -239,7 +239,7 @@
+ electron-mail
+ electrum
+ element-desktop
+-elinks
++#elinks
+ empathy
+ enchant
+ enchant-2
+@@ -290,7 +290,7 @@
+ flowblade
+ fluffychat
+ font-manager
+-fontforge
++#fontforge
+ fossamail
+ four-in-a-row
+ fractal
+@@ -541,7 +541,7 @@
+ luminance-hdr
+ lximage-qt
+ lxmusic
+-lynx
++#lynx
+ lyriek
+ lyx
+ #lz4 # disable until we fix CLI archivers for makepkg on Arch (see discussion in #3095)
+@@ -549,7 +549,7 @@
+ #lz4cat # disable until we fix CLI archivers for makepkg on Arch (see discussion in #3095)
+ macrofusion
+ magicor
+-man
++#man
+ manaplus
+ marker
+ masterpdfeditor
+@@ -631,7 +631,7 @@
+ musictube
+ musixmatch
+ mutool
+-mutt
++#mutt
+ mypaint
+ mypaint-ora-thumbnailer
+ natron
+@@ -696,7 +696,7 @@
+ palemoon
+ #pandoc
+ parole
+-patch
++#patch
+ pavucontrol
+ pavucontrol-qt
+ pcsxr
+@@ -841,7 +841,7 @@
+ stellarium
+ straw-viewer
+ strawberry
+-strings
++#strings
+ studio.sh
+ subdownloader
+ sum
+@@ -974,7 +974,7 @@
+ weechat
+ weechat-curses
+ wesnoth
+-wget
++#wget
+ wget2
+ whalebird
+ whois
