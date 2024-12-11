@@ -10,5 +10,5 @@ KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86
 LICENSE=LGPL-2.1
 RDEPEND=dev-lang/perl dev-perl/Gtk2 >=dev-perl/glib-perl-1.01 x11-libs/vte:0 >=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=] dev-lang/perl:=
 SLOT=0
-_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	perl-functions	1863acf0982afafc67797e3ce7275b4c	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	perl-module	25ca2ff8e7971cb7f817f0bda4be696d
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	perl-functions	1863acf0982afafc67797e3ce7275b4c	toolchain-funcs	fa554cc3cff825d21dfe3f24841e29cf	multilib	b2a329026f2e404e9e371097dda47f96	perl-module	25ca2ff8e7971cb7f817f0bda4be696d
 _md5_=58014f8d4556c247b5fd674130a04064
